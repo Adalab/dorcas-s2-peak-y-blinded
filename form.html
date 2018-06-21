@@ -1,54 +1,104 @@
 <!DOCTYPE html>
 <html lang="es" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-  	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
-  	<link rel="stylesheet" href="../css/main.css">
-  	<title>Awesome Profile Cards</title>
-  </head>
-  <body>
-    <form class="form" action="index.html" method="post">
-      <fieldset>
-        <legend>Rellena</legend>
-        <div class="">
-          <label for="name">Nombre completo</label>
-          <input id="name" type="text" name="name" placeholder="Ej: Sally Jill" required>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+  <link rel="stylesheet" href="../css/main.css">
+  <title>Awesome Profile Cards</title>
+</head>
+<body>
+  <div class="wrapper">
+    <header class="cabecera">
+      <a href="#">
+        <img src="../images/awesome-profile-cards-logo.svg" alt="awesome logo">
+      </a>
+    </header>
+    <main>
+      <section class="section1">
+        <div class="boton_reset">
+          <button type="button" name="button" class="resetear">reset</button>
         </div>
-        <div class="">
-          <label for="job">Puesto</label>
-          <input id="job" type="text" name="job" placeholder="Ej: Front-end unicorn" required>
+        <div class="info_personal">
+          <h1 class="firstLastName"> nombre apellido</h1>
+          <h2 class="personalDescription">Front-end developer</h2>
+          <img src="http://placehold.it/240x200/880000/00ff00" alt="foto personal">
+          <div class="contactopersonal">
+            <button type="button" name="button" class="button_phone"></button>
+            <button type="button" name="button" class="button_mail"></button>
+            <button type="button" name="button" class="button_linkedin"></button>
+            <button type="button" name="button" class="button_github"></button>
+          </div>
+          <div class="habilidades">
+            <ul class="lista_habilidades">
+              <li class="habilidad1"></li>
+              <li class="habilidad2"></li>
+              <li class="habilidad3"></li>
+            </ul>
+          </div>
         </div>
-        <div class="">
-          <label for="image">Imagen de perfil</label>
-          <input id="image" type="file" name="image" required>
+      </section>
+
+      <form class="form" action="index.html" method="post">
+        <fieldset>
+          <legend>Rellena</legend>
+          <div class="">
+            <label for="name">Nombre completo</label>
+            <input id="name" type="text" name="name" placeholder="Ej: Sally Jill" required>
+          </div>
+          <div class="">
+            <label for="job">Puesto</label>
+            <input id="job" type="text" name="job" placeholder="Ej: Front-end unicorn" required>
+          </div>
+          <div class="">
+            <label for="image">Imagen de perfil</label>
+            <input id="image" type="file" name="image" required>
+          </div>
+          <div class="">
+            <label for="mail">Email</label>
+            <input id="mail" type="email" name="mail" placeholder="Ej: sally-hill@gmail.com" required>
+          </div>
+          <div class="">
+            <label for="telephone">Teléfono</label>
+            <input id="telephone" type="tel" name="telephone" placeholder="Ej: 555-55-55-55" required>
+          </div>
+          <div class="">
+            <label for="linkedin">Linkedin</label>
+            <input id="linkedin" type="text" name="linkedin" placeholder="Ej: linkedin.com/in/sally.hill" required>
+          </div>
+          <div class="">
+            <label for="github">Github</label>
+            <input id="github" type="text" name="github" placeholder="Ej: @sally-hill" required>
+          </div>
+          <div class="">
+            <label for="abilities">Habilidades</label>
+            <select id="abilities" class="" name="abilities" required>
+              <option value="HTML"></option>
+            </select>
+            <select id="abilities" class="" name="abilities" required>
+              <option value="CSS"></option>
+            </select>
+          </div>
+        </fieldset>
+      </form>
+      
+      <section class="comparte">
+        <div class="cabecera-comparte">
+          <i class="fas fa-share-alt"></i>
+          <h2 class="titulo-comparte">COMPARTE</h2>
+          <button class="btn-flecha" type="button" name="button"><i class="fas fa-angle-up"></i></button>
         </div>
-        <div class="">
-          <label for="mail">Email</label>
-          <input id="mail" type="email" name="mail" placeholder="Ej: sally-hill@gmail.com" required>
-        </div>
-        <div class="">
-          <label for="telephone">Teléfono</label>
-          <input id="telephone" type="tel" name="telephone" placeholder="Ej: 555-55-55-55" required>
-        </div>
-        <div class="">
-          <label for="linkedin">Linkedin</label>
-          <input id="linkedin" type="text" name="linkedin" placeholder="Ej: linkedin.com/in/sally.hill" required>
-        </div>
-        <div class="">
-          <label for="github">Github</label>
-          <input id="github" type="text" name="github" placeholder="Ej: @sally-hill" required>
-        </div>
-        <div class="">
-          <label for="abilities">Habilidades</label>
-          <select id="abilities" class="" name="abilities" required>
-            <option value="HTML"></option>
-          </select>
-          <select id="abilities" class="" name="abilities" required>
-            <option value="CSS"></option>
-          </select>
-        </div>
-      </fieldset>
-    </form>
-  </body>
+        <button class="btn-twitter" type="button" name="button"><i class="fab fa-twitter"></i>TWITTER</button>
+      </section>
+    </main>
+
+    <footer class="pie">
+      <div class="">
+        <p>Awesome profile-cards @2018</p>
+        <a href="#"> <img src="../images/logo-adalab-80px.png" alt="adalab logo"> </a>
+      </div>
+    </footer>
+
+  </div>
+</body>
 </html>
