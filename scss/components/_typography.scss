@@ -1,0 +1,39 @@
+.icon-style-small {
+  font-size: $size-m;
+  color: $color-primary;
+} // text style
+
+.icon-style-large {
+  font-size: $size-xl;
+  color: $color-primary;
+  text-align: center;
+} // text style 4
+
+.text-style-small {
+  font-family: $font-primary;
+  font-size: $size-xs;
+  color: $color-paleta1-primary;
+} // text style 3
+
+.text-style-regular {
+  font-family: $font-optional-2;
+  font-size: $font-sm;
+  color: $color-medium-dark-dark;
+  text-align: center;
+} // text style 6
+
+.text-style-semibold {
+  font-family: $font-primary;
+  font-size: $font-sm;
+  font-weight: $weight-semibold;
+  color: $color-light;
+  text-align: center;
+} // text style 5
+
+.text-style-large {
+  font-family: $font-secondary;
+  font-size: $size-ml;
+  font-weight: $weight-bold;
+  color: $color-primary;
+  text-align: center;
+} // text style 2
