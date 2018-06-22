@@ -1,3 +1,53 @@
+.colorpalette-box {
+  display: flex;
+  align-items: center;
+}
+
+.label-design {
+  display: flex;
+}
+
+.color_palette {
+  width: 30px;
+  height: 25px;
+}
+
+.colorp1 {
+  background-color: $color-paleta1-primary;
+}
+
+.colorp2 {
+  background-color: $color-paleta1-secondary;
+}
+
+.colorp3 {
+  background-color: $color-paleta1-terciary;
+}
+
+.colorp4 {
+  background-color: $color-paleta2-primary;
+}
+
+.colorp5 {
+  background-color: $color-paleta2-secondary;
+}
+
+.colorp6 {
+  background-color: $color-paleta2-terciary;
+}
+
+.colorp7 {
+  background-color: $color-paleta3-primary;
+}
+
+.colorp8 {
+  background-color: $color-paleta3-secondary;
+}
+
+.colorp9 {
+  background-color: $color-paleta3-terciary;
+}
+
 .share_header {
   margin-top: 10px;
   display: flex;

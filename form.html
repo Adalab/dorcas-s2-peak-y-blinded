@@ -12,15 +12,25 @@
     <header class="form_header">
       <div class="awesome_header">
         <!-- <a href="#">
-          <img src="../images/awesome-profile-cards-logo.svg" alt="awesome logo">
-        </a> -->
+        <img src="../images/awesome-profile-cards-logo.svg" alt="awesome logo">
+      </a> -->
+    </div>
+  </header>
+  <main>
+    <section class="section1">
+      <div class="boton_reset">
+        <i class="far fa-trash-alt"></i>
+        <input type="reset" value="Reset">
       </div>
-    </header>
-    <main>
-      <section class="section1">
-        <div class="boton_reset">
-          <i class="far fa-trash-alt"></i>
-          <input type="reset" value="Reset">
+      <div class="info_personal">
+        <h1 class="firstLastName"> nombre apellido</h1>
+        <h2 class="personalDescription">Front-end developer</h2>
+        <img src="http://placehold.it/240x200/880000/00ff00" alt="foto personal">
+        <div class="contactopersonal">
+          <a href="#"><i class="fas fa-mobile-alt"></i></a>
+          <a href="#"><i class="far fa-envelope"></i></a>
+          <a href="#"><i class="fab fa-linkedin-in"></i></a>
+          <a href="#"><i class="fab fa-github-alt"></i></a>
         </div>
         <div class="info_personal">
           <h1 class="firstLastName"> nombre apellido</h1>
@@ -40,75 +50,119 @@
             </ul>
           </div>
         </div>
-      </section>
-
-      <form class="form" action="index.html" method="post">
-        <fieldset>
-          <legend>Rellena</legend>
-          <div class="">
-            <label for="name">Nombre completo</label>
-            <input id="name" type="text" name="name" placeholder="Ej: Sally Jill" required>
-          </div>
-          <div class="">
-            <label for="job">Puesto</label>
-            <input id="job" type="text" name="job" placeholder="Ej: Front-end unicorn" required>
-          </div>
-          <div class="">
-            <label for="image">Imagen de perfil</label>
-            <input id="image" type="file" name="image" required>
-          </div>
-          <div class="">
-            <label for="mail">Email</label>
-            <input id="mail" type="email" name="mail" placeholder="Ej: sally-hill@gmail.com" required>
-          </div>
-          <div class="">
-            <label for="telephone">Teléfono</label>
-            <input id="telephone" type="tel" name="telephone" placeholder="Ej: 555-55-55-55" required>
-          </div>
-          <div class="">
-            <label for="linkedin">Linkedin</label>
-            <input id="linkedin" type="text" name="linkedin" placeholder="Ej: linkedin.com/in/sally.hill" required>
-          </div>
-          <div class="">
-            <label for="github">Github</label>
-            <input id="github" type="text" name="github" placeholder="Ej: @sally-hill" required>
-          </div>
-          <div class="">
-            <label for="abilities">Habilidades</label>
-            <select id="abilities" class="" name="abilities" required>
-              <option value="HTML"></option>
-            </select>
-            <select id="abilities" class="" name="abilities" required>
-              <option value="CSS"></option>
-            </select>
-          </div>
-        </fieldset>
-      </form>
-
-      <section class="share">
-        <div class="share_header">
-          <div class="share_icon_title">
-            <i class="share_icon fas fa-share-alt"></i>
-            <h2 class="share_title">COMPARTE</h2>
-          </div>
-          <button class="btn_arrow" type="button" name="button"><i class="fas fa-angle-up"></i></button>
-        </div>
-        <button class="btn_card" type="button" name="button"><i class="far fa-address-card"></i>CREAR TARJETA</button>
-        <div class="card_created">
-          <h3 class="card_created_title">La tarjeta ha sido creada:</h3>
-          <a class="card_link"  href="#">https://awesome-profile-card.com?id=A456DF0001</a>
-          <button class="btn_twitter" type="button" name="button"><i class="fab fa-twitter"></i>Compartir en twitter</button>
-        </div>
-      </section>
-    </main>
-
-    <footer class="footer">
-      <div class="footer_content">
-        <p class="copyrigth">Awesome profile-cards @2018</p>
-        <a class="adalab_logo" href="http://adalab.es/" target="_blank"> <img src="../images/logo-adalab.png" alt="adalab logo"> </a>
       </div>
-    </footer>
+    </section>
 
-  </div>
+    <!-- FORMULARIO DISEÑA -->
+
+    <form class="form" action="index.html" method="post">
+      <fieldset>
+        <legend>diseña</legend>
+        <div class="">colores</div>
+        <div class="colorpalette-box">
+          <input id="color1" type="radio" name="colorpalette">
+          <label for="color1" class="label-design">
+            <div class="color_palette colorp1"></div>
+            <div class="color_palette colorp2"></div>
+            <div class="color_palette colorp3"></div>
+          </label>
+        </div>
+        <div class="colorpalette-box">
+          <input id="color2" type="radio" name="colorpalette">
+          <label for="color2" class="label-design">
+            <div class="color_palette colorp4"></div>
+            <div class="color_palette colorp5"></div>
+            <div class="color_palette colorp6"></div>
+          </label>
+        </div>
+        <div class="colorpalette-box">
+          <input id="color3" type="radio" name="colorpalette">
+          <label for="color3" class="label-design">
+            <div class="color_palette colorp7"></div>
+            <div class="color_palette colorp8"></div>
+            <div class="color_palette colorp9"></div>
+          </label>
+        </div>
+
+        <div class="">fuentes</div>
+        <div class="">
+          <input id="font1" type="radio" name="font">
+          <label for="font1">Ubuntu</label>
+          <input id="font2" type="radio" name="font">
+          <label for="font2">Comic Sans</label>
+          <input id="font3" type="radio" name="font">
+          <label for="font1">Montserrat</label>
+        </div>
+      </fieldset>
+
+      <!-- FORMULARIO-RELLENA -->
+
+      <fieldset>
+        <legend>Rellena</legend>
+        <div class="">
+          <label for="name">Nombre completo</label>
+          <input id="name" type="text" name="name" placeholder="Ej: Sally Jill" required>
+        </div>
+        <div class="">
+          <label for="job">Puesto</label>
+          <input id="job" type="text" name="job" placeholder="Ej: Front-end unicorn" required>
+        </div>
+        <div class="">
+          <label for="image">Imagen de perfil</label>
+          <input id="image" type="file" name="image" required>
+        </div>
+        <div class="">
+          <label for="mail">Email</label>
+          <input id="mail" type="email" name="mail" placeholder="Ej: sally-hill@gmail.com" required>
+        </div>
+        <div class="">
+          <label for="telephone">Teléfono</label>
+          <input id="telephone" type="tel" name="telephone" placeholder="Ej: 555-55-55-55" required>
+        </div>
+        <div class="">
+          <label for="linkedin">Linkedin</label>
+          <input id="linkedin" type="text" name="linkedin" placeholder="Ej: linkedin.com/in/sally.hill" required>
+        </div>
+        <div class="">
+          <label for="github">Github</label>
+          <input id="github" type="text" name="github" placeholder="Ej: @sally-hill" required>
+        </div>
+        <div class="">
+          <label for="abilities">Habilidades</label>
+          <select id="abilities" class="" name="abilities" required>
+            <option value="HTML"></option>
+          </select>
+          <select id="abilities" class="" name="abilities" required>
+            <option value="CSS"></option>
+          </select>
+        </div>
+      </fieldset>
+    </form>
+
+    <section class="share">
+      <div class="share_header">
+        <div class="share_icon_title">
+          <i class="share_icon fas fa-share-alt"></i>
+          <h2 class="share_title">COMPARTE</h2>
+        </div>
+        <button class="btn_arrow" type="button" name="button"><i class="fas fa-angle-up"></i></button>
+      </div>
+      <button class="btn_card" type="button" name="button"><i class="far fa-address-card"></i>CREAR TARJETA</button>
+      <div class="card_created">
+        <h3 class="card_created_title">La tarjeta ha sido creada:</h3>
+        <a class="card_link"  href="#">https://awesome-profile-card.com?id=A456DF0001</a>
+        <button class="btn_twitter" type="button" name="button"><i class="fab fa-twitter"></i>Compartir en twitter</button>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer_content">
+      <p class="copyrigth">Awesome profile-cards @2018</p>
+      <a class="adalab_logo" href="http://adalab.es/" target="_blank"> <img src="../images/logo-adalab.png" alt="adalab logo"> </a>
+    </div>
+  </footer>
+
+</div>
 </body>
 </html>
