@@ -1,3 +1,23 @@
+p {
+  margin: 0;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.footer_content {
+  padding-bottom: 20px;
+  text-align: center;
+  border-top: 1px solid #d8d8d8;
+}
+
+.copyrigth {
+  padding-top: 20px;
+  padding-bottom: 10px;
+}
+
 body {
   margin: 0;
 }
