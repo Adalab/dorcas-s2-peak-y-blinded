@@ -1,9 +1,31 @@
-* {
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
+.btn_card {
+  width: 199px;
+  height: 50px;
+  background-color: #e17334;
+  border-radius: 12px;
+  -webkit-box-shadow: 0 1px 6px 0 rgba(0, 0, 0, 0.32);
+  box-shadow: 0 1px 6px 0 rgba(0, 0, 0, 0.32);
+  color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+  justify-content: space-around;
+}
+
+.btn_twitter {
+  width: 181px;
+  height: 30px;
+  background-color: #00a0f5;
+  border-radius: 3px;
+  -webkit-box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.32);
+  box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.32);
+  color: #fff;
 }
 
 .form_header {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -23,7 +45,7 @@ p {
   margin: 0;
 }
 
-* {
+.footer {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }

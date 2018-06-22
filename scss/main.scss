@@ -1,6 +1,9 @@
 @import 'core/variables';
+@import 'components/buttons';
+@import 'components/forms';
 @import 'layout/header';
 @import 'layout/footer';
+@import 'pages/home';
 
 body {
 	margin: 0;
