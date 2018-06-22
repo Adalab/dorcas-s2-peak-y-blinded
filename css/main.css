@@ -44,6 +44,62 @@
   border: none;
 }
 
+.colorpalette-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.label-design {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.color_palette {
+  width: 30px;
+  height: 25px;
+}
+
+.colorp1 {
+  background-color: #114e4e;
+}
+
+.colorp2 {
+  background-color: #438792;
+}
+
+.colorp3 {
+  background-color: #a2deaf;
+}
+
+.colorp4 {
+  background-color: #420101;
+}
+
+.colorp5 {
+  background-color: #bd1010;
+}
+
+.colorp6 {
+  background-color: #e95626;
+}
+
+.colorp7 {
+  background-color: #3e5b65;
+}
+
+.colorp8 {
+  background-color: #dfe5eb;
+}
+
+.colorp9 {
+  background-color: #a0c0cf;
+}
+
 .share_header {
   margin-top: 10px;
   display: -webkit-box;
