@@ -1,3 +1,131 @@
+.btn_card {
+  width: 199px;
+  height: 50px;
+  margin: 30px auto;
+  background-color: #e17334;
+  border-radius: 12px;
+  -webkit-box-shadow: 0 1px 6px 0 rgba(0, 0, 0, 0.32);
+  box-shadow: 0 1px 6px 0 rgba(0, 0, 0, 0.32);
+  color: #fff;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+  justify-content: space-around;
+}
+
+.btn_twitter {
+  display: block;
+  margin: 10px auto 30px auto;
+  width: 181px;
+  height: 30px;
+  background-color: #00a0f5;
+  border-radius: 3px;
+  -webkit-box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.32);
+  box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.32);
+  color: #fff;
+  cursor: pointer;
+}
+
+.btn_arrow {
+  width: 16px;
+  height: 18px;
+  background-color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border: none;
+}
+
+.share_header {
+  margin-top: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.share_icon_title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+}
+
+.share_icon {
+  color: #e17334;
+}
+
+.share_title {
+  margin: 0;
+  padding-left: 12px;
+}
+
+.form_header {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-left: 40px;
+}
+
+.awesome_header {
+  width: 201px;
+  height: 51px;
+  margin: 30px 0;
+  background-image: url("../images/awesome-profile-cards-logo.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+p {
+  margin: 0;
+}
+
+.footer {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.footer_content {
+  padding-bottom: 20px;
+  text-align: center;
+  border-top: 1px solid #d8d8d8;
+}
+
+.copyrigth {
+  padding-top: 20px;
+  padding-bottom: 10px;
+}
+
+.card_created {
+  text-align: center;
+}
+
+.card_created_title {
+  margin: 0;
+  padding-top: 20px;
+  padding-bottom: 5px;
+}
+
+.card_link {
+  text-decoration: none;
+  color: #e17334;
+}
+
 body {
   margin: 0;
 }

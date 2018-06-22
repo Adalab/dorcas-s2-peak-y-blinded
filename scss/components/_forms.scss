@@ -1,0 +1,19 @@
+.share_header {
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.share_icon_title {
+  display: flex;
+  flex-direction: row;
+}
+
+.share_icon {
+  color: $color-primary;
+}
+
+.share_title {
+  margin: 0;
+  padding-left: 12px;
+}
