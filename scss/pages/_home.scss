@@ -1,3 +1,18 @@
+.section1 {
+  height: 457px;
+  background: linear-gradient($color-gradient-dark, $color-gradient-light);
+}
+
+.boton_reset {
+  display: flex;
+  height: 30px;
+  width: 75px;
+  border: 1px solid $color-light;
+  border-radius: 15px;
+  align-items: center;
+  justify-content: center;
+}
+
 .card_created {
   text-align: center;
 }
