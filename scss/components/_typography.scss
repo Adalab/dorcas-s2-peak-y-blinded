@@ -1,39 +1,76 @@
-.icon-style-small {
+// Color primary
+
+.icon-style--small {
   font-size: $size-m;
   color: $color-primary;
 } // text style
 
-.icon-style-large {
+.icon-style--extra-large {
   font-size: $size-xl;
   color: $color-primary;
-  text-align: center;
 } // text style 4
 
-.text-style-small {
-  font-family: $font-primary;
-  font-size: $size-xs;
-  color: $color-paleta1-primary;
-} // text style 3
-
-.text-style-regular {
-  font-family: $font-optional-2;
-  font-size: $size-sm;
-  color: $color-medium-dark-dark;
-  text-align: center;
-} // text style 6
-
-.text-style-semibold {
-  font-family: $font-primary;
-  font-size: $size-sm;
-  font-weight: $weight-semibold;
-  color: $color-light;
-  text-align: center;
-} // text style 5
-
-.text-style-large {
+.text-style--medium-large {
   font-family: $font-secondary;
   font-size: $size-ml;
   font-weight: $weight-bold;
   color: $color-primary;
-  text-align: center;
 } // text style 2
+
+// Color dark-dark
+
+.text__dark--regular {
+  font-family: $font-optional-2;
+  font-size: $size-sm;
+  color: $color-medium-dark-dark;
+} // text style 6
+
+.text__dark--semibold {
+  font-family: $font-primary;
+  font-size: $size-sm;
+  font-weight: $weight-semibold;
+  color: $color-medium-dark-dark;
+} // text style 5 - dark!
+
+.text__dark--small {
+  font-family: $font-primary;
+  font-size: $size-s;
+  text-transform: uppercase;
+  color: $color-medium-dark-dark;
+} // colores, fuentes - esther
+
+.text__dark--title {
+  font-family: $font-primary;
+  font-size: $size-m;
+  font-weight: $weight-semibold;
+  text-transform: uppercase;
+  color: $color-medium-dark-dark;
+} // titulos del formulario diseña, rellena, comparte
+
+// Optional fonts
+
+.text__optional--ubuntu {
+  font-family: $font-optional-1;
+  font-size: $size-sm;
+  color: $color-medium-dark-dark;
+}
+
+.text__optional--comic {
+  font-family: $font-optional-2;
+  font-size: $size-sm;
+  color: $color-medium-dark-dark;
+}
+
+.text__optional--mont {
+  font-family: $font-optional-3;
+  font-size: $size-sm;
+  color: $color-medium-dark-dark;
+}
+
+// Otros
+
+.text-style--extra-small {
+  font-family: $font-primary;
+  font-size: $size-xs;
+  color: $color-paleta1-primary;
+} // text style 3

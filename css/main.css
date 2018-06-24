@@ -10,12 +10,6 @@ body {
   height: 100vh;
 }
 
-input {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-}
-
 .btn_card {
   width: 199px;
   height: 50px;
@@ -62,7 +56,7 @@ input {
   border: none;
 }
 
-.color-palette {
+.palette {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -147,44 +141,73 @@ input {
   padding-left: 12px;
 }
 
-.icon-style-small {
+.icon-style--small {
   font-size: 18px;
   color: #e17334;
 }
 
-.icon-style-large {
+.icon-style--extra-large {
   font-size: 28px;
   color: #e17334;
-  text-align: center;
 }
 
-.text-style-small {
-  font-family: "Open Sans", sans-serif;
-  font-size: 13px;
-  color: #114e4e;
-}
-
-.text-style-regular {
-  font-family: "Comic Sans MS", sans-serif;
-  font-size: 16px;
-  color: #54585a;
-  text-align: center;
-}
-
-.text-style-semibold {
-  font-family: "Open Sans", sans-serif;
-  font-size: 16px;
-  font-weight: 600;
-  color: #fff;
-  text-align: center;
-}
-
-.text-style-large {
+.text-style--medium-large {
   font-family: "Merriweather", serif;
   font-size: 19px;
   font-weight: 700;
   color: #e17334;
-  text-align: center;
+}
+
+.text__dark--regular {
+  font-family: "Comic Sans MS", sans-serif;
+  font-size: 16px;
+  color: #54585a;
+}
+
+.text__dark--semibold {
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  color: #54585a;
+}
+
+.text__dark--small {
+  font-family: "Open Sans", sans-serif;
+  font-size: 14px;
+  text-transform: uppercase;
+  color: #54585a;
+}
+
+.text__dark--title {
+  font-family: "Open Sans", sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: #54585a;
+}
+
+.text__optional--ubuntu {
+  font-family: "Ubuntu", sans-serif;
+  font-size: 16px;
+  color: #54585a;
+}
+
+.text__optional--comic {
+  font-family: "Comic Sans MS", sans-serif;
+  font-size: 16px;
+  color: #54585a;
+}
+
+.text__optional--mont {
+  font-family: "Montserrat", serif;
+  font-size: 16px;
+  color: #54585a;
+}
+
+.text-style--extra-small {
+  font-family: "Open Sans", sans-serif;
+  font-size: 13px;
+  color: #114e4e;
 }
 
 .form_header {
