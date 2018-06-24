@@ -3,12 +3,52 @@
 .title-header {
   display: flex;
   justify-content: space-between;
-  padding: 0 20px;
+  padding: 27px 20px 0px 20px;
+}
+
+.icon__primary--medium {
+  padding-right: 10px;
+}
+
+.design__container {
+  margin: 25px 20px 30px 40px;
+}
+
+.item-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.item-container--color {
+  margin-bottom: 36px;
+}
+
+.radio-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.label-design {
+  margin-left: 4px;
 }
 
 .palette {
   display: flex;
   align-items: center;
+}
+
+.palette--margin {
+  margin-bottom: 20px;
+}
+
+.font {
+  display: flex;
+  align-items: center;
+}
+
+.font--margin {
+  margin-bottom: 9px;
 }
 
 .label-design {
