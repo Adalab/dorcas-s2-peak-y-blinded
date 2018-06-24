@@ -56,6 +56,16 @@ body {
   border: none;
 }
 
+.title-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  padding: 0 20px;
+}
+
 .palette {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -141,12 +151,12 @@ body {
   padding-left: 12px;
 }
 
-.icon-style--small {
+.icon__primary--medium {
   font-size: 18px;
   color: #e17334;
 }
 
-.icon-style--extra-large {
+.icon__primary--extra-large {
   font-size: 28px;
   color: #e17334;
 }
@@ -156,6 +166,11 @@ body {
   font-size: 19px;
   font-weight: 700;
   color: #e17334;
+}
+
+.icon__dark--medium {
+  font-size: 18px;
+  color: #54585a;
 }
 
 .text__dark--regular {
