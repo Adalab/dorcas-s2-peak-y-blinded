@@ -16,8 +16,8 @@ input {
   appearance: none;
 }
 
-p {
-  margin: 0;
+a {
+  text-decoration: none;
 }
 
 .btn-card {
@@ -160,7 +160,7 @@ p {
 
 .share__title {
   margin: 0;
-  padding-left: 12px;
+  padding-left: 10px;
 }
 
 .icon-style-small {
@@ -265,7 +265,6 @@ p {
 }
 
 .card-link {
-  text-decoration: none;
   color: #e17334;
 }
 
