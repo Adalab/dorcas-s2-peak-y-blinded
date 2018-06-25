@@ -12,20 +12,13 @@
   height: 367px;
   width: 240px;
   background-color: $color-light;
-
 }
 
-.boton_reset {
-  display: flex;
-  height: 30px;
-  width: 75px;
-  border: 1px solid $color-light;
-  border-radius: 15px;
-  margin-top: 10px;
-  margin-left: 45px;
-  margin-bottom: 20px;
-  align-items: center;
-  justify-content: center;
+.titles_container {
+  margin-top: 20px;
+  margin-bottom: 10px;
+  padding-left: 15px;
+  border-left: 5px solid $color-paleta1-terciary;
 }
 
 .personal_info {
