@@ -12,7 +12,7 @@ body {
   color: #54585a;
 }
 
-input {
+.input {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
@@ -64,13 +64,78 @@ input {
   border: none;
 }
 
-.color-palette {
+.legend__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  padding: 27px 20px 0px 20px;
+}
+
+.icon__primary--medium {
+  padding-right: 10px;
+}
+
+.design__container {
+  margin: 25px 20px 30px 40px;
+}
+
+.item-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+}
+
+.item-container--color {
+  margin-bottom: 36px;
+}
+
+.radio-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.label-design {
+  margin-left: 4px;
+}
+
+.palette {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+}
+
+.palette--margin {
+  margin-bottom: 20px;
+}
+
+.font {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.font--margin {
+  margin-bottom: 9px;
 }
 
 .label-design {
@@ -303,51 +368,130 @@ select {
   padding-left: 12px;
 }
 
-.icon-style-small {
+.icon__primary--medium {
   font-size: 18px;
   color: #e17334;
 }
 
-.icon-style-large {
+.icon__primary--extra-large {
   font-size: 28px;
   color: #e17334;
-  text-align: center;
 }
 
-.text-style-small {
+.text-style--medium-large {
+  font-family: "Merriweather", serif;
+  font-size: 19px;
+  font-weight: 700;
+  color: #e17334;
+}
+
+.icon__dark--medium {
+  font-size: 18px;
+}
+
+.text__dark--regular {
+  font-family: "Comic Sans MS", sans-serif;
+  font-size: 16px;
+}
+
+.text__dark--semibold {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.text__dark--small {
+  font-size: 14px;
+  text-transform: uppercase;
+}
+
+.text__dark--title {
+  font-size: 18px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.text__optional--ubuntu {
+  font-family: "Ubuntu", sans-serif;
+  font-size: 16px;
+}
+
+.text__optional--comic {
+  font-family: "Comic Sans MS", sans-serif;
+  font-size: 16px;
+}
+
+.text__optional--mont {
+  font-family: "Montserrat", serif;
+  font-size: 16px;
+}
+
+.text-style--extra-small {
   font-family: "Open Sans", sans-serif;
   font-size: 13px;
   color: #114e4e;
 }
 
-.text-style-regular {
-  font-family: "Comic Sans MS", sans-serif;
-  font-size: 16px;
-  color: #54585a;
-  text-align: center;
+.icon__primary--medium {
+  font-size: 18px;
+  color: #e17334;
 }
 
-.text-style-semibold {
-  font-family: "Open Sans", sans-serif;
-  font-size: 16px;
-  font-weight: 600;
-  color: #fff;
-  text-align: center;
+.icon__primary--extra-large {
+  font-size: 28px;
+  color: #e17334;
 }
 
-.text-style-large {
+.text-style--medium-large {
   font-family: "Merriweather", serif;
   font-size: 19px;
   font-weight: 700;
   color: #e17334;
-  text-align: center;
 }
 
-.legend__title {
-  color: #54585a;
+.icon__dark--medium {
+  font-size: 18px;
+}
+
+.text__dark--regular {
+  font-family: "Comic Sans MS", sans-serif;
+  font-size: 16px;
+}
+
+.text__dark--semibold {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.text__dark--small {
+  font-size: 14px;
+  text-transform: uppercase;
+}
+
+.text__dark--title {
   font-size: 18px;
   font-weight: 600;
   text-transform: uppercase;
+}
+
+.text__optional--ubuntu {
+  font-family: "Ubuntu", sans-serif;
+  font-size: 16px;
+}
+
+.text__optional--comic {
+  font-family: "Comic Sans MS", sans-serif;
+  font-size: 16px;
+}
+
+.text__optional--mont {
+  font-family: "Montserrat", serif;
+  font-size: 16px;
+}
+
+.text-style--extra-small {
+  font-family: "Open Sans", sans-serif;
+  font-size: 13px;
+  color: #114e4e;
 }
 
 .item__label {
