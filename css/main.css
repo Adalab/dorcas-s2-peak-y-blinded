@@ -226,9 +226,32 @@ p {
 }
 
 .section1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
   height: 457px;
   background: -webkit-gradient(linear, left top, left bottom, from(#bfcdd0), to(#dde9ed));
   background: linear-gradient(#bfcdd0, #dde9ed);
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.section1_container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  height: 367px;
+  width: 240px;
+  background-color: #fff;
 }
 
 .boton_reset {
@@ -239,12 +262,22 @@ p {
   width: 75px;
   border: 1px solid #fff;
   border-radius: 15px;
+  margin-top: 10px;
+  margin-left: 45px;
+  margin-bottom: 20px;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
+}
+
+.personal_info {
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  text-align: center;
 }
 
 .card_created {

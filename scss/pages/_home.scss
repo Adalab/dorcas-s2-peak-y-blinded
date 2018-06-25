@@ -1,6 +1,18 @@
 .section1 {
+  display: flex;
+  flex-direction: column;
   height: 457px;
   background: linear-gradient($color-gradient-dark, $color-gradient-light);
+  align-items: center;
+}
+
+.section1_container {
+  display: flex;
+  flex-direction: column;
+  height: 367px;
+  width: 240px;
+  background-color: $color-light;
+
 }
 
 .boton_reset {
@@ -9,8 +21,16 @@
   width: 75px;
   border: 1px solid $color-light;
   border-radius: 15px;
+  margin-top: 10px;
+  margin-left: 45px;
+  margin-bottom: 20px;
   align-items: center;
   justify-content: center;
+}
+
+.personal_info {
+  justify-content: center;
+  text-align: center;
 }
 
 .card_created {
