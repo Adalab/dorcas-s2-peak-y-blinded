@@ -16,10 +16,13 @@ input {
   appearance: none;
 }
 
-.btn_card {
+p {
+  margin: 0;
+}
+
+.btn-card {
   width: 199px;
   height: 50px;
-  margin: 30px auto;
   background-color: #e17334;
   border-radius: 12px;
   -webkit-box-shadow: 0 1px 6px 0 rgba(0, 0, 0, 0.32);
@@ -31,11 +34,19 @@ input {
   display: flex;
   -ms-flex-pack: distribute;
   justify-content: space-around;
+  -webkit-transition: color ease 0.1s;
+  transition: color ease 0.1s;
 }
 
-.btn_twitter {
-  display: block;
-  margin: 10px auto 30px auto;
+.btn-card:active {
+  background-color: #d5d5d5;
+}
+
+.btn-card--position {
+  margin: 30px auto;
+}
+
+.btn-twitter {
   width: 181px;
   height: 30px;
   background-color: #00a0f5;
@@ -46,7 +57,12 @@ input {
   cursor: pointer;
 }
 
-.btn_arrow {
+.btn-twitter--position {
+  display: block;
+  margin: 10px auto 30px auto;
+}
+
+.btn-arrow {
   width: 16px;
   height: 18px;
   background-color: #fff;
@@ -118,7 +134,7 @@ input {
   background-color: #a0c0cf;
 }
 
-.share_header {
+.share__header {
   margin-top: 10px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -128,7 +144,7 @@ input {
   justify-content: space-between;
 }
 
-.share_icon_title {
+.share__icon-title {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -138,11 +154,11 @@ input {
   flex-direction: row;
 }
 
-.share_icon {
+.share__icon {
   color: #e17334;
 }
 
-.share_title {
+.share__title {
   margin: 0;
   padding-left: 12px;
 }
@@ -187,7 +203,7 @@ input {
   text-align: center;
 }
 
-.form_header {
+.form-header {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   display: -webkit-box;
@@ -196,7 +212,7 @@ input {
   padding-left: 40px;
 }
 
-.awesome_header {
+.header--image {
   width: 201px;
   height: 51px;
   margin: 30px 0;
@@ -205,22 +221,13 @@ input {
   background-repeat: no-repeat;
 }
 
-p {
-  margin: 0;
-}
-
-.footer {
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-}
-
-.footer_content {
+.footer__content {
   padding-bottom: 20px;
   text-align: center;
   border-top: 1px solid #d8d8d8;
 }
 
-.copyrigth {
+.footer__copyrigth {
   padding-top: 20px;
   padding-bottom: 10px;
 }
@@ -247,17 +254,17 @@ p {
   justify-content: center;
 }
 
-.card_created {
+.card-created {
   text-align: center;
 }
 
-.card_created_title {
+.card-created__title {
   margin: 0;
   padding-top: 20px;
   padding-bottom: 5px;
 }
 
-.card_link {
+.card-link {
   text-decoration: none;
   color: #e17334;
 }

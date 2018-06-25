@@ -48,22 +48,22 @@
   background-color: $color-paleta3-terciary;
 }
 
-.share_header {
+.share__header {
   margin-top: 10px;
   display: flex;
   justify-content: space-between;
 }
 
-.share_icon_title {
+.share__icon-title {
   display: flex;
   flex-direction: row;
 }
 
-.share_icon {
+.share__icon {
   color: $color-primary;
 }
 
-.share_title {
+.share__title {
   margin: 0;
   padding-left: 12px;
 }

@@ -1,23 +1,10 @@
-p {
-  margin: 0;
-}
-
-.footer {
-  box-sizing: border-box;
-  // border: 1px solid red;
-}
-
-.footer_content {
+.footer__content {
   padding-bottom: 20px;
   text-align: center;
   border-top: 1px solid $color-medium-light;
 }
 
-.copyrigth {
+.footer__copyrigth {
   padding-top: 20px;
   padding-bottom: 10px;
 }
-
-// .adalab_logo {
-//   padding-bottom: 20px;
-// }
