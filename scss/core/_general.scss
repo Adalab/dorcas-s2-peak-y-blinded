@@ -5,12 +5,18 @@
 }
 
 body {
-  width: 100%;
+  width: 100vw;
   height: 100vh;
+  font-family: $font-primary;
+  color: $color-medium-dark-dark;
 }
 
-input {
+.input {
   -webkit-appearance: none;
-  -moz-appearance:    none;
-  appearance:         none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+a {
+  text-decoration: none;
 }

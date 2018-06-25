@@ -9,8 +9,8 @@
 </head>
 <body>
   <div class="wrapper">
-    <header class="form_header">
-      <div class="awesome_header">
+    <header class="form-header">
+      <div class="header--image">
         <!-- <a href="#">
         <img src="../images/awesome-profile-cards-logo.svg" alt="awesome logo">
       </a> -->
@@ -18,27 +18,30 @@
   </header>
   <main>
     <section class="section1">
-      <div class="boton_reset">
-        <i class="far fa-trash-alt"></i>
-        <input type="reset" value="Reset">
-      </div>
-      <div class="info_personal">
+
+        <div class="boton_reset">
+          <i class="far fa-trash-alt"></i>
+          <input type="reset" value="Reset">
+        </div>
+        <div class="section1_container">
         <div class="info_personal">
-          <h1 class="firstLastName"> nombre apellido</h1>
-          <h2 class="personalDescription">Front-end developer</h2>
-          <img src="http://placehold.it/240x200/880000/00ff00" alt="foto personal">
-          <div class="contact">
-            <a class="contact__mobile" href="#"><i class="fas fa-mobile-alt"></i></a>
-            <a class="contact__envelope" href="#"><i class="far fa-envelope"></i></a>
-            <a class="contact__linkedin" href="#"><i class="fab fa-linkedin-in"></i></a>
-            <a class="contact__github" href="#"><i class="fab fa-github-alt"></i></a>
-          </div>
-          <div class="skills">
-            <ul class="skills__list">
-              <li class="skills__item"></li>
-              <li class="skills__item"></li>
-              <li class="skills__item"></li>
-            </ul>
+          <div class="info_personal">
+            <h1 class="firstLastName"> nombre apellido</h1>
+            <h2 class="personalDescription">Front-end developer</h2>
+            <img src="http://placehold.it/240x200/880000/00ff00" alt="foto personal">
+            <div class="contact">
+              <a class="contact__mobile" href="#"><i class="fas fa-mobile-alt"></i></a>
+              <a class="contact__envelope" href="#"><i class="far fa-envelope"></i></a>
+              <a class="contact__linkedin" href="#"><i class="fab fa-linkedin-in"></i></a>
+              <a class="contact__github" href="#"><i class="fab fa-github-alt"></i></a>
+            </div>
+            <div class="skills">
+              <ul class="skills__list">
+                <li class="skills__item"></li>
+                <li class="skills__item"></li>
+                <li class="skills__item"></li>
+              </ul>
+            </div>
           </div>
         </div>
       </div>
@@ -47,113 +50,142 @@
     <!-- FORMULARIO DISEÑA -->
 
     <form class="form" action="index.html" method="post">
-      <fieldset>
-        <legend>diseña</legend>
-        <div class="">colores</div>
-        <div class="color-palette">
-          <input id="color1" type="radio" name="colorpalette">
-          <label for="color1" class="label-design">
-            <div class="palette-box colorp1"></div>
-            <div class="palette-box colorp2"></div>
-            <div class="palette-box colorp3"></div>
-          </label>
+      <div class="legend__container">
+        <legend class="fieldset__legend"><i class="far fa-object-ungroup icon__primary--medium"></i><span class="text__dark--title">diseña</span></legend>
+        <button class="btn_arrow" type="button" name="button"><i class="fas fa-angle-up icon__dark--medium"></i></button>
+      </div>
+      <div class="design__container">
+        <div class="item-container item-container--color">
+          <div class="text__dark--small">colores</div>
+          <div class="radio-container">
+            <div class="palette palette--margin">
+              <input id="color1" type="radio" name="colorpalette">
+              <label for="color1" class="label-design">
+                <div class="palette-box colorp1"></div>
+                <div class="palette-box colorp2"></div>
+                <div class="palette-box colorp3"></div>
+              </label>
+            </div>
+            <div class="palette palette--margin">
+              <input id="color2" type="radio" name="colorpalette">
+              <label for="color2" class="label-design">
+                <div class="palette-box colorp4"></div>
+                <div class="palette-box colorp5"></div>
+                <div class="palette-box colorp6"></div>
+              </label>
+            </div>
+            <div class="palette">
+              <input id="color3" type="radio" name="colorpalette">
+              <label for="color3" class="label-design">
+                <div class="palette-box colorp7"></div>
+                <div class="palette-box colorp8"></div>
+                <div class="palette-box colorp9"></div>
+              </label>
+            </div>
+          </div>
         </div>
-        <div class="color-palette">
-          <input id="color2" type="radio" name="colorpalette">
-          <label for="color2" class="label-design">
-            <div class="palette-box colorp4"></div>
-            <div class="palette-box colorp5"></div>
-            <div class="palette-box colorp6"></div>
-          </label>
+        <div class="item-container">
+          <div class="text__dark--small">fuentes</div>
+          <div class="radio-container">
+            <div class="font font--margin">
+              <input id="font1" type="radio" name="font">
+              <label for="font1" class="text__optional--ubuntu label-design">Ubuntu</label>
+            </div>
+            <div class="font font--margin">
+              <input id="font2" type="radio" name="font">
+              <label for="font2" class="text__optional--comic label-design">Comic Sans</label>
+            </div>
+            <div class="font">
+              <input id="font3" type="radio" name="font">
+              <label for="font3" class="text__optional--mont label-design">Montserrat</label>
+            </div>
+          </div>
         </div>
-        <div class="color-palette">
-          <input id="color3" type="radio" name="colorpalette">
-          <label for="color3" class="label-design">
-            <div class="palette-box colorp7"></div>
-            <div class="palette-box colorp8"></div>
-            <div class="palette-box colorp9"></div>
-          </label>
-        </div>
-
-        <div class="">fuentes</div>
-        <div class="">
-          <input id="font1" type="radio" name="font">
-          <label for="font1">Ubuntu</label>
-          <input id="font2" type="radio" name="font">
-          <label for="font2">Comic Sans</label>
-          <input id="font3" type="radio" name="font">
-          <label for="font1">Montserrat</label>
-        </div>
-      </fieldset>
-
+      </div>
       <!-- FORMULARIO-RELLENA -->
 
-      <fieldset class="fieldset">
-        <legend class="fieldset__legend">Rellena</legend>
+      <div class="fieldset">
+        <div class="legend__container">
+          <div class="legend">
+            <i class="legend__icon far fa-keyboard"></i>
+            <h1 class="legend__title">Rellena</h1>
+          </div>
+          <span class="legend__arrow"><i class="fas fa-angle-down"></i></span>
+        </div>
         <div class="item">
           <label class="item__label" for="name">Nombre completo</label>
-          <input class="item__input" id="name" type="text" name="name" placeholder="Ej: Sally Jill" required>
+          <input class="input item__input" id="name" type="text" name="name" placeholder="Ej: Sally Jill" required>
         </div>
         <div class="item">
           <label class="item__label" for="job">Puesto</label>
-          <input class="item__input" id="job" type="text" name="job" placeholder="Ej: Front-end unicorn" required>
+          <input class="input item__input" id="job" type="text" name="job" placeholder="Ej: Front-end unicorn" required>
         </div>
         <div class="item">
           <label class="item__label" for="image">Imagen de perfil</label>
-          <input class="item__button-file" id="image" type="file" name="image" required>
+          <input class= "input" id="image" type="file" name="image" required>
+          <div class="item__button-container">
+            <span class="item__button-file item__button-label">Añadir imagen</span>
+            <input class="input item__button-checkbox" type="checkbox">
+          </div>
         </div>
         <div class="item">
           <label class="item__label" for="mail">Email</label>
-          <input class="item__input"
+          <input class="input item__input"
           id="mail" type="email" name="mail" placeholder="Ej: sally-hill@gmail.com" required>
         </div>
         <div class="item">
           <label class="item__label" for="telephone">Teléfono</label>
-          <input class="item__input" id="telephone" type="tel" name="telephone" placeholder="Ej: 555-55-55-55" required>
+          <input class="input item__input" id="telephone" type="tel" name="telephone" placeholder="Ej: 555-55-55-55" required>
         </div>
         <div class="item">
           <label class="item__label" for="linkedin">Linkedin</label>
-          <input class="item__input" id="linkedin" type="text" name="linkedin" placeholder="Ej: linkedin.com/in/sally.hill" required>
+          <input class="input item__input" id="linkedin" type="text" name="linkedin" placeholder="Ej: linkedin.com/in/sally.hill" required>
         </div>
         <div class="item">
           <label class="item__label" for="github">Github</label>
-          <input class="item__input" id="github" type="text" name="github" placeholder="Ej: @sally-hill" required>
+          <input class="input item__input" id="github" type="text" name="github" placeholder="Ej: @sally-hill" required>
         </div>
         <div class="item">
-          <label class="item__label" for="abilities">Habilidades</label>
-          <select class="item__select" id="abilities" class="" name="abilities" required>
-            <option value="HTML"></option>
-          </select>
-          <select class="item__select" id="abilities" class="" name="abilities" required>
-            <option value="CSS"></option>
-          </select>
+          <label class="item__label" for="abilities">Habilidades (máximo 3)</label>
+          <div class="item__select-container">
+            <select class="item__select" id="abilities" name="abilities" required>
+              <option value="HTML"></option>
+            </select>
+            <div class="item__select-button"><i class="fas fa-minus"></i></div>
+          </div>
+          <div class="item__select-container">
+            <select class="item__select" id="abilities" name="abilities" required>
+              <option value="CSS"></option>
+            </select>
+            <div class="item__select-button"><i class="fas fa-plus"></i></div>
+          </div>
         </div>
-      </fieldset>
+      </div>
     </form>
 
-      <!-- FORMULARIO-COMPARTE -->
+    <!-- FORMULARIO-COMPARTE -->
 
     <section class="share">
-      <div class="share_header">
-        <div class="share_icon_title">
-          <i class="share_icon fas fa-share-alt"></i>
-          <h2 class="share_title">COMPARTE</h2>
+      <div class="share__header">
+        <div class="share__icon-title">
+          <i class="share__icon fas fa-share-alt"></i>
+          <h2 class="share__title">COMPARTE</h2>
         </div>
-        <button class="btn_arrow" type="button" name="button"><i class="fas fa-angle-up"></i></button>
+        <button class="btn-arrow" type="button" name="button"><i class="fas fa-angle-up"></i></button>
       </div>
-      <button class="btn_card" type="button" name="button"><i class="far fa-address-card"></i>CREAR TARJETA</button>
-      <div class="card_created">
-        <h3 class="card_created_title">La tarjeta ha sido creada:</h3>
-        <a class="card_link"  href="#">https://awesome-profile-card.com?id=A456DF0001</a>
-        <button class="btn_twitter" type="button" name="button"><i class="fab fa-twitter"></i>Compartir en twitter</button>
+      <button class="btn-card btn-card--position" type="submit" name="button"><i class="far fa-address-card"></i>CREAR TARJETA</button>
+      <div class="card-created">
+        <h3 class="card-created__title">La tarjeta ha sido creada:</h3>
+        <a class="card-link"  href="#">https://awesome-profile-card.com?id=A456DF0001</a>
+        <button class="btn-twitter btn-twitter--position" type="button" name="button"><i class="fab fa-twitter"></i>Compartir en twitter</button>
       </div>
     </section>
   </main>
 
   <footer class="footer">
-    <div class="footer_content">
-      <p class="copyrigth">Awesome profile-cards @2018</p>
-      <a class="adalab_logo" href="http://adalab.es/" target="_blank"> <img src="../images/logo-adalab.png" alt="adalab logo"> </a>
+    <div class="footer__content">
+      <p class="footer__copyrigth">Awesome profile-cards @2018</p>
+      <a class="footer--adalab-logo" href="http://adalab.es/" target="_blank"> <img src="../images/logo-adalab.png" alt="adalab logo"> </a>
     </div>
   </footer>
 
