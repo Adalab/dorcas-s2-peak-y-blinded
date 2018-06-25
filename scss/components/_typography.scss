@@ -21,35 +21,27 @@
 
 .icon__dark--medium {
   font-size: $size-m;
-  color: $color-medium-dark-dark;
 }
 
 .text__dark--regular {
   font-family: $font-optional-2;
   font-size: $size-sm;
-  color: $color-medium-dark-dark;
 } // text style 6
 
 .text__dark--semibold {
-  font-family: $font-primary;
   font-size: $size-sm;
   font-weight: $weight-semibold;
-  color: $color-medium-dark-dark;
 } // text style 5 - dark!
 
 .text__dark--small {
-  font-family: $font-primary;
   font-size: $size-s;
   text-transform: uppercase;
-  color: $color-medium-dark-dark;
 } // colores, fuentes - esther
 
 .text__dark--title {
-  font-family: $font-primary;
   font-size: $size-m;
   font-weight: $weight-semibold;
   text-transform: uppercase;
-  color: $color-medium-dark-dark;
 } // titulos del formulario diseña, rellena, comparte
 
 // Optional fonts
@@ -57,19 +49,16 @@
 .text__optional--ubuntu {
   font-family: $font-optional-1;
   font-size: $size-sm;
-  color: $color-medium-dark-dark;
 }
 
 .text__optional--comic {
   font-family: $font-optional-2;
   font-size: $size-sm;
-  color: $color-medium-dark-dark;
 }
 
 .text__optional--mont {
   font-family: $font-optional-3;
   font-size: $size-sm;
-  color: $color-medium-dark-dark;
 }
 
 // Otros

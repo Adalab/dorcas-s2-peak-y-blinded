@@ -225,53 +225,42 @@ body {
 
 .icon__dark--medium {
   font-size: 18px;
-  color: #54585a;
 }
 
 .text__dark--regular {
   font-family: "Comic Sans MS", sans-serif;
   font-size: 16px;
-  color: #54585a;
 }
 
 .text__dark--semibold {
-  font-family: "Open Sans", sans-serif;
   font-size: 16px;
   font-weight: 600;
-  color: #54585a;
 }
 
 .text__dark--small {
-  font-family: "Open Sans", sans-serif;
   font-size: 14px;
   text-transform: uppercase;
-  color: #54585a;
 }
 
 .text__dark--title {
-  font-family: "Open Sans", sans-serif;
   font-size: 18px;
   font-weight: 600;
   text-transform: uppercase;
-  color: #54585a;
 }
 
 .text__optional--ubuntu {
   font-family: "Ubuntu", sans-serif;
   font-size: 16px;
-  color: #54585a;
 }
 
 .text__optional--comic {
   font-family: "Comic Sans MS", sans-serif;
   font-size: 16px;
-  color: #54585a;
 }
 
 .text__optional--mont {
   font-family: "Montserrat", serif;
   font-size: 16px;
-  color: #54585a;
 }
 
 .text-style--extra-small {
