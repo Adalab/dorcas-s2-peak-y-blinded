@@ -1,3 +1,5 @@
+//DISEÑA
+
 .color-palette {
   display: flex;
   align-items: center;
@@ -47,6 +49,121 @@
 .colorp9 {
   background-color: $color-paleta3-terciary;
 }
+
+//RELLENA
+
+.fieldset {
+  width: 88%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  margin: 0 20px 0 20px;
+  border-bottom: solid 1px $color-medium-light;
+  border-width: 88%;
+  padding-bottom: 15px;
+}
+
+.legend__container {
+  width: 100%;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.legend {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.legend__icon {
+  color: $color-primary;
+  font-size: $size-m;
+}
+
+.legend__arrow {
+  font-size: $size-m;
+  color: $color-medium-dark-dark;
+}
+
+.item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.item__input {
+  width: 100%;
+  height: 30px;
+  margin-top: 5px;
+  margin-bottom: 20px;
+  border: solid 1px $color-paleta1-terciary;
+}
+
+input[type=file] {
+  width: 0.1px;
+  height: 0.1px;
+  opacity: 0;
+  overflow: hidden;
+  position: absolute;
+  z-index: -1;
+}
+
+.item__button-container {
+  display: flex;
+  margin-top: 5px;
+  margin-bottom: 20px;
+}
+
+.item__button-file {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  height: 30px;
+  margin-right: 20px;
+  background-color: $color-primary;
+  border-radius: 3px;
+}
+
+.item__button-checkbox {
+  width: 30px;
+  height: 30px;
+  border: solid 1px $color-paleta1-terciary;
+}
+
+.item__select-container {
+  display: flex;
+  align-items: center;
+  height: 30px;
+  margin-top: 5px;
+  margin-bottom: 15px;
+}
+
+select {
+  width: 55%;
+  height: 30px;
+  background-color: inherit;
+  border: solid 1px $color-paleta1-terciary;
+  border-radius: 4px;
+}
+
+.item__select-button {
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 20px;
+  border: solid 1px $color-primary;
+  border-radius: 15px;
+  color: $color-primary;
+  font-size: $size-m;
+}
+
+//COMPARTE
 
 .share_header {
   margin-top: 10px;

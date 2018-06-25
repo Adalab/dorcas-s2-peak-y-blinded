@@ -37,3 +37,22 @@
   color: $color-primary;
   text-align: center;
 } // text style 2
+
+//.text__dark--title
+.legend__title {
+  color: $color-medium-dark-dark;
+  font-size: $size-m;
+  font-weight: $weight-semibold;
+  text-transform: uppercase;
+}
+
+.item__label {
+  color: $color-paleta1-primary;
+  font-size: $size-s;
+  line-height: 20px;
+}
+
+.item__button-label {
+  font-size: $size-s;
+  color: $color-light;
+}

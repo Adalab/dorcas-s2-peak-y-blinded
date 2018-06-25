@@ -88,8 +88,14 @@
 
       <!-- FORMULARIO-RELLENA -->
 
-      <fieldset class="fieldset">
-        <legend class="fieldset__legend">Rellena</legend>
+      <div class="fieldset">
+        <div class="legend__container">
+          <div class="legend">
+            <i class="legend__icon far fa-keyboard"></i>
+            <h1 class="legend__title">Rellena</h1>
+          </div>
+          <span class="legend__arrow"><i class="fas fa-angle-down"></i></span>
+        </div>
         <div class="item">
           <label class="item__label" for="name">Nombre completo</label>
           <input class="item__input" id="name" type="text" name="name" placeholder="Ej: Sally Jill" required>
@@ -100,7 +106,11 @@
         </div>
         <div class="item">
           <label class="item__label" for="image">Imagen de perfil</label>
-          <input class="item__button-file" id="image" type="file" name="image" required>
+          <input id="image" type="file" name="image" required>
+          <div class="item__button-container">
+            <span class="item__button-file item__button-label">Añadir imagen</span>
+            <input class="item__button-checkbox" type="checkbox">
+          </div>
         </div>
         <div class="item">
           <label class="item__label" for="mail">Email</label>
@@ -120,18 +130,24 @@
           <input class="item__input" id="github" type="text" name="github" placeholder="Ej: @sally-hill" required>
         </div>
         <div class="item">
-          <label class="item__label" for="abilities">Habilidades</label>
-          <select class="item__select" id="abilities" class="" name="abilities" required>
-            <option value="HTML"></option>
-          </select>
-          <select class="item__select" id="abilities" class="" name="abilities" required>
-            <option value="CSS"></option>
-          </select>
+          <label class="item__label" for="abilities">Habilidades (máximo 3)</label>
+          <div class="item__select-container">
+            <select class="item__select" id="abilities" name="abilities" required>
+              <option value="HTML"></option>
+            </select>
+            <div class="item__select-button"><i class="fas fa-minus"></i></div>
+          </div>
+          <div class="item__select-container">
+            <select class="item__select" id="abilities" name="abilities" required>
+              <option value="CSS"></option>
+            </select>
+            <div class="item__select-button"><i class="fas fa-plus"></i></div>
+          </div>
         </div>
-      </fieldset>
+      </div>
     </form>
 
-      <!-- FORMULARIO-COMPARTE -->
+    <!-- FORMULARIO-COMPARTE -->
 
     <section class="share">
       <div class="share_header">
