@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 .boton_reset {
   display: flex;
   height: 30px;
@@ -19,9 +20,11 @@
 }
 
 .btn_card {
+=======
+.btn-card {
+>>>>>>> 9c4b2a3e401b25829f57342f14ca7efa2435f0ce
   width: 199px;
   height: 50px;
-  margin: 30px auto;
   background-color: $color-primary;
   border-radius: 12px;
   box-shadow: 0 1px 6px 0 rgba(0, 0, 0, 0.32);
@@ -29,25 +32,32 @@
   cursor: pointer;
   display: flex;
   justify-content: space-around;
-  // transition: color ease 0.1s;
-  // &:active {
-  //   color: #d5d5d5;
-  // }
+  transition: color ease 0.1s;
+  &:active {
+    background-color: $color-submit-button;
+  }
 }
 
-.btn_twitter {
-  display: block;
-  margin: 10px auto 30px auto;
+.btn-card--position {
+  margin: 30px auto;
+}
+
+.btn-twitter {
   width: 181px;
   height: 30px;
-  background-color: #00a0f5;
+  background-color: $color-twitter-button;
   border-radius: 3px;
   box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.32);
   color: $color-light;
   cursor: pointer;
 }
 
-.btn_arrow {
+.btn-twitter--position {
+  display: block;
+  margin: 10px auto 30px auto;
+}
+
+.btn-arrow {
   width: 16px;
   height: 18px;
   background-color: $color-light;

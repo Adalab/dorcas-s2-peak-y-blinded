@@ -13,42 +13,123 @@
   font-weight: $weight-regular;
 }
 
-.icon-style-small {
+// Color primary
+.icon__primary--medium {
   font-size: $size-m;
   color: $color-primary;
 } // text style
-
-.icon-style-large {
+.icon__primary--extra-large {
   font-size: $size-xl;
   color: $color-primary;
-  text-align: center;
 } // text style 4
-
-.text-style-small {
+.text-style--medium-large {
+  font-family: $font-secondary;
+  font-size: $size-ml;
+  font-weight: $weight-bold;
+  color: $color-primary;
+} // text style 2
+// Color dark-dark
+.icon__dark--medium {
+  font-size: $size-m;
+}
+.text__dark--regular {
+  font-family: $font-optional-2;
+  font-size: $size-sm;
+} // text style 6
+.text__dark--semibold {
+  font-size: $size-sm;
+  font-weight: $weight-semibold;
+} // text style 5 - dark!
+.text__dark--small {
+  font-size: $size-s;
+  text-transform: uppercase;
+} // colores, fuentes - esther
+.text__dark--title {
+  font-size: $size-m;
+  font-weight: $weight-semibold;
+  text-transform: uppercase;
+} // titulos del formulario diseña, rellena, comparte
+// Optional fonts
+.text__optional--ubuntu {
+  font-family: $font-optional-1;
+  font-size: $size-sm;
+}
+.text__optional--comic {
+  font-family: $font-optional-2;
+  font-size: $size-sm;
+}
+.text__optional--mont {
+  font-family: $font-optional-3;
+  font-size: $size-sm;
+}
+// Otros
+.text-style--extra-small {
+  font-family: $font-primary;
+  font-size: $size-xs;
+  color: $color-paleta1-primary;
+} // text style 3// Color primary
+.icon__primary--medium {
+  font-size: $size-m;
+  color: $color-primary;
+} // text style
+.icon__primary--extra-large {
+  font-size: $size-xl;
+  color: $color-primary;
+} // text style 4
+.text-style--medium-large {
+  font-family: $font-secondary;
+  font-size: $size-ml;
+  font-weight: $weight-bold;
+  color: $color-primary;
+} // text style 2
+// Color dark-dark
+.icon__dark--medium {
+  font-size: $size-m;
+}
+.text__dark--regular {
+  font-family: $font-optional-2;
+  font-size: $size-sm;
+} // text style 6
+.text__dark--semibold {
+  font-size: $size-sm;
+  font-weight: $weight-semibold;
+} // text style 5 - dark!
+.text__dark--small {
+  font-size: $size-s;
+  text-transform: uppercase;
+} // colores, fuentes - esther
+.text__dark--title {
+  font-size: $size-m;
+  font-weight: $weight-semibold;
+  text-transform: uppercase;
+} // titulos del formulario diseña, rellena, comparte
+// Optional fonts
+.text__optional--ubuntu {
+  font-family: $font-optional-1;
+  font-size: $size-sm;
+}
+.text__optional--comic {
+  font-family: $font-optional-2;
+  font-size: $size-sm;
+}
+.text__optional--mont {
+  font-family: $font-optional-3;
+  font-size: $size-sm;
+}
+// Otros
+.text-style--extra-small {
   font-family: $font-primary;
   font-size: $size-xs;
   color: $color-paleta1-primary;
 } // text style 3
 
-.text-style-regular {
-  font-family: $font-optional-2;
-  font-size: $size-sm;
-  color: $color-medium-dark-dark;
-  text-align: center;
-} // text style 6
+.item__label {
+  color: $color-paleta1-primary;
+  font-size: $size-s;
+  line-height: 20px;
+ }
 
-.text-style-semibold {
-  font-family: $font-primary;
-  font-size: $size-sm;
-  font-weight: $weight-semibold;
+ .item__button-label {
+  font-size: $size-s;
   color: $color-light;
-  text-align: center;
-} // text style 5
-
-.text-style-large {
-  font-family: $font-secondary;
-  font-size: $size-ml;
-  font-weight: $weight-bold;
-  color: $color-primary;
-  text-align: center;
-} // text style 2
+ }

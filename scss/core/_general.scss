@@ -5,13 +5,22 @@
 }
 
 body {
-  width: 100%;
+  width: 100vw;
   height: 100vh;
+  font-family: $font-primary;
+  color: $color-medium-dark-dark;
 }
 
-input {
+.input {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
+<<<<<<< HEAD
 
+=======
+}
+
+a {
+  text-decoration: none;
+>>>>>>> 9c4b2a3e401b25829f57342f14ca7efa2435f0ce
 }
