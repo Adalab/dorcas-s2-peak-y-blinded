@@ -355,7 +355,7 @@ select {
   font-size: 18px;
 }
 
-.share_header {
+.share__header {
   margin-top: 10px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -550,6 +550,11 @@ select {
   padding-bottom: 10px;
 }
 
+.wrapper {
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
 .section1 {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -605,7 +610,7 @@ select {
   text-align: center;
 }
 
-.card_created {
+.card-created {
   text-align: center;
 }
 
