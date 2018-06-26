@@ -18,6 +18,10 @@ body {
   appearance: none;
 }
 
+a {
+  text-decoration: none;
+}
+
 .boton_reset {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -44,10 +48,11 @@ body {
   text-transform: uppercase;
 }
 
-.btn_card {
+.btn-card {
   width: 199px;
   height: 50px;
   background-color: #e17334;
+  border: 0;
   border-radius: 12px;
   -webkit-box-shadow: 0 1px 6px 0 rgba(0, 0, 0, 0.32);
   box-shadow: 0 1px 6px 0 rgba(0, 0, 0, 0.32);
@@ -377,7 +382,7 @@ select {
   font-size: 18px;
 }
 
-.share_header {
+.share__header {
   margin-top: 10px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -401,9 +406,8 @@ select {
   color: #e17334;
 }
 
-.share__title {
-  margin: 0;
-  padding-left: 10px;
+.share__content {
+  border-bottom: 1px solid #d8d8d8;
 }
 
 .firstLastName {
@@ -419,69 +423,6 @@ select {
   font-size: 16px;
   font-family: "Comic Sans MS", sans-serif;
   font-weight: 400;
-}
-
-.icon-style-small {
-  font-size: 18px;
-  color: #e17334;
-}
-
-.icon__primary--extra-large {
-  font-size: 28px;
-  color: #e17334;
-}
-
-.text-style--medium-large {
-  font-family: "Merriweather", serif;
-  font-size: 19px;
-  font-weight: 700;
-  color: #e17334;
-}
-
-.icon__dark--medium {
-  font-size: 18px;
-}
-
-.text__dark--regular {
-  font-family: "Comic Sans MS", sans-serif;
-  font-size: 16px;
-}
-
-.text__dark--semibold {
-  font-size: 16px;
-  font-weight: 600;
-}
-
-.text__dark--small {
-  font-size: 14px;
-  text-transform: uppercase;
-}
-
-.text__dark--title {
-  font-size: 18px;
-  font-weight: 600;
-  text-transform: uppercase;
-}
-
-.text__optional--ubuntu {
-  font-family: "Ubuntu", sans-serif;
-  font-size: 16px;
-}
-
-.text__optional--comic {
-  font-family: "Comic Sans MS", sans-serif;
-  font-size: 16px;
-}
-
-.text__optional--mont {
-  font-family: "Montserrat", serif;
-  font-size: 16px;
-}
-
-.text-style--extra-small {
-  font-family: "Open Sans", sans-serif;
-  font-size: 13px;
-  color: #114e4e;
 }
 
 .icon__primary--medium {
@@ -558,6 +499,13 @@ select {
   color: #fff;
 }
 
+.btn-card--text {
+  font-family: "Open Sans", sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  color: #fff;
+}
+
 .form-header {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
@@ -588,7 +536,7 @@ select {
 }
 
 main {
-  background-color: color-medium-light-light;
+  background-color: pink;
 }
 
 .main__sub-title {
@@ -625,6 +573,11 @@ main {
   font-family: "Open Sans", sans-serif;
   font-weight: 400;
   font-size: 16px;
+}
+
+.wrapper {
+  margin-left: 20px;
+  margin-right: 20px;
 }
 
 .section1 {
@@ -670,12 +623,15 @@ main {
   text-align: center;
 }
 
-.card_created {
+.card-created {
+  margin-bottom: 30px;
+  border-bottom: 1px solid #d8d8d8;
   text-align: center;
 }
 
 .card-created__title {
   margin: 0;
+  text-transform: none;
   padding-top: 20px;
   padding-bottom: 5px;
 }

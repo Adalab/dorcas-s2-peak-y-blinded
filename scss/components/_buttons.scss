@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 .boton_reset {
   display: flex;
   height: 30px;
@@ -19,13 +18,11 @@
   text-transform: uppercase;
 }
 
-.btn_card {
-=======
 .btn-card {
->>>>>>> 9c4b2a3e401b25829f57342f14ca7efa2435f0ce
   width: 199px;
   height: 50px;
   background-color: $color-primary;
+  border: 0;
   border-radius: 12px;
   box-shadow: 0 1px 6px 0 rgba(0, 0, 0, 0.32);
   color: $color-light;
