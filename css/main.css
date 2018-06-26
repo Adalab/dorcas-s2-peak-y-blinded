@@ -18,11 +18,33 @@ body {
   appearance: none;
 }
 
-a {
-  text-decoration: none;
+.boton_reset {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 30px;
+  width: 75px;
+  border: 1px solid #fff;
+  border-radius: 15px;
+  margin-top: 10px;
+  margin-left: 45px;
+  margin-bottom: 20px;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -ms-flex-pack: distribute;
+  justify-content: space-around;
+  -ms-flex-item-align: start;
+  align-self: flex-start;
 }
 
-.btn-card {
+.boton_reset-text {
+  border: none;
+  background-color: transparent;
+  text-transform: uppercase;
+}
+
+.btn_card {
   width: 199px;
   height: 50px;
   background-color: #e17334;
@@ -384,7 +406,22 @@ select {
   padding-left: 10px;
 }
 
-.icon__primary--medium {
+.firstLastName {
+  font-size: 18px;
+  font-family: "Comic Sans MS", sans-serif;
+  font-weight: 700;
+  text-transform: capitalize;
+  color: #114e4e;
+  margin-bottom: 5px;
+}
+
+.personalDescription {
+  font-size: 16px;
+  font-family: "Comic Sans MS", sans-serif;
+  font-weight: 400;
+}
+
+.icon-style-small {
   font-size: 18px;
   color: #e17334;
 }
@@ -619,23 +656,11 @@ main {
   background-color: #fff;
 }
 
-.boton_reset {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  height: 30px;
-  width: 75px;
-  border: 1px solid #fff;
-  border-radius: 15px;
-  margin-top: 10px;
-  margin-left: 45px;
-  margin-bottom: 20px;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
+.titles_container {
+  margin-top: 20px;
+  margin-bottom: 10px;
+  padding-left: 15px;
+  border-left: 5px solid #a2deaf;
 }
 
 .personal_info {
