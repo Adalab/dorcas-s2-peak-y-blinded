@@ -384,6 +384,10 @@ select {
   padding-left: 10px;
 }
 
+.share__content {
+  border-bottom: 1px solid #d8d8d8;
+}
+
 .icon__primary--medium {
   font-size: 18px;
   color: #e17334;
@@ -611,6 +615,8 @@ select {
 }
 
 .card-created {
+  margin-bottom: 30px;
+  border-bottom: 1px solid #d8d8d8;
   text-align: center;
 }
 
