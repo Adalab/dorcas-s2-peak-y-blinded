@@ -29,6 +29,7 @@
   cursor: pointer;
   display: flex;
   justify-content: space-around;
+  align-items: center;
   transition: color ease 0.1s;
   &:active {
     background-color: $color-submit-button;
@@ -43,10 +44,12 @@
   width: 181px;
   height: 30px;
   background-color: $color-twitter-button;
+  border: 0;
   border-radius: 3px;
   box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.32);
   color: $color-light;
   cursor: pointer;
+  align-items: center;
 }
 
 .btn-twitter--position {
