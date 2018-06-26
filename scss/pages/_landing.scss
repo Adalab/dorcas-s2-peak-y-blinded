@@ -1,5 +1,5 @@
 main {
-  background-color: pink;
+  background-color: $color-medium-light-light;
 }
 
 .main__sub-title {
@@ -24,9 +24,9 @@ main {
   margin: auto;
 }
 
-.main__section-2 {
+.grid {
   display: grid;
-  grid-template-columns: 1fr, 1fr, 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr;
   color: $color-medium-dark-dark;
   font-family: $font-primary;
