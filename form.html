@@ -8,27 +8,28 @@
   <title>Awesome Profile Cards</title>
 </head>
 <body>
-  <div class="wrapper">
-    <header class="form-header">
-      <div class="header--image">
-        <!-- <a href="#">
-        <img src="../images/awesome-profile-cards-logo.svg" alt="awesome logo">
-      </a> -->
-    </div>
-  </header>
-  <main>
-    <section class="section1">
+  <header class="form-header">
+    <div class="header--image">
+      <!-- <a href="#">
+      <img src="../images/awesome-profile-cards-logo.svg" alt="awesome logo">
+    </a> -->
+  </div>
+</header>
+<main>
+  <section class="section1">
 
-        <div class="boton_reset">
-          <i class="far fa-trash-alt"></i>
-          <input type="reset" value="Reset">
-        </div>
+        <button class="boton_reset">
+          <i class="far fa-trash-alt boton_reset-icon"></i>
+          <span class="boton_reset-text">reset</span>
+        </button>
         <div class="section1_container">
         <div class="info_personal">
           <div class="info_personal">
+            <div class="titles_container">
             <h1 class="firstLastName"> nombre apellido</h1>
             <h2 class="personalDescription">Front-end developer</h2>
-            <img src="http://placehold.it/240x200/880000/00ff00" alt="foto personal">
+            </div>
+            <img class="personal_image" src="http://placehold.it/240x200/880000/00ff00" alt="foto personal">
             <div class="contact">
               <a class="contact__mobile" href="#"><i class="fas fa-mobile-alt"></i></a>
               <a class="contact__envelope" href="#"><i class="far fa-envelope"></i></a>
@@ -45,10 +46,11 @@
           </div>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- FORMULARIO DISEÑA -->
-
+  <!-- FORMULARIO DISEÑA -->
+  <div class="wrapper">
     <form class="form" action="index.html" method="post">
       <div class="legend__container">
         <legend class="fieldset__legend"><i class="far fa-object-ungroup icon__primary--medium"></i><span class="text__dark--title">diseña</span></legend>
@@ -163,32 +165,30 @@
       </div>
     </form>
 
-    <!-- FORMULARIO-COMPARTE -->
-
     <section class="share">
       <div class="share__header">
         <div class="share__icon-title">
-          <i class="share__icon fas fa-share-alt"></i>
-          <h2 class="share__title">COMPARTE</h2>
+          <i class="icon__primary--medium fas fa-share-alt"></i>
+          <h2 class="text__dark--title share__title">comparte</h2>
         </div>
         <button class="btn-arrow" type="button" name="button"><i class="fas fa-angle-up"></i></button>
       </div>
-      <button class="btn-card btn-card--position" type="submit" name="button"><i class="far fa-address-card"></i>CREAR TARJETA</button>
+      <div class="share__content">
+        <button class="btn-card btn-card--position btn-card--text" type="submit" name="button"><i class="far fa-address-card"></i>Crear tarjeta</button>
+      </div>
       <div class="card-created">
-        <h3 class="card-created__title">La tarjeta ha sido creada:</h3>
+        <h3 class="text__dark--title card-created__title">La tarjeta ha sido creada:</h3>
         <a class="card-link"  href="#">https://awesome-profile-card.com?id=A456DF0001</a>
         <button class="btn-twitter btn-twitter--position" type="button" name="button"><i class="fab fa-twitter"></i>Compartir en twitter</button>
       </div>
     </section>
-  </main>
-
-  <footer class="footer">
-    <div class="footer__content">
-      <p class="footer__copyrigth">Awesome profile-cards @2018</p>
-      <a class="footer--adalab-logo" href="http://adalab.es/" target="_blank"> <img src="../images/logo-adalab.png" alt="adalab logo"> </a>
-    </div>
-  </footer>
-
-</div>
+  </div>
+</main>
+<footer class="footer">
+  <div class="footer__content">
+    <p class="footer__copyrigth">Awesome profile-cards @2018</p>
+    <a class="footer--adalab-logo" href="http://adalab.es/" target="_blank"> <img src="../images/logo-adalab.png" alt="adalab logo"> </a>
+  </div>
+</footer>
 </body>
 </html>

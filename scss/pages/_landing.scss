@@ -1,0 +1,35 @@
+main {
+  background-color: pink;
+}
+
+.main__sub-title {
+  color: $color-primary;
+  font-family: $font-secondary;
+  font-weight: $weight-superbold;
+  font-size: $size-ml;
+  display: flex;
+  text-align: center;
+  max-width: 222px;
+  margin: auto;
+}
+
+.main__paragraph {
+  color: $color-paleta1-primary;
+  font-family: $font-primary;
+  font-weight: $weight-regular;
+  font-size: $size-xs;
+  display: flex; //block//
+  text-align: center;
+  max-width: 264px;
+  margin: auto;
+}
+
+.main__section-2 {
+  display: grid;
+  grid-template-columns: 1fr, 1fr, 1fr;
+  grid-template-rows: 1fr;
+  color: $color-medium-dark-dark;
+  font-family: $font-primary;
+  font-weight: $weight-regular;
+  font-size: $size-sm;
+}
