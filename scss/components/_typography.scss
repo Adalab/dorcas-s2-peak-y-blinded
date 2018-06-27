@@ -98,16 +98,25 @@
  }
 
 .btn-card--text {
-  font-family: $font-primary;
-  font-size: $size-m;
-  font-weight: $weight-semibold;
-  color: $color-light;
+  font: $weight-semibold $size-m $font-primary;
   text-transform: uppercase;
+}
+
+.icon-card {
+  font-size: 22px;
+}
+
+.text__card-link {
+  font-weight: $weight-semibold;
+  font-size: $size-xxs;
 }
 
 .btn-twitter--text {
   font-family: $font-primary;
   font-size: $size-s;
   font-weight: $weight-regular;
-  color: $color-light;
+}
+
+.icon-twitter {
+  font-size: $size-m;
 }
