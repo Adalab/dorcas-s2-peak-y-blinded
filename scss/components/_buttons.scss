@@ -28,11 +28,9 @@
   box-shadow: 0 1px 6px 0 rgba(0, 0, 0, 0.32);
   color: $color-light;
   cursor: pointer;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  transition: color ease 0.1s;
-  &:active {
+  display: block;
+  // transition: color ease 0.1s;
+  &:visited {
     background-color: $color-submit-button;
   }
 }
@@ -50,7 +48,6 @@
   box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.32);
   color: $color-light;
   cursor: pointer;
-  align-items: center;
 }
 
 .btn-twitter--position {
