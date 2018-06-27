@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
-  <link rel="stylesheet" href="../css/main.css">
+  <link rel="stylesheet" href="./css/main.css">
   <title>Awesome Profile Cards</title>
 </head>
 <body>
@@ -16,42 +16,40 @@
   </div>
 </header>
 <main>
-  <section class="section1">
-
-        <button class="boton_reset">
-          <i class="far fa-trash-alt boton_reset-icon"></i>
-          <span class="boton_reset-text">reset</span>
-        </button>
-        <div class="section1_container">
-        <div class="info_personal">
-          <div class="info_personal">
-            <div class="titles_container">
-            <h1 class="firstLastName"> nombre apellido</h1>
-            <h2 class="personalDescription">Front-end developer</h2>
-            </div>
-            <img class="personal_image" src="http://placehold.it/240x200/880000/00ff00" alt="foto personal">
-            <div class="contact">
-              <a class="contact__mobile" href="#"><i class="fas fa-mobile-alt"></i></a>
-              <a class="contact__envelope" href="#"><i class="far fa-envelope"></i></a>
-              <a class="contact__linkedin" href="#"><i class="fab fa-linkedin-in"></i></a>
-              <a class="contact__github" href="#"><i class="fab fa-github-alt"></i></a>
-            </div>
-            <div class="skills">
-              <ul class="skills__list">
-                <li class="skills__item"></li>
-                <li class="skills__item"></li>
-                <li class="skills__item"></li>
-              </ul>
-            </div>
-          </div>
+<!-- Preview tarjeta -->
+  <section class="section-card">
+    <button class="button-reset">
+      <i class="far fa-trash-alt button-reset__icon"></i>
+      <span class="button-reset__text">reset</span>
+    </button>
+    <div class="section-card__container">
+      <div class="info-personal">
+        <div class="info-personal__container">
+          <p class="font__comic--bold">nombre apellido</p>
+          <p class="font__comic">Front-end developer</p>
+        </div>
+        <img class="personal-image" src="http://placehold.it/240x200/880000/00ff00" alt="foto personal">
+        <div class="contact">
+          <a class="contact__mobile" href="#"><i class="fas fa-mobile-alt"></i></a>
+          <a class="contact__envelope" href="#"><i class="far fa-envelope"></i></a>
+          <a class="contact__linkedin" href="#"><i class="fab fa-linkedin-in"></i></a>
+          <a class="contact__github" href="#"><i class="fab fa-github-alt"></i></a>
+        </div>
+        <div class="skills">
+          <ul class="skills__list">
+            <li class="skills__item"></li>
+            <li class="skills__item"></li>
+            <li class="skills__item"></li>
+          </ul>
         </div>
       </div>
     </div>
-  </section>
-
-  <!-- FORMULARIO DISEÑA -->
-  <div class="wrapper">
-    <form class="form" action="index.html" method="post">
+  </div>
+</section>
+<!-- FORMULARIO DISEÑA -->
+<div class="wrapper">
+  <form class="form" action="index.html" method="post">
+    <section class="form__fieldset-design">
       <div class="legend__container">
         <legend class="fieldset__legend"><i class="far fa-object-ungroup icon__primary--medium"></i><span class="text__dark--title">diseña</span></legend>
         <button class="btn_arrow" type="button" name="button"><i class="fas fa-angle-up icon__dark--medium"></i></button>
@@ -103,14 +101,13 @@
             </div>
           </div>
         </div>
-      </div>
+      </section>
       <!-- FORMULARIO-RELLENA -->
-
       <div class="fieldset">
         <div class="legend__container">
           <div class="legend">
-            <i class="legend__icon far fa-keyboard"></i>
-            <h1 class="legend__title">Rellena</h1>
+            <i class="icon__primary--medium far fa-keyboard"></i>
+            <h1 class="text__dark--title">Rellena</h1>
           </div>
           <span class="legend__arrow"><i class="fas fa-angle-down"></i></span>
         </div>
@@ -134,16 +131,6 @@
           <label class="item__label" for="mail">Email</label>
           <input class="input item__input"
           id="mail" type="email" name="mail" placeholder="Ej: sally-hill@gmail.com" required>
-      </div>
-    </div>
-
-    <!-- FORMULARIO-RELLENA -->
-
-    <div class="fieldset">
-      <div class="legend__container">
-        <div class="legend">
-          <i class="icon__primary--medium far fa-keyboard"></i>
-          <h1 class="text__dark--title">Rellena</h1>
         </div>
         <div class="item">
           <label class="item__label" for="telephone">Teléfono</label>
@@ -174,7 +161,7 @@
         </div>
       </div>
     </form>
-
+    <!-- Sección Comparte -->
     <section class="share">
       <div class="share__header">
         <div class="share__icon-title">
@@ -194,11 +181,13 @@
     </section>
   </div>
 </main>
+<!-- footer -->
 <footer class="footer">
   <div class="footer__content">
     <p class="footer__copyrigth">Awesome profile-cards @2018</p>
-    <a class="footer--adalab-logo" href="http://adalab.es/" target="_blank"> <img src="../images/logo-adalab.png" alt="adalab logo"> </a>
+    <a class="footer--adalab-logo" href="http://adalab.es/" target="_blank"> <img src="./images/logo-adalab.png" alt="adalab logo"> </a>
   </div>
 </footer>
+<script type="text/javascript" src="./js/main.js"></script>
 </body>
 </html>
