@@ -1,21 +1,22 @@
-.boton_reset {
+.button-reset {
   display: flex;
+  background-color: transparent;
   height: 30px;
   width: 75px;
+  padding: 5px 10px;
   border: 1px solid $color-light;
   border-radius: 15px;
   margin-top: 10px;
   margin-left: 45px;
   margin-bottom: 20px;
   align-items: center;
-  justify-content: space-around;
+  justify-content: center;
   align-self: flex-start;
 }
 
-.boton_reset-text {
+.button-reset__text {
   border: none;
-  background-color: transparent;
-  text-transform: uppercase;
+  padding-left: 10px;
 }
 
 .btn-card {
