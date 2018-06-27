@@ -1,3 +1,19 @@
+<<<<<<< HEAD
+body {
+  background-color: $color-medium-light-light;
+}
+
+.imagen {
+  display: flex;
+  text-align: center;
+  margin-top: 94px;
+  width: 80%;
+  margin-left: 34px;
+  margin-right: 34px;
+}
+
+=======
+>>>>>>> 713456f0d0a7aa8097202ebec2f945bebbbdb7f2
 .main__sub-title {
   color: $color-primary;
   font-family: $font-secondary;
@@ -7,6 +23,8 @@
   text-align: center;
   max-width: 222px;
   margin: auto;
+  margin-top: 30px;
+  margin-bottom: 10px;
 }
 
 .main__paragraph {
@@ -18,9 +36,10 @@
   text-align: center;
   max-width: 264px;
   margin: auto;
+  margin-bottom: 14px;
 }
 
-.grid {
+.card-options {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr;
@@ -28,4 +47,32 @@
   font-family: $font-primary;
   font-weight: $weight-regular;
   font-size: $size-sm;
+  width: 80%;
+  margin: auto;
+  list-style: none;
+}
+
+.card-options__item {
+  justify-self: center;
+}
+
+.button {
+  color: $color-light;
+  font-family: $font-primary;
+  font-weight: $weight-semibold;
+  font-size: $size-sm;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  // align-self: flex-start;
+  width: 130px;
+  height: 42px;
+  border-radius: 20px;
+  background-color: $color-paleta1-secondary;
+  border: solid 1px #979797;
+  margin-bottom: 30px;
+  margin-top: 50px;
+  margin-left: 150px;
+  margin-right: 100px;
 }
