@@ -106,4 +106,12 @@
   font-size: $size-m;
   font-weight: $weight-semibold;
   color: $color-light;
+  text-transform: uppercase;
+}
+
+.btn-twitter--text {
+  font-family: $font-primary;
+  font-size: $size-s;
+  font-weight: $weight-regular;
+  color: $color-light;
 }
