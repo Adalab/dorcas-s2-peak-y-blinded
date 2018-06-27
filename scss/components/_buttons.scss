@@ -1,21 +1,22 @@
-.boton_reset {
+.button-reset {
   display: flex;
+  background-color: transparent;
   height: 30px;
   width: 75px;
+  padding: 5px 10px;
   border: 1px solid $color-light;
   border-radius: 15px;
   margin-top: 10px;
   margin-left: 45px;
   margin-bottom: 20px;
   align-items: center;
-  justify-content: space-around;
+  justify-content: center;
   align-self: flex-start;
 }
 
-.boton_reset-text {
+.button-reset__text {
   border: none;
-  background-color: transparent;
-  text-transform: uppercase;
+  padding-left: 10px;
 }
 
 .btn-card {
@@ -29,6 +30,7 @@
   cursor: pointer;
   display: flex;
   justify-content: space-around;
+  align-items: center;
   transition: color ease 0.1s;
   &:active {
     background-color: $color-submit-button;
@@ -43,10 +45,12 @@
   width: 181px;
   height: 30px;
   background-color: $color-twitter-button;
+  border: 0;
   border-radius: 3px;
   box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.32);
   color: $color-light;
   cursor: pointer;
+  align-items: center;
 }
 
 .btn-twitter--position {

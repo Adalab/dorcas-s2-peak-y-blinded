@@ -22,12 +22,14 @@ a {
   text-decoration: none;
 }
 
-.boton_reset {
+.button-reset {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  background-color: transparent;
   height: 30px;
   width: 75px;
+  padding: 5px 10px;
   border: 1px solid #fff;
   border-radius: 15px;
   margin-top: 10px;
@@ -36,16 +38,16 @@ a {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  -ms-flex-pack: distribute;
-  justify-content: space-around;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   -ms-flex-item-align: start;
   align-self: flex-start;
 }
 
-.boton_reset-text {
+.button-reset__text {
   border: none;
-  background-color: transparent;
-  text-transform: uppercase;
+  padding-left: 10px;
 }
 
 .btn-card {
@@ -63,6 +65,9 @@ a {
   display: flex;
   -ms-flex-pack: distribute;
   justify-content: space-around;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-transition: color ease 0.1s;
   transition: color ease 0.1s;
 }
@@ -79,11 +84,15 @@ a {
   width: 181px;
   height: 30px;
   background-color: #00a0f5;
+  border: 0;
   border-radius: 3px;
   -webkit-box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.32);
   box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.32);
   color: #fff;
   cursor: pointer;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .btn-twitter--position {
@@ -393,19 +402,23 @@ select {
   border-bottom: 1px solid #d8d8d8;
 }
 
-.firstLastName {
+.font__comic--bold {
   font-size: 18px;
   font-family: "Comic Sans MS", sans-serif;
   font-weight: 700;
   text-transform: capitalize;
   color: #114e4e;
-  margin-bottom: 5px;
 }
 
-.personalDescription {
+.font__comic {
   font-size: 16px;
   font-family: "Comic Sans MS", sans-serif;
   font-weight: 400;
+}
+
+.button-reset__text,.button-reset__icon {
+  font-size: 12px;
+  text-transform: uppercase;
 }
 
 .icon__primary--medium {
@@ -490,6 +503,13 @@ select {
   text-transform: uppercase;
 }
 
+.btn-twitter--text {
+  font-family: "Open Sans", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  color: #fff;
+}
+
 .form-header {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
@@ -517,10 +537,6 @@ select {
 .footer__copyrigth {
   padding-top: 20px;
   padding-bottom: 10px;
-}
-
-main {
-  background-color: #f5f5f5;
 }
 
 .main__sub-title {
@@ -564,7 +580,7 @@ main {
   margin-right: 20px;
 }
 
-.section1 {
+.section-card {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -580,7 +596,7 @@ main {
   align-items: center;
 }
 
-.section1_container {
+.section-card__container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -593,18 +609,15 @@ main {
   background-color: #fff;
 }
 
-.titles_container {
+.info-personal__container {
   margin-top: 20px;
   margin-bottom: 10px;
   padding-left: 15px;
   border-left: 5px solid #a2deaf;
 }
 
-.personal_info {
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  text-align: center;
+.skills__item {
+  list-style: none;
 }
 
 .card-created {
@@ -622,6 +635,10 @@ main {
 
 .card-link {
   color: #e17334;
+}
+
+.fa-twitter {
+  padding-right: 10px;
 }
 
 /*# sourceMappingURL=main.css.map */
