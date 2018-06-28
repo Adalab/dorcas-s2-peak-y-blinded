@@ -30,10 +30,6 @@
   color: $color-light;
   cursor: pointer;
   display: block;
-  // transition: color ease 0.1s;
-  &:visited {
-    background-color: $color-submit-button;
-  }
 }
 
 .btn-card--position {
