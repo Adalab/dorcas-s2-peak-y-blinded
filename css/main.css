@@ -9,7 +9,6 @@ body {
   width: 100vw;
   height: 100vh;
   font-family: "Open Sans", sans-serif;
-  color: #54585a;
 }
 
 .input {
@@ -124,7 +123,7 @@ a {
 }
 
 .design__container {
-  margin: 25px 20px 30px 40px;
+  margin: 25px 0px 30px 0px;
 }
 
 .item-container {
@@ -400,7 +399,7 @@ select {
 
 .font__comic--bold {
   font-size: 18px;
-  font-family: "Comic Sans MS", sans-serif;
+  font-family: "Comic Sans MS", "Chilanka", sans-serif;
   font-weight: 700;
   text-transform: capitalize;
   color: #114e4e;
@@ -408,7 +407,7 @@ select {
 
 .font__comic {
   font-size: 16px;
-  font-family: "Comic Sans MS", sans-serif;
+  font-family: "Comic Sans MS", "Chilanka", sans-serif;
   font-weight: 400;
 }
 
@@ -439,7 +438,7 @@ select {
 }
 
 .text__dark--regular {
-  font-family: "Comic Sans MS", sans-serif;
+  font-family: "Comic Sans MS", "Chilanka", sans-serif;
   font-size: 16px;
 }
 
@@ -465,7 +464,7 @@ select {
 }
 
 .text__optional--comic {
-  font-family: "Comic Sans MS", sans-serif;
+  font-family: "Comic Sans MS", "Chilanka", sans-serif;
   font-size: 16px;
 }
 
@@ -544,11 +543,6 @@ select {
   padding-bottom: 10px;
 }
 
-<<<<<<< HEAD
-body {
-  background-color: #f5f5f5;
-}
-
 .imagen {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -560,8 +554,6 @@ body {
   margin-right: 34px;
 }
 
-=======
->>>>>>> 713456f0d0a7aa8097202ebec2f945bebbbdb7f2
 .main__sub-title {
   color: #e17334;
   font-family: "Merriweather", serif;
@@ -678,6 +670,7 @@ body {
   list-style: none;
 }
 
+.info-personal__container--
 .card-created {
   margin-bottom: 30px;
   border-bottom: 1px solid #d8d8d8;
