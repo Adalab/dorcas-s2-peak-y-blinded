@@ -694,4 +694,27 @@ body {
   padding-right: 10px;
 }
 
+@media all and (min-width: 768px) {
+  .footer__content {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 40px;
+    padding-right: 40px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+
+  .footer__copyrigth {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+}
+
 /*# sourceMappingURL=main.css.map */
