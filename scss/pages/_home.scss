@@ -26,6 +26,24 @@
   border-left: 5px solid $color-paleta1-terciary;
 }
 
+.icon__contact {
+  padding: 7px;
+  border: 2px solid $color-paleta1-terciary;
+  border-radius: 50%;
+}
+
+.contact__mobile {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.contact__link {
+  margin-left: 5px;
+  margin-right: 5px;
+  // border: 2px solid $color-paleta1-terciary;
+  // border-radius: 50%;
+}
+
 .skills__item {
   list-style: none;
 }
