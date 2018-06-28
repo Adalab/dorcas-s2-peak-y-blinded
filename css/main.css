@@ -51,8 +51,9 @@ a {
 }
 
 .btn-card {
-  width: 199px;
   height: 50px;
+  padding-left: 18px;
+  padding-right: 18px;
   background-color: #e17334;
   border: 0;
   border-radius: 12px;
@@ -72,8 +73,9 @@ a {
 }
 
 .btn-twitter {
-  width: 181px;
   height: 30px;
+  padding-left: 10px;
+  padding-right: 10px;
   background-color: #00a0f5;
   border: 0;
   border-radius: 3px;
@@ -540,7 +542,6 @@ select {
   padding-bottom: 10px;
 }
 
-<<<<<<< HEAD
 body {
   background-color: #f5f5f5;
 }
@@ -556,8 +557,6 @@ body {
   margin-right: 34px;
 }
 
-=======
->>>>>>> 713456f0d0a7aa8097202ebec2f945bebbbdb7f2
 .main__sub-title {
   color: #e17334;
   font-family: "Merriweather", serif;
