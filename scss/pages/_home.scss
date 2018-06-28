@@ -11,6 +11,30 @@
   align-items: center;
 }
 
+@media all and (min-width:768px) {
+  .main__form {
+    background: linear-gradient($color-medium-light-light, $color-light);
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    align-content: space-between;
+    padding-top: 20px;
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+  .wrapper {
+    margin-right: 30px;
+    margin-left: 0;
+    flex-shrink: 2;
+  }
+  .section-card {
+    height: 800px;
+    flex-grow: 1;
+    flex-basis: 50%;
+    border-radius: 6px;
+  }
+}
+
 .section-card__container {
   display: flex;
   flex-direction: column;
