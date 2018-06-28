@@ -670,13 +670,17 @@ body {
   border-left: 5px solid #a2deaf;
 }
 
+.contact {
+  padding-left: 15px;
+}
+
 .icon__contact {
   padding: 7px;
   border: 2px solid #a2deaf;
   border-radius: 50%;
 }
 
-.contact__mobile {
+.icon-mobile {
   padding-left: 10px;
   padding-right: 10px;
 }
