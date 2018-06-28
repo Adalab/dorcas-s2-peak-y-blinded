@@ -30,7 +30,7 @@
           <p class="font__comic--bold">nombre apellido</p>
           <p class="font__comic">Front-end developer</p>
         </div>
-        <img class="personal-image" src="http://placehold.it/240x200/880000/00ff00" alt="foto personal">
+        <img class="personal-image" src="./images/card-image.png" alt="foto personal">
         <div class="contact">
           <a class="contact__link contact__mobile" href="#"><i class="fas fa-mobile-alt icon-mobile icon__contact"></i></a>
           <a class="contact__link contact__envelope" href="#"><i class="far fa-envelope icon-mail icon__contact"></i></a>
@@ -48,13 +48,15 @@
     </div>
   </div>
 </section>
+
 <!-- FORMULARIO DISEÑA -->
+
 <div class="wrapper">
   <form class="form" action="index.html" method="post">
     <section class="form__fieldset-design">
       <div class="legend__container">
         <legend class="fieldset__legend"><i class="far fa-object-ungroup icon__primary--medium"></i><span class="text__dark--title">diseña</span></legend>
-        <button class="btn_arrow" type="button" name="button"><i class="fas fa-angle-up icon__dark--medium"></i></button>
+        <button class="btn-arrow" type="button" name="button"><i class="fas fa-angle-up icon__dark--medium"></i></button>
       </div>
       <div class="design__container">
         <div class="item-container item-container--color">
@@ -105,76 +107,78 @@
         </div>
       </section>
 
-      <!-- FORMULARIO-RELLENA -->
-      <div class="fieldset">
-        <div class="legend__container">
-          <div class="legend">
-            <i class="icon__primary--medium far fa-keyboard"></i>
-            <h1 class="text__dark--title">Rellena</h1>
+        <!-- FORMULARIO-RELLENA -->
+        <div class="fieldset">
+          <div class="legend__container">
+            <div class="legend">
+              <i class="icon__primary--medium far fa-keyboard"></i>
+              <h1 class="text__dark--title">Rellena</h1>
+            </div>
+            <span class="legend__arrow"><i class="fas fa-angle-down"></i></span>
           </div>
-          <span class="legend__arrow"><i class="fas fa-angle-down"></i></span>
-        </div>
-        <div class="item">
-          <label class="item__label" for="name">Nombre completo</label>
-          <input class="input item__input" id="name" type="text" name="name" placeholder="Ej: Sally Jill" required>
-        </div>
-        <div class="item">
-          <label class="item__label" for="job">Puesto</label>
-          <input class="input item__input" id="job" type="text" name="job" placeholder="Ej: Front-end unicorn" required>
-        </div>
-        <div class="item">
-          <label class="item__label" for="image">Imagen de perfil</label>
-          <input class= "input" id="image" type="file" name="image" required>
-          <div class="item__button-container">
-            <span class="item__button-file item__button-label">Añadir imagen</span>
-            <input class="input item__button-checkbox" type="checkbox">
+          <div>
+            <div class="item">
+              <label class="item__label" for="name">Nombre completo</label>
+              <input class="input item__input" id="name" type="text" name="name" placeholder="Ej: Sally Jill" required>
+            </div>
+            <div class="item">
+              <label class="item__label" for="job">Puesto</label>
+              <input class="input item__input" id="job" type="text" name="job" placeholder="Ej: Front-end unicorn" required>
+            </div>
+            <div class="item">
+              <label class="item__label" for="image">Imagen de perfil</label>
+              <input class= "input" id="image" type="file" name="image" required>
+              <div class="item__button-container">
+                <span class="item__button-file item__button-label">Añadir imagen</span>
+                <input class="input item__button-checkbox" type="checkbox">
+              </div>
+            </div>
+            <div class="item">
+              <label class="item__label" for="mail">Email</label>
+              <input class="input item__input"
+              id="mail" type="email" name="mail" placeholder="Ej: sally-hill@gmail.com" required>
+            </div>
+            <div class="item">
+              <label class="item__label" for="telephone">Teléfono</label>
+              <input class="input item__input" id="telephone" type="tel" name="telephone" placeholder="Ej: 555-55-55-55" required>
+            </div>
+            <div class="item">
+              <label class="item__label" for="linkedin">Linkedin</label>
+              <input class="input item__input" id="linkedin" type="text" name="linkedin" placeholder="Ej: linkedin.com/in/sally.hill" required>
+            </div>
+            <div class="item">
+              <label class="item__label" for="github">Github</label>
+              <input class="input item__input" id="github" type="text" name="github" placeholder="Ej: @sally-hill" required>
+            </div>
+            <div class="item">
+              <label class="item__label" for="abilities">Habilidades (máximo 3)</label>
+              <div class="item__select-container">
+                <select class="item__select" id="abilities" name="abilities" required>
+                  <option value="HTML"></option>
+                </select>
+                <div class="item__select-button"><i class="fas fa-minus"></i></div>
+              </div>
+              <div class="item__select-container">
+                <select class="item__select" id="abilities" name="abilities" required>
+                  <option value="CSS"></option>
+                </select>
+                <div class="item__select-button"><i class="fas fa-plus"></i></div>
+              </div>
+            </div>
           </div>
         </div>
-        <div class="item">
-          <label class="item__label" for="mail">Email</label>
-          <input class="input item__input"
-          id="mail" type="email" name="mail" placeholder="Ej: sally-hill@gmail.com" required>
-        </div>
-        <div class="item">
-          <label class="item__label" for="telephone">Teléfono</label>
-          <input class="input item__input" id="telephone" type="tel" name="telephone" placeholder="Ej: 555-55-55-55" required>
-        </div>
-        <div class="item">
-          <label class="item__label" for="linkedin">Linkedin</label>
-          <input class="input item__input" id="linkedin" type="text" name="linkedin" placeholder="Ej: linkedin.com/in/sally.hill" required>
-        </div>
-        <div class="item">
-          <label class="item__label" for="github">Github</label>
-          <input class="input item__input" id="github" type="text" name="github" placeholder="Ej: @sally-hill" required>
-        </div>
-        <div class="item">
-          <label class="item__label" for="abilities">Habilidades (máximo 3)</label>
-          <div class="item__select-container">
-            <select class="item__select" id="abilities" name="abilities" required>
-              <option value="HTML"></option>
-            </select>
-            <div class="item__select-button"><i class="fas fa-minus"></i></div>
-          </div>
-          <div class="item__select-container">
-            <select class="item__select" id="abilities" name="abilities" required>
-              <option value="CSS"></option>
-            </select>
-            <div class="item__select-button"><i class="fas fa-plus"></i></div>
-          </div>
-        </div>
-      </div>
-    </form>
+      </form>
 
-    <!-- Sección Comparte -->
+      <!-- Sección Comparte -->
 
-    <section class="share">
-      <div class="share__header">
-        <div class="share__icon-title">
-          <i class="icon__primary--medium fas fa-share-alt"></i>
-          <h2 class="text__dark--title share__title">comparte</h2>
+      <section class="share">
+        <div class="share__header">
+          <div class="share__icon-title">
+            <i class="icon__primary--medium fas fa-share-alt"></i>
+            <h2 class="text__dark--title share__title">comparte</h2>
+          </div>
+          <button class="btn-arrow" type="button" name="button"><i class="fas fa-angle-up"></i></button>
         </div>
-        <button class="btn-arrow" type="button" name="button"><i class="fas fa-angle-up"></i></button>
-      </div>
       <div class="share__content">
         <button class="btn-card btn-card--position btn-card--text boton-card--active" type="submit" name="button"><i class="far fa-address-card icon-card"></i>Crear tarjeta</button>
       </div>
@@ -187,15 +191,15 @@
   </div>
 </main>
 
-<!-- footer -->
+  <!-- footer -->
 
-<footer class="footer">
-  <div class="footer__content">
-    <p class="footer__copyrigth">Awesome profile-cards @2018</p>
-    <a class="footer--adalab-logo" href="http://adalab.es/" target="_blank"> <img src="./images/logo-adalab.png" alt="adalab logo"> </a>
-  </div>
-</footer>
+  <footer class="footer">
+    <div class="footer__content">
+      <p class="footer__copyrigth">Awesome profile-cards @2018</p>
+      <a class="footer--adalab-logo" href="http://adalab.es/" target="_blank"> <img src="./images/logo-adalab.png" alt="adalab logo"> </a>
+    </div>
+  </footer>
 
-<script type="text/javascript" src="./js/main.js"></script>
+  <script type="text/javascript" src="./js/main.js"></script>
 </body>
 </html>
