@@ -38,7 +38,6 @@
 .card__container {
   display: flex;
   flex-direction: column;
-  height: 367px;
   width: 240px;
   background-color: $color-light;
 }
@@ -51,7 +50,7 @@
 }
 
 .contact {
-  padding-left: 15px;
+  padding: 10px 0 10px 15px;
 }
 
 .icon__contact {
@@ -68,15 +67,27 @@
 .contact__link {
   margin-left: 5px;
   margin-right: 5px;
-  // border: 2px solid $color-paleta1-terciary;
-  // border-radius: 50%;
+}
+
+.skills__list {
+  display: flex;
+  padding: 10px 0 10px 20px;
+  border-top: 2px solid rgba($color-paleta1-primary, 0.2);
+
 }
 
 .skills__item {
+  display: flex;
   list-style: none;
+  display: inline-block;
+  height: 18px;
+  padding: 0 5px;
+  background-color: $color-paleta1-primary;
+  border-radius: 4px;
+  margin-right: 10px;
+  align-items: center;
+  justify-content: center;
 }
-
-.info-personal__container--
 
 .card-created {
   margin-bottom: 30px;

@@ -387,6 +387,11 @@ select {
   text-transform: uppercase;
 }
 
+.text__skills {
+  font-size: 13px;
+  color: #fff;
+}
+
 .icon__primary--medium {
   font-size: 18px;
   color: #e17334;
@@ -642,7 +647,6 @@ select {
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
-  height: 367px;
   width: 240px;
   background-color: #fff;
 }
@@ -655,7 +659,7 @@ select {
 }
 
 .contact {
-  padding-left: 15px;
+  padding: 10px 0 10px 15px;
 }
 
 .icon__contact {
@@ -674,11 +678,33 @@ select {
   margin-right: 5px;
 }
 
-.skills__item {
-  list-style: none;
+.skills__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 10px 0 10px 20px;
+  border-top: 2px solid rgba(17, 78, 78, 0.2);
 }
 
-.info-personal__container--
+.skills__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  list-style: none;
+  display: inline-block;
+  height: 18px;
+  padding: 0 5px;
+  background-color: #114e4e;
+  border-radius: 4px;
+  margin-right: 10px;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
 .card-created {
   margin-bottom: 30px;
   border-bottom: 1px solid #d8d8d8;
