@@ -9,7 +9,6 @@ body {
   width: 100vw;
   height: 100vh;
   font-family: "Open Sans", sans-serif;
-  color: #54585a;
 }
 
 .input {
@@ -20,6 +19,7 @@ body {
 
 a {
   text-decoration: none;
+  color: #114e4e;
 }
 
 .button-reset {
@@ -51,8 +51,9 @@ a {
 }
 
 .btn-card {
-  width: 199px;
   height: 50px;
+  padding-left: 18px;
+  padding-right: 18px;
   background-color: #e17334;
   border: 0;
   border-radius: 12px;
@@ -63,17 +64,14 @@ a {
   display: block;
 }
 
-.btn-card:visited {
-  background-color: #d5d5d5;
-}
-
 .btn-card--position {
   margin: 30px auto;
 }
 
 .btn-twitter {
-  width: 181px;
   height: 30px;
+  padding-left: 10px;
+  padding-right: 10px;
   background-color: #00a0f5;
   border: 0;
   border-radius: 3px;
@@ -104,6 +102,10 @@ a {
   border: none;
 }
 
+.form__fieldset-design {
+  border-bottom: 1px solid #d8d8d8;
+}
+
 .legend__container {
   margin-top: 10px;
   margin-bottom: 20px;
@@ -120,7 +122,7 @@ a {
 }
 
 .design__container {
-  margin: 25px 20px 30px 40px;
+  margin: 25px 0px 30px 0px;
 }
 
 .item-container {
@@ -395,7 +397,7 @@ select {
 
 .font__comic--bold {
   font-size: 18px;
-  font-family: "Comic Sans MS", sans-serif;
+  font-family: "Comic Sans MS", "Chilanka", sans-serif;
   font-weight: 700;
   text-transform: capitalize;
   color: #114e4e;
@@ -403,7 +405,7 @@ select {
 
 .font__comic {
   font-size: 16px;
-  font-family: "Comic Sans MS", sans-serif;
+  font-family: "Comic Sans MS", "Chilanka", sans-serif;
   font-weight: 400;
 }
 
@@ -434,7 +436,7 @@ select {
 }
 
 .text__dark--regular {
-  font-family: "Comic Sans MS", sans-serif;
+  font-family: "Comic Sans MS", "Chilanka", sans-serif;
   font-size: 16px;
 }
 
@@ -460,7 +462,7 @@ select {
 }
 
 .text__optional--comic {
-  font-family: "Comic Sans MS", sans-serif;
+  font-family: "Comic Sans MS", "Chilanka", sans-serif;
   font-size: 16px;
 }
 
@@ -550,7 +552,7 @@ select {
   flex-grow: 1;
 }
 
-main {
+.main {
   -webkit-box-flex: 1;
   -ms-flex-positive: 1;
   flex-grow: 1;
@@ -679,10 +681,31 @@ main {
   border-left: 5px solid #a2deaf;
 }
 
+.contact {
+  padding-left: 15px;
+}
+
+.icon__contact {
+  padding: 7px;
+  border: 2px solid #a2deaf;
+  border-radius: 50%;
+}
+
+.icon-mobile {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.contact__link {
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
 .skills__item {
   list-style: none;
 }
 
+.info-personal__container--
 .card-created {
   margin-bottom: 30px;
   border-bottom: 1px solid #d8d8d8;
@@ -705,6 +728,27 @@ main {
 }
 
 @media all and (min-width: 768px) {
+  .footer__content {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 40px;
+    padding-right: 40px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+
+  .footer__copyrigth {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
   .main__form {
     background: -webkit-gradient(linear, left top, left bottom, from(#f5f5f5), to(#fff));
     background: linear-gradient(#f5f5f5, #fff);

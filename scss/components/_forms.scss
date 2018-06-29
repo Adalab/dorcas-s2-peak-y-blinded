@@ -1,5 +1,9 @@
 // FORMULARIO DISEÑA
 
+.form__fieldset-design {
+  border-bottom: 1px solid $color-medium-light;
+}
+
 .legend__container {
   margin-top: 10px;
   margin-bottom: 20px;
@@ -12,7 +16,7 @@
 }
 
 .design__container {
-  margin: 25px 20px 30px 40px;
+  margin: 25px 0px 30px 0px;
 }
 
 .item-container {
