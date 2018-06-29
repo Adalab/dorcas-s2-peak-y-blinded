@@ -20,11 +20,14 @@
 <!-- Preview tarjeta -->
 
   <section class="section-card">
+  <div class="section-card__container">
+
+
     <button class="button-reset">
       <i class="far fa-trash-alt button-reset__icon"></i>
       <span class="button-reset__text">reset</span>
     </button>
-    <div class="section-card__container">
+    <div class="card__container">
       <div class="info-personal">
         <div class="info-personal__container">
           <p class="font__comic--bold">nombre apellido</p>
@@ -47,6 +50,7 @@
       </div>
     </div>
   </div>
+  </div>
 </section>
 
 <!-- FORMULARIO DISEÑA -->
@@ -56,14 +60,14 @@
     <section class="form__fieldset-design">
       <div class="legend__container">
         <legend class="fieldset__legend"><i class="far fa-object-ungroup icon__primary--medium"></i><span class="text__dark--title">diseña</span></legend>
-        <button class="btn-arrow" type="button" name="button"><i class="fas fa-angle-up icon__dark--medium"></i></button>
+        <span class="legend__arrow"><i class="fas fa-angle-down"></i></span>
       </div>
       <div class="design__container">
         <div class="item-container item-container--color">
           <div class="text__dark--small">colores</div>
           <div class="radio-container">
             <div class="palette palette--margin">
-              <input id="color1" type="radio" name="colorpalette">
+              <input id="color1" type="radio" name="colorpalette" checked>
               <label for="color1" class="label-design">
                 <div class="palette-box colorp1"></div>
                 <div class="palette-box colorp2"></div>
@@ -96,7 +100,7 @@
               <label for="font1" class="text__optional--ubuntu label-design">Ubuntu</label>
             </div>
             <div class="font font--margin">
-              <input id="font2" type="radio" name="font">
+              <input id="font2" type="radio" name="font" checked>
               <label for="font2" class="text__optional--comic label-design">Comic Sans</label>
             </div>
             <div class="font">
@@ -181,7 +185,7 @@
             <i class="icon__primary--medium fas fa-share-alt"></i>
             <h2 class="text__dark--title share__title">comparte</h2>
           </div>
-          <button class="btn-arrow" type="button" name="button"><i class="fas fa-angle-up"></i></button>
+          <span class="legend__arrow"><i class="fas fa-angle-down"></i></span>
         </div>
       <div class="share__content">
         <button class="btn-card btn-card--position btn-card--text boton-card--active" type="submit" name="button"><i class="far fa-address-card icon-card"></i>Crear tarjeta</button>
