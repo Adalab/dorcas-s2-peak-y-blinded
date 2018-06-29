@@ -1,17 +1,12 @@
 .button-reset {
-  display: flex;
+  display: block;
   background-color: transparent;
   height: 30px;
-  width: 75px;
-  padding: 5px 10px;
+  padding-left: 10px;
+  padding-right: 10px;
   border: 1px solid $color-light;
   border-radius: 15px;
-  margin-top: 10px;
-  margin-left: 45px;
-  margin-bottom: 20px;
-  align-items: center;
-  justify-content: center;
-  align-self: flex-start;
+  margin: 10px 0 20px 0;
 }
 
 .button-reset__text {
@@ -20,8 +15,9 @@
 }
 
 .btn-card {
-  width: 199px;
   height: 50px;
+  padding-left: 18px;
+  padding-right: 18px;
   background-color: $color-primary;
   border: 0;
   border-radius: 12px;
@@ -29,10 +25,6 @@
   color: $color-light;
   cursor: pointer;
   display: block;
-  // transition: color ease 0.1s;
-  &:visited {
-    background-color: $color-submit-button;
-  }
 }
 
 .btn-card--position {
@@ -40,8 +32,9 @@
 }
 
 .btn-twitter {
-  width: 181px;
   height: 30px;
+  padding-left: 10px;
+  padding-right: 10px;
   background-color: $color-twitter-button;
   border: 0;
   border-radius: 3px;
@@ -53,14 +46,4 @@
 .btn-twitter--position {
   display: block;
   margin: 10px auto 30px auto;
-}
-
-.btn-arrow {
-  width: 16px;
-  height: 18px;
-  background-color: $color-light;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border: none;
 }
