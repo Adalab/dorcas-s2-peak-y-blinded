@@ -526,6 +526,11 @@ select {
   padding-bottom: 10px;
 }
 
+.adalab-logo {
+  width: 103px;
+  height: 40px;
+}
+
 .body {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -719,7 +724,6 @@ select {
   display: -ms-flexbox;
   display: flex;
   list-style: none;
-  display: inline-block;
   height: 18px;
   padding: 0 5px;
   background-color: #114e4e;
