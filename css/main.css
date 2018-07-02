@@ -503,9 +503,6 @@ select {
   width: 201px;
   height: 51px;
   margin: 30px 0;
-  background-image: url("../images/awesome-profile-cards-logo.svg");
-  background-size: contain;
-  background-repeat: no-repeat;
 }
 
 .footer {
