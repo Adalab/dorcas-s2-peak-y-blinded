@@ -102,7 +102,7 @@
  }
 
  .item__button-label {
-  font-size: $size-s;
+  font: $weight-regular $size-s $font-primary;
   color: $color-light;
  }
 
