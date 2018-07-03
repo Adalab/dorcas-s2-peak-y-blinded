@@ -1,12 +1,14 @@
 .button-reset {
   display: block;
-  background-color: transparent;
   height: 30px;
+  margin: 10px 0 20px 0;
   padding-left: 10px;
   padding-right: 10px;
+  color: $color-medium-dark-dark;
+  background-color: transparent;
   border: 1px solid $color-light;
   border-radius: 15px;
-  margin: 10px 0 20px 0;
+  cursor: pointer;
 }
 
 .button-reset__text {

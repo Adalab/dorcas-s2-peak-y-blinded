@@ -14,8 +14,8 @@
   font-weight: $weight-regular;
 }
 
-.button-reset__text, .button-reset__icon {
-  font-size: $size-xxs;
+.button-reset__text {
+  font: $weight-regular $size-xxs $font-primary;
   text-transform: uppercase;
 }
 

@@ -25,13 +25,15 @@ a {
 
 .button-reset {
   display: block;
-  background-color: transparent;
   height: 30px;
+  margin: 10px 0 20px 0;
   padding-left: 10px;
   padding-right: 10px;
+  color: #54585a;
+  background-color: transparent;
   border: 1px solid #fff;
   border-radius: 15px;
-  margin: 10px 0 20px 0;
+  cursor: pointer;
 }
 
 .button-reset__text {
@@ -382,8 +384,8 @@ select {
   font-weight: 400;
 }
 
-.button-reset__text,.button-reset__icon {
-  font-size: 12px;
+.button-reset__text {
+  font: 400 12px "Open Sans", sans-serif;
   text-transform: uppercase;
 }
 
@@ -509,9 +511,6 @@ select {
   width: 201px;
   height: 51px;
   margin: 30px 0;
-  background-image: url("../images/awesome-profile-cards-logo.svg");
-  background-size: contain;
-  background-repeat: no-repeat;
 }
 
 .footer {
@@ -530,6 +529,11 @@ select {
 .footer__copyrigth {
   padding-top: 20px;
   padding-bottom: 10px;
+}
+
+.adalab-logo {
+  width: 103px;
+  height: 40px;
 }
 
 .footer--adalab-logo {
@@ -737,7 +741,6 @@ select {
   display: -ms-flexbox;
   display: flex;
   list-style: none;
-  display: inline-block;
   height: 18px;
   padding: 0 5px;
   background-color: #114e4e;
