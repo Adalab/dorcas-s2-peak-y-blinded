@@ -138,65 +138,12 @@
   border: solid 1px $color-paleta1-terciary;
 }
 
-input[type=file] {
-  width: 0.1px;
-  height: 0.1px;
-  opacity: 0;
-  overflow: hidden;
-  position: absolute;
-  z-index: -1;
-}
-
-.item__button-container {
-  display: flex;
-  margin-top: 5px;
-  margin-bottom: 20px;
-}
-
-.item__button-file {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 50%;
-  height: 30px;
-  margin-right: 20px;
-  background-color: $color-primary;
-  border-radius: 3px;
-}
-
-.item__button-checkbox {
-  width: 30px;
-  height: 30px;
-  border: solid 1px $color-paleta1-terciary;
-}
-
 .item__select-container {
   display: flex;
   align-items: center;
   height: 30px;
   margin-top: 5px;
   margin-bottom: 15px;
-}
-
-select {
-  width: 55%;
-  height: 30px;
-  background-color: inherit;
-  border: solid 1px $color-paleta1-terciary;
-  border-radius: 4px;
-}
-
-.item__select-button {
-  width: 30px;
-  height: 30px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-left: 20px;
-  border: solid 1px $color-primary;
-  border-radius: 15px;
-  color: $color-primary;
-  font-size: $size-m;
 }
 
 //COMPARTE
