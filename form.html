@@ -129,11 +129,12 @@
             </div>
             <div class="item">
               <label class="item__label" for="image">Imagen de perfil</label>
-              <input class= "input" id="image" type="file" name="image" required>
-              <div class="item__button-container">
-                <span class="item__button-file item__button-label">Añadir imagen</span>
+              <div class="item__addfile">
+                <button class="item__button-file item__button-label" type="button">Añadir imagen</button>
+                <input class= "input input__file--hidden" id="image" type="file" name="image" required>
+                  <!-- <span class="item__button-file item__button-label">Añadir imagen</span> -->
                 <input class="input item__button-checkbox" type="checkbox">
-              </div>
+            </div>
             </div>
             <div class="item">
               <label class="item__label" for="mail">Email</label>
