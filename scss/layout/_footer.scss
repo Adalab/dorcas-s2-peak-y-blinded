@@ -15,8 +15,8 @@
   padding-bottom: 10px;
 }
 
-@media all and (min-width:768px){
-  .footer__content{
+@media all and (min-width: 768px) {
+  .footer__content {
     padding-top: 10px;
     padding-bottom: 10px;
     padding-left: 40px;
@@ -25,8 +25,13 @@
     justify-content: space-between;
     align-items: center;
   }
-  .footer__copyrigth{
+
+  .footer__copyrigth {
     padding-top: 0;
     padding-bottom: 0;
   }
+}
+
+.footer--adalab-logo {
+  width: 102px;
 }

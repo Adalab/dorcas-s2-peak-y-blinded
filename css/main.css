@@ -490,6 +490,12 @@ select {
   font-size: 18px;
 }
 
+.text__footer {
+  font-size: 14px;
+  color: #6b6b6b;
+  opacity: 0.5;
+}
+
 .form-header {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
@@ -526,6 +532,10 @@ select {
   padding-bottom: 10px;
 }
 
+.footer--adalab-logo {
+  width: 102px;
+}
+
 .body {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -538,25 +548,28 @@ select {
   min-height: 100vh;
 }
 
-.header {
-  -webkit-box-flex: 1;
-  -ms-flex-positive: 1;
-  flex-grow: 1;
-}
-
 .main {
   -webkit-box-flex: 1;
   -ms-flex-positive: 1;
   flex-grow: 1;
-}
-
-.imagen {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  text-align: center;
-  margin-top: 94px;
-  width: 80%;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: relative;
+}
+
+.image {
+  width: 250px;
   margin-left: 34px;
   margin-right: 34px;
 }
@@ -621,6 +634,15 @@ select {
   color: #e17334;
 }
 
+.main__section-3 {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  margin-bottom: 30px;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
+
 .button {
   color: #fff;
   font-family: "Open Sans", sans-serif;
@@ -640,10 +662,6 @@ select {
   border-radius: 20px;
   background-color: #438792;
   border: solid 1px #979797;
-  margin-bottom: 30px;
-  margin-top: 50px;
-  margin-left: auto;
-  margin-right: auto;
 }
 
 .wrapper {
@@ -774,6 +792,10 @@ select {
   .footer__copyrigth {
     padding-top: 0;
     padding-bottom: 0;
+  }
+
+  .image {
+    width: 420px;
   }
 
   .main__form {
