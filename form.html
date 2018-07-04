@@ -55,12 +55,12 @@
 
 <div class="wrapper">
   <form class="form" action="index.html" method="post">
-    <section class="form__fieldset-design">
-      <div class="legend__container">
+    <section class="form__fieldset-design js__dropdown">
+      <div class="legend__container js__dropdown-title">
         <legend class="fieldset__legend"><i class="far fa-object-ungroup icon__primary--medium"></i><span class="text__dark--title">diseña</span></legend>
         <span class="legend__arrow"><i class="fas fa-angle-down"></i></span>
       </div>
-      <div class="design__container">
+      <div class="design__container js__dropdown-content hidden">
         <div class="item-container item-container--color">
           <div class="text__dark--small">colores</div>
           <div class="radio-container">
@@ -110,15 +110,15 @@
       </section>
 
         <!-- FORMULARIO-RELLENA -->
-        <section class="fieldset">
+        <section class="fieldset js__dropdown">
           <div class="legend__container">
-            <div class="legend">
+            <div class="legend js__dropdown-title">
               <i class="icon__primary--medium far fa-keyboard"></i>
               <h1 class="text__dark--title">Rellena</h1>
             </div>
             <span class="legend__arrow"><i class="fas fa-angle-down"></i></span>
           </div>
-          <div>
+          <div class="js__dropdown-content hidden">
             <div class="item">
               <label class="item__label" for="name">Nombre completo</label>
               <input class="input item__input" id="name" type="text" name="name" placeholder="Ej: Sally Jill" required>
@@ -132,7 +132,6 @@
               <div class="item__addfile">
                 <button class="item__button-file item__button-label" type="button">Añadir imagen</button>
                 <input class= "input input__file--hidden" id="image" type="file" name="image" required>
-                  <!-- <span class="item__button-file item__button-label">Añadir imagen</span> -->
                 <input class="input item__button-checkbox" type="checkbox">
             </div>
             </div>
@@ -178,15 +177,15 @@
 
       <!-- Sección Comparte -->
 
-      <section class="share">
-        <div class="share__header">
+      <section class="share js__dropdown">
+        <div class="share__header js__dropdown-title">
           <div class="share__icon-title">
             <i class="icon__primary--medium fas fa-share-alt"></i>
             <h2 class="text__dark--title share__title">comparte</h2>
           </div>
           <span class="legend__arrow"><i class="fas fa-angle-down"></i></span>
         </div>
-        <div class="">
+        <div class="js__dropdown-content hidden">
           <div class="share__content">
             <button class="btn-card btn-card--position btn-card--text boton-card--active" type="submit" name="button"><i class="far fa-address-card icon-card"></i>Crear tarjeta</button>
           </div>
@@ -210,6 +209,6 @@
     </div>
   </footer>
 
-  <script type="text/javascript" src="./js/main.js"></script>
+  <script type="text/javascript" src="./js/main.min.js"></script>
 </body>
 </html>

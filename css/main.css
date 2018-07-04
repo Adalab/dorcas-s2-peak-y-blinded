@@ -778,6 +778,14 @@ select {
   padding-top: 30px;
 }
 
+.hidden {
+  display: none;
+}
+
+.visible {
+  display: block;
+}
+
 @media all and (min-width: 768px) {
   .footer__content {
     padding-top: 10px;
