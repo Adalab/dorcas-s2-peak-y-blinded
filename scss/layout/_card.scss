@@ -23,11 +23,85 @@
   background-color: $color-light;
 }
 
+.paleta-azul {
+  .font__comic--bold {
+    color: $color-paleta1-primary;
+  }
+
+  .info-personal__container {
+    border-left: 5px solid $color-paleta1-terciary;
+  }
+
+  .icon__contact {
+    border: 2px solid $color-paleta1-terciary;
+  }
+
+  .skills__list {
+    border-top: 2px solid rgba($color-paleta1-primary, 0.2);
+  }
+  .skills__item {
+    background-color: $color-paleta1-primary;
+  }
+
+  .skills__item {
+    background-color: $color-paleta1-primary;
+  }
+}
+
+.paleta-roja {
+  .font__comic--bold {
+    color: $color-paleta2-primary;
+  }
+
+  .info-personal__container {
+    border-left: 5px solid $color-paleta2-terciary;
+  }
+
+  .icon__contact {
+    border: 2px solid $color-paleta2-terciary;
+  }
+
+  .skills__list {
+    border-top: 2px solid rgba($color-paleta2-primary, 0.2);
+  }
+  .skills__item {
+    background-color: $color-paleta2-primary;
+  }
+
+  .skills__item {
+    background-color: $color-paleta2-primary;
+  }
+}
+
+.paleta-gris {
+  .font__comic--bold {
+    color: $color-paleta3-primary;
+  }
+
+  .info-personal__container {
+    border-left: 5px solid $color-paleta3-terciary;
+  }
+
+  .icon__contact {
+    border: 2px solid $color-paleta3-terciary;
+  }
+
+  .skills__list {
+    border-top: 2px solid rgba($color-paleta3-primary, 0.2);
+  }
+  .skills__item {
+    background-color: $color-paleta3-primary;
+  }
+
+  .skills__item {
+    background-color: $color-paleta3-primary;
+  }
+}
+
 .info-personal__container {
   margin-top: 20px;
   margin-bottom: 10px;
   padding-left: 15px;
-  border-left: 5px solid $color-paleta1-terciary;
 }
 
 .contact {
