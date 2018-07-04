@@ -599,6 +599,15 @@ select {
   padding: 10px 0 10px 15px;
 }
 
+.personal-image__container {
+  width: 240px;
+}
+
+.personal-image {
+  width: 100%;
+  display: block;
+}
+
 .icon__contact {
   padding: 7px;
   border: 2px solid #a2deaf;
