@@ -1,0 +1,98 @@
+.section-card {
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(#fccf31, #f55555);
+  align-items: center;
+  padding-bottom: 30px;
+
+  @media all and (min-width: 768px) {
+    flex-grow: 1;
+    flex-basis: 50%;
+    border-radius: 6px;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+    padding-bottom: 0;
+  }
+}
+
+.card__container {
+  display: flex;
+  flex-direction: column;
+  width: 240px;
+  background-color: $color-light;
+}
+
+.info-personal__container {
+  margin-top: 20px;
+  margin-bottom: 10px;
+  padding-left: 15px;
+  border-left: 5px solid $color-paleta1-terciary;
+}
+
+.contact {
+  padding: 10px 0 10px 15px;
+}
+
+.icon__contact {
+  padding: 7px;
+  border: 2px solid $color-paleta1-terciary;
+  border-radius: 50%;
+}
+
+.icon-mobile {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.contact__link {
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+.skills__list {
+  display: flex;
+  padding: 10px 0 10px 20px;
+  border-top: 2px solid rgba($color-paleta1-primary, 0.2);
+}
+
+.skills__item {
+  display: flex;
+  list-style: none;
+  height: 18px;
+  padding: 0 5px;
+  background-color: $color-paleta1-primary;
+  border-radius: 4px;
+  margin-right: 10px;
+  align-items: center;
+  justify-content: center;
+}
+
+.card-created {
+  margin-bottom: 30px;
+  border-bottom: 1px solid $color-medium-light;
+  text-align: center;
+
+  @media all and (min-width:768px) {
+    margin-bottom: 20px;
+  }
+}
+
+.card-created__title {
+  margin: 0;
+  text-transform: none;
+  padding-top: 20px;
+  padding-bottom: 5px;
+}
+
+.card-link {
+  color: $color-primary;
+}
+
+.icon-twitter {
+  padding-right: 10px;
+}
+
+.hidden__item {
+  display: none;
+}
