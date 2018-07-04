@@ -28,12 +28,10 @@
     <div class="card__container">
       <div class="info-personal">
         <div class="info-personal__container">
-          <p class="font__comic--bold">nombre apellido</p>
-          <p class="font__comic">Front-end developer</p>
+          <p id="element-name" class="font__comic--bold">nombre apellido</p>
+          <p id="element-role" class="font__comic">Front-end developer</p>
         </div>
-        <div class="personal-image__container">
         <img class="personal-image" src="./images/card-image.png" alt="foto personal">
-        </div>
         <div class="contact">
           <a class="contact__link contact__mobile" href="#"><i class="fas fa-mobile-alt icon-mobile icon__contact"></i></a>
           <a class="contact__link contact__envelope" href="#"><i class="far fa-envelope icon-mail icon__contact"></i></a>
@@ -123,11 +121,11 @@
           <div>
             <div class="item">
               <label class="item__label" for="name">Nombre completo</label>
-              <input class="input item__input" id="name" type="text" name="name" placeholder="Ej: Sally Jill" required>
+              <input class="input item__input form-field--name" id="name" type="text" name="name" placeholder="Ej: Sally Jill" data-donde="element-name" required>
             </div>
             <div class="item">
               <label class="item__label" for="job">Puesto</label>
-              <input class="input item__input" id="job" type="text" name="job" placeholder="Ej: Front-end unicorn" required>
+              <input class="input item__input form-field--role" id="job" type="text" name="job" placeholder="Ej: Front-end unicorn" data-donde="element-role" required>
             </div>
             <div class="item">
               <label class="item__label" for="image">Imagen de perfil</label>
@@ -212,6 +210,6 @@
     </div>
   </footer>
 
-  <script type="text/javascript" src="./js/main.js"></script>
+  <script type="text/javascript" src="./js/main.min.js"></script>
 </body>
 </html>
