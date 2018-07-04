@@ -23,6 +23,27 @@ a {
   color: #114e4e;
 }
 
+.button-start {
+  color: #fff;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  text-transform: uppercase;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -ms-flex-pack: distribute;
+  justify-content: space-around;
+  width: 130px;
+  height: 42px;
+  border-radius: 20px;
+  background-color: #438792;
+  border: solid 1px #979797;
+}
+
 .button-reset {
   display: block;
   height: 30px;
@@ -586,7 +607,6 @@ select {
   max-width: 222px;
   margin: auto;
   margin-top: 30px;
-  margin-bottom: 10px;
 }
 
 .main__paragraph {
@@ -641,27 +661,6 @@ select {
   margin-bottom: 30px;
   -webkit-transform: translateX(-50%);
   transform: translateX(-50%);
-}
-
-.button {
-  color: #fff;
-  font-family: "Open Sans", sans-serif;
-  font-weight: 600;
-  font-size: 16px;
-  text-transform: uppercase;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -ms-flex-pack: distribute;
-  justify-content: space-around;
-  width: 130px;
-  height: 42px;
-  border-radius: 20px;
-  background-color: #438792;
-  border: solid 1px #979797;
 }
 
 .wrapper {
@@ -796,6 +795,41 @@ select {
 
   .image {
     width: 420px;
+  }
+
+  .main__paragraph {
+    margin-bottom: 20px;
+  }
+
+  .main__section-2 {
+    width: 330px;
+    height: 86px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+
+  .card-options__item {
+    text-align: center;
+    padding-left: 12px;
+    padding-right: 12px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
   }
 
   .main__form {
