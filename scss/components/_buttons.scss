@@ -1,3 +1,19 @@
+.button-start {
+  color: $color-light;
+  font-family: $font-primary;
+  font-weight: $weight-semibold;
+  font-size: $size-sm;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 130px;
+  height: 42px;
+  border-radius: 20px;
+  background-color: $color-paleta1-secondary;
+  border: solid 1px $color-border-start-button;
+}
+
 .button-reset {
   display: block;
   height: 30px;
