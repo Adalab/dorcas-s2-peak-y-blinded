@@ -7,12 +7,11 @@
 
   @media all and (min-width: 768px) {
     flex-grow: 1;
-    flex-basis: 50%;
+    flex-basis: 80%;
     border-radius: 6px;
     display: flex;
     justify-content: center;
     margin-bottom: 20px;
-    padding-bottom: 0;
   }
 }
 

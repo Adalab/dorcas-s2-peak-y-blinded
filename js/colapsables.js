@@ -1,17 +1,19 @@
 'use strict';
 
-var dropDown = document.querySelectorAll('.js__dropDown');
+console.log('init colapsables');
+var dropDown = document.querySelectorAll('.js__dropdown');
 
-var dropDownTitle = document.querySelectorAll('.js__dropDownTitle');
+var dropDownTitle = document.querySelectorAll('.js__dropdown-title');
 
 function refreshDropDown(event) {
+  console.log('wadus');
   var parent = event.currentTarget.parentElement;
-  
+
   if (parent.classList.contains('visible')) {
-    parent.classList.remove('visible');  
+    parent.classList.remove('visible');
   } else {
     closeAllDropDown();
-    parent.classList.add('hidden');
+    parent.classList.add('visible');
   }
 }
 
@@ -21,6 +23,6 @@ function closeAllDropDown() {
   }
 }
 
-for (var i = 0; i < dropDownTitle.length; i++) {
-  dropDownTitle[i].addEventListener('click', refreshDropDown);
+for (var j = 0; j < dropDownTitle.length; j++) {
+  dropDownTitle[j].addEventListener('click', refreshDropDown);
 }

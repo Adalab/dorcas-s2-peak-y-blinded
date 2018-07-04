@@ -6,7 +6,7 @@
 	"js": {
 		"src": [
 			"js/main.js",
-			"js/colapsable.js"
+			"js/colapsables.js"
 		],
 		"dest": "js/"
 	},

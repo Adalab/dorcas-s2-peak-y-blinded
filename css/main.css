@@ -298,7 +298,6 @@ select {
   margin-top: 0;
   margin-bottom: 0;
   border-bottom: solid 1px #d8d8d8;
-  padding-bottom: 15px;
 }
 
 .legend {
@@ -778,11 +777,15 @@ select {
   padding-top: 30px;
 }
 
-.hidden {
+.js__dropdown-title {
+  cursor: pointer;
+}
+
+.js__dropdown-content {
   display: none;
 }
 
-.visible {
+.visible .js__dropdown-content {
   display: block;
 }
 
@@ -812,8 +815,8 @@ select {
     -webkit-box-flex: 1;
     -ms-flex-positive: 1;
     flex-grow: 1;
-    -ms-flex-preferred-size: 50%;
-    flex-basis: 50%;
+    -ms-flex-preferred-size: 80%;
+    flex-basis: 80%;
     border-radius: 6px;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -822,7 +825,6 @@ select {
     -ms-flex-pack: center;
     justify-content: center;
     margin-bottom: 20px;
-    padding-bottom: 0;
   }
 
   .card-created {
@@ -894,8 +896,10 @@ select {
   .wrapper {
     margin-right: 30px;
     margin-left: 0;
-    -ms-flex-negative: 2;
-    flex-shrink: 2;
+    -ms-flex-negative: 1;
+    flex-shrink: 1;
+    -ms-flex-preferred-size: 50%;
+    flex-basis: 50%;
   }
 }
 
