@@ -1,12 +1,10 @@
 'use strict';
 
-console.log('init colapsables');
 var dropDown = document.querySelectorAll('.js__dropdown');
 
 var dropDownTitle = document.querySelectorAll('.js__dropdown-title');
 
 function refreshDropDown(event) {
-  console.log('wadus');
   var parent = event.currentTarget.parentElement;
 
   if (parent.classList.contains('visible')) {
