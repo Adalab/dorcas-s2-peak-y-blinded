@@ -39,3 +39,23 @@ function writeData(event) {
 
 nameField.addEventListener('keyup', writeData);
 roleField.addEventListener('keyup', writeData);
+
+//redes sociales
+
+var mailField = document.querySelector('.form-field--mail');
+var telField = document.querySelector('.form-field--tel');
+var linField = document.querySelector('.form-field--lin');
+var ghField = document.querySelector('.form-field--gh');
+
+function writeSocialMedia(event) {
+  var guiltyElement = event.currentTarget;
+  var targetID = guiltyElement.getAttribute('data-donde');
+
+var linkID = document.querySelector('#' + targetID);
+linkID.href = linkID.href + guiltyElement.value;
+}
+
+mailField.addEventListener('keyup', writeSocialMedia);
+telField.addEventListener('keyup', writeSocialMedia);
+linField.addEventListener('keyup', writeSocialMedia);
+ghField.addEventListener('keyup', writeSocialMedia);
