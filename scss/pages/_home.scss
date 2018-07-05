@@ -17,8 +17,30 @@
     padding-right: 40px;
   }
   .wrapper {
+    max-width: 400px;
     margin-right: 30px;
     margin-left: 0;
-    flex-shrink: 2;
+    flex-shrink: 1;
+    flex-basis: 40%;
+  }
+}
+
+//ESTILOS PARA LOS COLAPSABLES
+
+// .js__dropdown {
+//   overflow: hidden;
+// }
+
+.js__dropdown-title {
+  cursor: pointer;
+}
+
+.js__dropdown-content {
+  display: none;
+}
+
+.visible{
+  .js__dropdown-content {
+    display: block;
   }
 }
