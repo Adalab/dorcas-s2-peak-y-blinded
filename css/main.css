@@ -20,7 +20,6 @@ body {
 
 a {
   text-decoration: none;
-  color: #114e4e;
 }
 
 .button-start {
@@ -585,6 +584,10 @@ select {
   flex-direction: column;
   width: 240px;
   background-color: #fff;
+}
+
+.contact__link--inactive {
+  color: #c5c5c5;
 }
 
 .paleta-azul .font__comic--bold {

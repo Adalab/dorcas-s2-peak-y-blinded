@@ -23,6 +23,10 @@
   background-color: $color-light;
 }
 
+.contact__link--inactive {
+  color: $color-medium;
+}
+
 .paleta-azul {
   .font__comic--bold {
     color: $color-paleta1-primary;
