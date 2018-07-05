@@ -25,11 +25,11 @@
       <i class="far fa-trash-alt button-reset__icon"></i>
       <span class="button-reset__text">reset</span>
     </button>
-    <div class="card__container">
+    <div class="card__container paleta-azul">
       <div class="info-personal">
         <div class="info-personal__container">
-          <p class="font__comic--bold">nombre apellido</p>
-          <p class="font__comic">Front-end developer</p>
+          <p id="element-name" class="font__comic--bold">nombre apellido</p>
+          <p id="element-role" class="font__comic">Front-end developer</p>
         </div>
         <img class="personal-image" src="./images/card-image.png" alt="foto personal">
         <div class="contact">
@@ -121,11 +121,11 @@
           <div class="js__dropdown-content">
             <div class="item">
               <label class="item__label" for="name">Nombre completo</label>
-              <input class="input item__input" id="name" type="text" name="name" placeholder="Ej: Sally Jill" required>
+              <input class="input item__input form-field--name" id="name" type="text" name="name" placeholder="Ej: Sally Jill" data-donde="element-name" required>
             </div>
             <div class="item">
               <label class="item__label" for="job">Puesto</label>
-              <input class="input item__input" id="job" type="text" name="job" placeholder="Ej: Front-end unicorn" required>
+              <input class="input item__input form-field--role" id="job" type="text" name="job" placeholder="Ej: Front-end unicorn" data-donde="element-role" required>
             </div>
             <div class="item">
               <label class="item__label" for="image">Imagen de perfil</label>
