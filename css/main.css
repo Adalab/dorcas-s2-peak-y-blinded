@@ -395,7 +395,6 @@ select {
   font-family: "Comic Sans MS", "Chilanka", sans-serif;
   font-weight: 700;
   text-transform: capitalize;
-  color: #114e4e;
 }
 
 .font__comic {
@@ -588,11 +587,70 @@ select {
   background-color: #fff;
 }
 
+.paleta-azul .font__comic--bold {
+  color: #114e4e;
+}
+
+.paleta-azul .info-personal__container {
+  border-left: 5px solid #a2deaf;
+}
+
+.paleta-azul .icon__contact {
+  border: 2px solid #a2deaf;
+}
+
+.paleta-azul .skills__list {
+  border-top: 2px solid rgba(17, 78, 78, 0.2);
+}
+
+.paleta-azul .skills__item {
+  background-color: #114e4e;
+}
+
+.paleta-roja .font__comic--bold {
+  color: #420101;
+}
+
+.paleta-roja .info-personal__container {
+  border-left: 5px solid #e95626;
+}
+
+.paleta-roja .icon__contact {
+  border: 2px solid #e95626;
+}
+
+.paleta-roja .skills__list {
+  border-top: 2px solid rgba(66, 1, 1, 0.2);
+}
+
+.paleta-roja .skills__item {
+  background-color: #420101;
+}
+
+.paleta-gris .font__comic--bold {
+  color: #3e5b65;
+}
+
+.paleta-gris .info-personal__container {
+  border-left: 5px solid #a0c0cf;
+}
+
+.paleta-gris .icon__contact {
+  border: 2px solid #a0c0cf;
+}
+
+.paleta-gris .skills__list {
+  border-top: 2px solid rgba(62, 91, 101, 0.2);
+}
+
+.paleta-gris .skills__item {
+  background-color: #3e5b65;
+}
+
 .info-personal__container {
   margin-top: 20px;
   margin-bottom: 10px;
   padding-left: 15px;
-  border-left: 5px solid #a2deaf;
 }
 
 .contact {
