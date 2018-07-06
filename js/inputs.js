@@ -50,9 +50,19 @@ var ghField = document.querySelector('.form-field--gh');
 function writeSocialMedia(event) {
   var guiltyElement = event.currentTarget;
   var targetID = guiltyElement.getAttribute('data-donde');
+  var inputID = guiltyElement.getAttribute('id');
+  var linkID = document.querySelector('#' + targetID);
 
-var linkID = document.querySelector('#' + targetID);
-linkID.href = linkID.href + guiltyElement.value;
+  if (inputID==='mail'){
+    linkID.href = 'mailto:' + guiltyElement.value;
+  } else if (inputID==='telephone'){
+    linkID.href = 'tel:' + guiltyElement.value;
+  } else if  (inputID==='linkedin'){
+    linkID.href = 'https://linkedin.com/in/' + guiltyElement.value;
+  } else if (inputID==='github'){
+    linkID.href = 'https://github.com/' + guiltyElement.value;
+  }
+
 }
 
 mailField.addEventListener('change', writeSocialMedia);
