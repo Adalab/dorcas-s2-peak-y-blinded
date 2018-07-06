@@ -55,7 +55,7 @@ var linkID = document.querySelector('#' + targetID);
 linkID.href = linkID.href + guiltyElement.value;
 }
 
-mailField.addEventListener('keyup', writeSocialMedia);
-telField.addEventListener('keyup', writeSocialMedia);
-linField.addEventListener('keyup', writeSocialMedia);
-ghField.addEventListener('keyup', writeSocialMedia);
+mailField.addEventListener('change', writeSocialMedia);
+telField.addEventListener('change', writeSocialMedia);
+linField.addEventListener('change', writeSocialMedia);
+ghField.addEventListener('change', writeSocialMedia);
