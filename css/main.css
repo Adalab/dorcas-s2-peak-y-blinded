@@ -154,6 +154,7 @@ select {
   border-radius: 15px;
   color: #e17334;
   font-size: 18px;
+  cursor: pointer;
 }
 
 .form__fieldset-design {
