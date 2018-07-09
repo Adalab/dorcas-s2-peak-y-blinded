@@ -7,12 +7,8 @@
 		"src": [
 			"js/main.js",
 			"js/colapsables.js",
-<<<<<<< HEAD
 			"js/inputs.js",
 			"js/select-buttons.js"
-=======
-			"js/inputs.js"
->>>>>>> master
 		],
 		"dest": "js/"
 	},
