@@ -602,8 +602,8 @@ select {
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#fccf31), to(#f55555));
-  background-image: linear-gradient(#fccf31, #f55555);
+  background: -webkit-gradient(linear, left top, left bottom, from(#fccf31), to(#f55555)), url("../../images/pattern-glasses.svg");
+  background: linear-gradient(#fccf31, #f55555), url("../../images/pattern-glasses.svg");
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
