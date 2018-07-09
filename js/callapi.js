@@ -15,7 +15,7 @@ function sendData () {
 }
 
 function loadPhoto(){
-  var myFile = document.querySelector('#img-selector').files[0];
+  var myFile = document.querySelector('#image').files[0];
   fr.addEventListener('load', sendData);
   fr.readAsDataURL(myFile);
 }

@@ -51,12 +51,12 @@ function writeSocialMedia(event) {
   var inputID = guiltyElement.getAttribute('id');
   var linkID = document.querySelector('#' + targetID);
 
-  if (inputID==='mail'){
+  if (inputID==='email'){
     linkID.href = 'mailto:' + guiltyElement.value;
     linkID.title = guiltyElement.value;
     linkID.classList.remove('contact__link--inactive');
     linkID.classList.add('contact__link--active');
-  } else if (inputID === 'telephone'){
+  } else if (inputID === 'phone'){
     linkID.href = 'tel:' + guiltyElement.value;
     linkID.title = guiltyElement.value;
     linkID.classList.remove('contact__link--inactive');

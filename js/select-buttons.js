@@ -65,7 +65,7 @@ function changeButton() {
       button[i].addEventListener('click', removeSelect);
     }
   }
-  // conectSelectWithCard();
+  conectSelectWithCard();
 }
 
 //Llamada a la función que crea el contenido la primera vez
