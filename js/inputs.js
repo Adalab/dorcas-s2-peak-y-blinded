@@ -39,3 +39,33 @@ function writeData(event) {
 
 nameField.addEventListener('keyup', writeData);
 roleField.addEventListener('keyup', writeData);
+
+//redes sociales
+
+var mailField = document.querySelector('.form-field--mail');
+var telField = document.querySelector('.form-field--tel');
+var linField = document.querySelector('.form-field--lin');
+var ghField = document.querySelector('.form-field--gh');
+
+function writeSocialMedia(event) {
+  var guiltyElement = event.currentTarget;
+  var targetID = guiltyElement.getAttribute('data-donde');
+  var inputID = guiltyElement.getAttribute('id');
+  var linkID = document.querySelector('#' + targetID);
+
+  if (inputID==='mail'){
+    linkID.href = 'mailto:' + guiltyElement.value;
+    linkClass.classList.remove('contact__link--inactive');
+  } else if (inputID==='telephone'){
+    linkID.href = 'tel:' + guiltyElement.value;
+  } else if  (inputID==='linkedin'){
+    linkID.href = 'https://linkedin.com/in/' + guiltyElement.value;
+  } else if (inputID==='github'){
+    linkID.href = 'https://github.com/' + guiltyElement.value;
+  }
+}
+
+mailField.addEventListener('change', writeSocialMedia);
+telField.addEventListener('change', writeSocialMedia);
+linField.addEventListener('change', writeSocialMedia);
+ghField.addEventListener('change', writeSocialMedia);

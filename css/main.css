@@ -20,7 +20,6 @@ body {
 
 a {
   text-decoration: none;
-  color: #114e4e;
 }
 
 .button-start {
@@ -597,6 +596,14 @@ select {
   background-color: #fff;
 }
 
+.contact__link--inactive {
+  color: #c5c5c5;
+}
+
+.paleta-azul .contact__link--active {
+  color: #114e4e;
+}
+
 .paleta-azul .font__comic--bold {
   color: #114e4e;
 }
@@ -617,6 +624,10 @@ select {
   background-color: #114e4e;
 }
 
+.paleta-roja .contact__link--active {
+  color: #420101;
+}
+
 .paleta-roja .font__comic--bold {
   color: #420101;
 }
@@ -635,6 +646,10 @@ select {
 
 .paleta-roja .skills__item {
   background-color: #420101;
+}
+
+.paleta-gris .contact__link--active {
+  color: #3e5b65;
 }
 
 .paleta-gris .font__comic--bold {
