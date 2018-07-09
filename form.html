@@ -130,7 +130,7 @@
             <div class="item">
               <label class="item__label" for="image">Imagen de perfil</label>
               <div class="item__addfile">
-                <button class="item__button-file item__button-label" type="button">Añadir imagen</button>
+                <button id="img-selector" class="item__button-file item__button-label" type="button">Añadir imagen</button>
                 <input class= "input input__file--hidden" id="image" type="file" name="image" required>
                 <input class="input item__button-checkbox" type="checkbox">
             </div>
@@ -187,11 +187,11 @@
         </div>
         <div class="js__dropdown-content share__content-parent">
           <div class="share__content">
-            <button class="btn-card btn-card--position btn-card--text boton-card--active" type="submit" name="button"><i class="far fa-address-card icon-card"></i>Crear tarjeta</button>
+            <button id="submit" class="btn-card btn-card--position btn-card--text boton-card--active" type="button" name="button"><i class="far fa-address-card icon-card"></i>Crear tarjeta</button>
           </div>
           <div class="card-created">
             <h3 class="text__dark--title card-created__title">La tarjeta ha sido creada:</h3>
-            <a class="card-link text__card-link"  href="#">https://awesome-profile-card.com?id=A456DF0001</a>
+            <p class="card-link text__card-link response"></p>
             <button class="btn-twitter btn-twitter--position btn-twitter--text" type="button" name="button"><i class="fab fa-twitter icon-twitter"></i>Compartir en twitter</button>
           </div>
         </div>
