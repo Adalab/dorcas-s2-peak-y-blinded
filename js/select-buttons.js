@@ -1,4 +1,4 @@
-'use strict';
+
 //userSelections para recoger en un array las selecciones del usuario
 var userSelections = [];
 
@@ -106,31 +106,3 @@ function removeSelect(event) {
     changeButton();
   }
 }
-
-//Función para pasar el contenido de los option a la tarjeta
-function conectSelectWithCard() {
-  var skill1 = document.querySelector('#skill-1');
-  var skill2 = document.querySelector('#skill-2');
-  var skill3 = document.querySelector('#skill-3');
-
-  if (userSelections.length === 0) {
-    skill1.classList.add('hidden__item');
-    skill2.classList.add('hidden__item');
-    skill3.classList.add('hidden__item');
-  } else if (userSelections.length === 1) {
-    skill1.classList.remove('hidden__item');
-    var newContent = document.createTextNode(userSelections[0]);
-    skill1.appendChild(newContent);
-    skill2.classList.add('hidden__item');
-    skill3.classList.add('hidden__item');
-  } else if (userSelections.length === 2) {
-    skill1.classList.remove('hidden__item');
-    skill2.classList.remove('hidden__item');
-    skill3.classList.add('hidden__item');
-  } else if (userSelections.length === 3) {
-    skill1.classList.remove('hidden__item');
-    skill2.classList.remove('hidden__item');
-    skill3.classList.remove('hidden__item');
-  }
-}
-
