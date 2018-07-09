@@ -78,3 +78,13 @@ mailField.addEventListener('change', writeSocialMedia);
 telField.addEventListener('change', writeSocialMedia);
 linField.addEventListener('change', writeSocialMedia);
 ghField.addEventListener('change', writeSocialMedia);
+
+// reset
+
+var resetButton = document.querySelector('.button-reset');
+
+function resetForm() {
+ document.getElementById('form').reset();
+}
+
+resetButton.addEventListener('click', resetForm);

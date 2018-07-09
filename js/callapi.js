@@ -1,7 +1,7 @@
 var submitButton = document.querySelector('#submit');
 var responseURL = document.querySelector('.response');
 var form = document.querySelector('form');
-var fr = new FileReader();
+// var fr = new FileReader();
 
 submitButton.addEventListener('click', loadPhoto);
 
