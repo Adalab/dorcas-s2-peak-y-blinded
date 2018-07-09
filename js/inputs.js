@@ -55,6 +55,7 @@ function writeSocialMedia(event) {
 
   if (inputID==='mail'){
     linkID.href = 'mailto:' + guiltyElement.value;
+    linkClass.classList.remove('contact__link--inactive');
   } else if (inputID==='telephone'){
     linkID.href = 'tel:' + guiltyElement.value;
   } else if  (inputID==='linkedin'){
@@ -62,7 +63,6 @@ function writeSocialMedia(event) {
   } else if (inputID==='github'){
     linkID.href = 'https://github.com/' + guiltyElement.value;
   }
-
 }
 
 mailField.addEventListener('change', writeSocialMedia);
