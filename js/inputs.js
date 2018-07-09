@@ -53,13 +53,24 @@ function writeSocialMedia(event) {
 
   if (inputID==='mail'){
     linkID.href = 'mailto:' + guiltyElement.value;
-    linkClass.classList.remove('contact__link--inactive');
-  } else if (inputID==='telephone'){
+    linkID.title = guiltyElement.value;
+    linkID.classList.remove('contact__link--inactive');
+    linkID.classList.add('contact__link--active');
+  } else if (inputID === 'telephone'){
     linkID.href = 'tel:' + guiltyElement.value;
-  } else if  (inputID==='linkedin'){
+    linkID.title = guiltyElement.value;
+    linkID.classList.remove('contact__link--inactive');
+    linkID.classList.add('contact__link--active');
+  } else if  (inputID === 'linkedin'){
     linkID.href = 'https://linkedin.com/in/' + guiltyElement.value;
-  } else if (inputID==='github'){
+    linkID.title = 'https://linkedin.com/in/' + guiltyElement.value;
+    linkID.classList.remove('contact__link--inactive');
+    linkID.classList.add('contact__link--active');
+  } else if (inputID === 'github') {
     linkID.href = 'https://github.com/' + guiltyElement.value;
+    linkID.title = 'https://github.com/' + guiltyElement.value;
+    linkID.classList.remove('contact__link--inactive');
+    linkID.classList.add('contact__link--active');
   }
 }
 

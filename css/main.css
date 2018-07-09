@@ -630,7 +630,11 @@ select {
   color: #114e4e;
 }
 
-.paleta-azul .font__comic--bold {
+.paleta-azul .contact__link--active:hover {
+  color: #438792;
+}
+
+.paleta-azul .font-color {
   color: #114e4e;
 }
 
@@ -654,7 +658,11 @@ select {
   color: #420101;
 }
 
-.paleta-roja .font__comic--bold {
+.paleta-roja .contact__link--active:hover {
+  color: #bd1010;
+}
+
+.paleta-roja .font-color {
   color: #420101;
 }
 
@@ -678,7 +686,11 @@ select {
   color: #3e5b65;
 }
 
-.paleta-gris .font__comic--bold {
+.paleta-gris .contact__link--active:hover {
+  color: #a0c0cf;
+}
+
+.paleta-gris .font-color {
   color: #3e5b65;
 }
 
