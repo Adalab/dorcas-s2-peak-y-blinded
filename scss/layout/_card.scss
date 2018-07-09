@@ -1,8 +1,7 @@
 .section-card {
   display: flex;
   flex-direction: column;
-  background: linear-gradient(#fccf31, #f55555);
-  align-items: center;
+  background-image: linear-gradient(#fccf31, #f55555);
   padding-bottom: 30px;
 
   @media all and (min-width: 768px) {
