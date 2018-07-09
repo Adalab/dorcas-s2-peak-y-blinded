@@ -22,7 +22,15 @@
   background-color: $color-light;
 }
 
+.contact__link--inactive {
+  color: $color-medium;
+}
+
 .paleta-azul {
+  .contact__link--active {
+    color: $color-paleta1-primary;
+  }
+
   .font__comic--bold {
     color: $color-paleta1-primary;
   }
@@ -38,12 +46,17 @@
   .skills__list {
     border-top: 2px solid rgba($color-paleta1-primary, 0.2);
   }
+
   .skills__item {
     background-color: $color-paleta1-primary;
   }
 }
 
 .paleta-roja {
+  .contact__link--active {
+    color: $color-paleta2-primary;
+  }
+
   .font__comic--bold {
     color: $color-paleta2-primary;
   }
@@ -59,12 +72,17 @@
   .skills__list {
     border-top: 2px solid rgba($color-paleta2-primary, 0.2);
   }
+
   .skills__item {
     background-color: $color-paleta2-primary;
   }
 }
 
 .paleta-gris {
+  .contact__link--active {
+    color: $color-paleta3-primary;
+  }
+
   .font__comic--bold {
     color: $color-paleta3-primary;
   }
@@ -80,6 +98,7 @@
   .skills__list {
     border-top: 2px solid rgba($color-paleta3-primary, 0.2);
   }
+
   .skills__item {
     background-color: $color-paleta3-primary;
   }
@@ -97,7 +116,6 @@
 
 .personal-image__container {
   width: 240px;
-
 }
 
 .personal-image {
