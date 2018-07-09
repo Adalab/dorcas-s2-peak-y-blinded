@@ -398,16 +398,42 @@ select {
   padding-right: 10px;
 }
 
-.font__comic--bold {
+.font-card--comicsans .font-card--bold {
   font-size: 18px;
   font-family: "Comic Sans MS", "Chilanka", sans-serif;
   font-weight: 700;
   text-transform: capitalize;
 }
 
-.font__comic {
+.font-card--comicsans .font-card {
   font-size: 16px;
   font-family: "Comic Sans MS", "Chilanka", sans-serif;
+  font-weight: 400;
+}
+
+.font-card--ubuntu .font-card--bold {
+  font-size: 18px;
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 700;
+  text-transform: capitalize;
+}
+
+.font-card--ubuntu .font-card {
+  font-size: 16px;
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 400;
+}
+
+.font-card--montserrat .font-card--bold {
+  font-size: 18px;
+  font-family: "Montserrat", serif;
+  font-weight: 700;
+  text-transform: capitalize;
+}
+
+.font-card--montserrat .font-card {
+  font-size: 16px;
+  font-family: "Montserrat", serif;
   font-weight: 400;
 }
 
