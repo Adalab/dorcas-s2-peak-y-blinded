@@ -8,7 +8,8 @@
 			"js/main.js",
 			"js/colapsables.js",
 			"js/inputs.js",
-			"js/radiobutton.js"
+			"js/radiobutton.js",
+			"js/select-buttons.js"
 		],
 		"dest": "js/"
 	},
