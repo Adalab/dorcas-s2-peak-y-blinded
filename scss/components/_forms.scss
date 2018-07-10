@@ -141,6 +141,7 @@
   display: flex;
   margin-top: 5px;
   margin-bottom: 20px;
+  align-items: center;
 }
 
 .item__input {
@@ -181,4 +182,17 @@
 
 .icon-card {
   padding-right: 10px;
+}
+
+.item-preview {
+  height: 30px;
+  width: 30px;
+  background-color: transparent;
+}
+
+.item-preview__img {
+  width: 100%;
+  height: 30px;
+  overflow: hidden;
+  border: 1px solid $color-paleta1-terciary;
 }
