@@ -602,8 +602,10 @@ select {
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#fccf31), to(#f55555));
-  background-image: linear-gradient(#fccf31, #f55555);
+  background-image: url("../../images/pattern-glasses.svg"), -webkit-gradient(linear, left top, left bottom, from(#fccf31), to(#f55555));
+  background-image: url("../../images/pattern-glasses.svg"), linear-gradient(#fccf31, #f55555);
+  background-repeat: repeat;
+  background-position: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
@@ -630,7 +632,11 @@ select {
   color: #114e4e;
 }
 
-.paleta-azul .font__comic--bold {
+.paleta-azul .contact__link--active:hover {
+  color: #438792;
+}
+
+.paleta-azul .font-color {
   color: #114e4e;
 }
 
@@ -654,7 +660,11 @@ select {
   color: #420101;
 }
 
-.paleta-roja .font__comic--bold {
+.paleta-roja .contact__link--active:hover {
+  color: #bd1010;
+}
+
+.paleta-roja .font-color {
   color: #420101;
 }
 
@@ -678,7 +688,11 @@ select {
   color: #3e5b65;
 }
 
-.paleta-gris .font__comic--bold {
+.paleta-gris .contact__link--active:hover {
+  color: #a0c0cf;
+}
+
+.paleta-gris .font-color {
   color: #3e5b65;
 }
 

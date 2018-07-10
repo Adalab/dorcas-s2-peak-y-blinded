@@ -51,15 +51,26 @@ function writeSocialMedia(event) {
   var inputID = guiltyElement.getAttribute('id');
   var linkID = document.querySelector('#' + targetID);
 
-  if (inputID==='mail'){
+  if (inputID==='email'){
     linkID.href = 'mailto:' + guiltyElement.value;
-    linkClass.classList.remove('contact__link--inactive');
-  } else if (inputID==='telephone'){
+    linkID.title = guiltyElement.value;
+    linkID.classList.remove('contact__link--inactive');
+    linkID.classList.add('contact__link--active');
+  } else if (inputID === 'phone'){
     linkID.href = 'tel:' + guiltyElement.value;
-  } else if  (inputID==='linkedin'){
+    linkID.title = guiltyElement.value;
+    linkID.classList.remove('contact__link--inactive');
+    linkID.classList.add('contact__link--active');
+  } else if  (inputID === 'linkedin'){
     linkID.href = 'https://linkedin.com/in/' + guiltyElement.value;
-  } else if (inputID==='github'){
+    linkID.title = 'https://linkedin.com/in/' + guiltyElement.value;
+    linkID.classList.remove('contact__link--inactive');
+    linkID.classList.add('contact__link--active');
+  } else if (inputID === 'github') {
     linkID.href = 'https://github.com/' + guiltyElement.value;
+    linkID.title = 'https://github.com/' + guiltyElement.value;
+    linkID.classList.remove('contact__link--inactive');
+    linkID.classList.add('contact__link--active');
   }
 }
 
@@ -67,3 +78,22 @@ mailField.addEventListener('change', writeSocialMedia);
 telField.addEventListener('change', writeSocialMedia);
 linField.addEventListener('change', writeSocialMedia);
 ghField.addEventListener('change', writeSocialMedia);
+
+// reset
+
+var resetButton = document.querySelector('.button-reset');
+
+function resetForm() {
+  document.getElementById('form').reset();
+  card.classList.remove('paleta-azul', 'paleta-roja', 'paleta-gris');
+  card.classList.add('paleta-azul');
+
+  cardInfo.classList.remove('font-card--comicsans', 'font-card--ubuntu', 'font-card--montserrat');
+  cardInfo.classList.add('font-card--comicsans');
+
+  // var linkID = document.querySelector('.contact-link');
+  // linkID.classList.remove('contact__link--active');
+  // linkID.classList.add('contact__link--inactive');
+}
+
+resetButton.addEventListener('click', resetForm);
