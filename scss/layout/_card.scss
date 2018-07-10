@@ -1,7 +1,9 @@
 .section-card {
   display: flex;
   flex-direction: column;
-  background: linear-gradient(#fccf31, #f55555), url('../../images/pattern-glasses.svg');
+  background-image:  url('../../images/pattern-glasses.svg'), linear-gradient(#fccf31, #f55555);;
+  background-repeat: repeat;
+  background-position: center;
   align-items: center;
   padding-bottom: 30px;
 
