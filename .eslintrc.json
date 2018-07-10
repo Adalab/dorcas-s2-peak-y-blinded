@@ -19,7 +19,7 @@
         "curly": [1, "multi-line", "consistent"],
         "no-empty-function": 1,
         "no-useless-return": 1,
-        "vars-on-top": 1,
+        "vars-on-top": 0,
         "no-use-before-define": [1, "nofunc"],
         "global-require": 1,
         "camelcase": 1,
