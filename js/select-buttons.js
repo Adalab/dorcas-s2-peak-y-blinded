@@ -1,4 +1,4 @@
-
+'use strict';
 //userSelections para recoger en un array las selecciones del usuario
 var userSelections = [];
 
@@ -65,7 +65,7 @@ function changeButton() {
       button[i].addEventListener('click', removeSelect);
     }
   }
-  conectSelectWithCard();
+  //conectSelectWithCard();
 }
 
 //Llamada a la función que crea el contenido la primera vez
@@ -106,3 +106,22 @@ function removeSelect(event) {
     changeButton();
   }
 }
+
+//Función para crear el contenido de las habilidades en la preview de la trajeta.
+function addContentToCard (){
+  console.log('estoy entrando');
+  var skills = document.querySelector('.skills');
+  var skillsList = document.createElement('ul');
+
+  console.log(skillsItem);
+  skills.appendChild(skillsList);
+  skillsList.classList.add('skills__list', 'text__skills');
+
+  for (var i = 0; i < 3; i++){
+    var skillsItem = document.createElement('li');
+    skillsList.appendChild(skillsItem);
+    skillsItem.classList.add('skills__item');
+  }
+}
+
+addContentToCard();
