@@ -3,7 +3,18 @@
 var userSelections = [];
 
 //arrayOptions para crear las option del select
-var arrayOptions = ['HTML', 'CSS', 'JavaScript', 'GULP'];
+var arrayOptions = {};
+
+fetch('https://raw.githubusercontent.com/Adalab/dorcas-s2-proyecto-data/master/skills.json')
+  .then(function(response){
+    return response.json();
+  })
+  .then(function(json) {
+    console.log(json);
+    arrayOptions = json.skills;
+    //Llamada a la función que crea el contenido la primera vez
+    addContentToHtml();
+  });
 
 //variables para eliminar los select
 var parentDiv;
@@ -28,12 +39,12 @@ function addContentToHtml() {
   for (var i = 0; i < userSelections.length + 1; i++) {
 
     //Insercion contenido en option, e insercion de option como contenido de select. Insercion de select dentro del div que es su padre
-    // newSelect.appendChild(newOption);
     newParentSelect.appendChild(newSelect);
     parentDivSelect.appendChild(newParentSelect);
 
     newParentSelect.classList.add('item__select-container');
     newSelect.classList.add('item__select');
+    newSelect.setAttribute('name', 'skills');
 
     //Insercion clase font-awesome en <i>, insercion <i> en <div>
     newSelectButtonContent.classList.add('fas', 'fa-plus', 'js__add');
@@ -75,9 +86,6 @@ function changeButton() {
   }
   addContentToCard();
 }
-
-//Llamada a la función que crea el contenido la primera vez
-addContentToHtml();
 
 //Función para añadir el contenido (hasta que las selecciones del usuario sean 3) y cambiar el signo del último botón
 function addSelect(event) {
@@ -127,8 +135,11 @@ function addContentToCard() {
   var newSkillsItem = document.querySelectorAll('.skills__item');
 
   for (var s = 0; s < newSkillsItem.length; s++) {
+    var buttons = document.querySelectorAll('.js__add');
     skillsList.removeChild(newSkillsItem[s]);
+
   }
+  console.log('user selections ', userSelections);
 
   for (var i = 0; i < userSelections.length; i++) {
     var optionContent = selects[i].value;
