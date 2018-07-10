@@ -84,7 +84,9 @@ ghField.addEventListener('change', writeSocialMedia);
 var resetButton = document.querySelector('.button-reset');
 
 function resetForm() {
- document.getElementById('form').reset();
+  document.getElementById('form').reset();
+  linkID.classList.remove('contact__link--active');
+  linkID.classList.add('contact__link--inactive');
 }
 
 resetButton.addEventListener('click', resetForm);
