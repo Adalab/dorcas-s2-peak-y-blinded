@@ -5,6 +5,7 @@ var fr = new FileReader();
 var uploadBtn = document.querySelector('.item__button-file');
 var fileField = document.querySelector('#image');
 var profileImage = document.querySelector('.personal-image');
+var miniImage = document.querySelector('.item-preview__img');
 
 function getImage(e){
   var myFile = e.currentTarget.files[0];
@@ -13,7 +14,8 @@ function getImage(e){
 }
 
 function writeImage() {
-  profileImage.src= fr.result;
+  profileImage.src = fr.result;
+  miniImage.src = fr.result;
 }
 
 function fakeFileClick() {
@@ -106,6 +108,11 @@ function resetForm() {
   nameFieldFilled.innerHTML = 'nombre apellidos';
   var roleFieldFilled = document.querySelector('#element-role');
   roleFieldFilled.innerHTML = 'Front-end developer';
+
+  //reset pic
+  profileImage.src = "./images/card-image.png";
+  miniImage.src = "http://placehold.it/29x29/ffffff/ffffff";
+
 }
 
 resetButton.addEventListener('click', resetForm);
