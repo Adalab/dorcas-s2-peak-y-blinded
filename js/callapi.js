@@ -1,7 +1,9 @@
+
+'use strict';
 var submitButton = document.querySelector('#submit');
 var responseURL = document.querySelector('.response');
 var form = document.querySelector('form');
-// var fr = new FileReader();
+var fr = new FileReader();
 
 submitButton.addEventListener('click', loadPhoto);
 
@@ -9,8 +11,11 @@ function sendData () {
 
   var inputs = Array.from(form.elements);
   var json = getJSONFromInputs(inputs);
+  json.typography = parseInt(json.typography);
+  json.palette = parseInt(json.palette);
   json.skills = ['JavaScript', 'React'];
   json.photo = fr.result;
+  console.log(json);
   sendRequest(json);
 }
 
@@ -25,8 +30,9 @@ function getJSONFromInputs(inputs){
     if(val.nodeName !== 'BUTTON')
       acc[val.name] = val.value;
     return acc;
-  }, {})
+  }, {});
 }
+
 
 function sendRequest(json){
   fetch('https://us-central1-awesome-cards-cf6f0.cloudfunctions.net/card/', {
@@ -36,13 +42,17 @@ function sendRequest(json){
       'content-type': 'application/json'
     },
   })
-    .then(function(resp) { return resp.json(); })
-    .then(function(result) { showURL(result); })
+
+    .then(function(resp) {
+      return resp.json(); })
+    .then(function(result) {
+      showURL(result.url); })
     .catch(function(error) { console.log(error); });
 }
 
 function showURL(result){
   if(result.success){
+    console.log(result.cardURL);
     responseURL.innerHTML = '<a href=' + result.cardURL + '>' + result.cardURL + '</a>';
   }else{
     responseURL.innerHTML = 'ERROR:' + result.error;
