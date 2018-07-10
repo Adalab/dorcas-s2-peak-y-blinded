@@ -112,7 +112,6 @@ function resetForm() {
   //reset pic
   profileImage.src = "./images/card-image.png";
   miniImage.src = "http://placehold.it/29x29/ffffff/ffffff";
-
 }
 
 resetButton.addEventListener('click', resetForm);
