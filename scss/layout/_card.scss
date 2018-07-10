@@ -1,7 +1,9 @@
 .section-card {
   display: flex;
   flex-direction: column;
-  background-image: linear-gradient(#fccf31, #f55555);
+  background-image:  url('../../images/pattern-glasses.svg'), linear-gradient(#fccf31, #f55555);;
+  background-repeat: repeat;
+  background-position: center;
   align-items: center;
   padding-bottom: 30px;
 
@@ -29,9 +31,13 @@
 .paleta-azul {
   .contact__link--active {
     color: $color-paleta1-primary;
+
+    &:hover {
+      color: $color-paleta1-secondary;
+    }
   }
 
-  .font__comic--bold {
+  .font-color {
     color: $color-paleta1-primary;
   }
 
@@ -55,9 +61,13 @@
 .paleta-roja {
   .contact__link--active {
     color: $color-paleta2-primary;
+
+    &:hover {
+      color: $color-paleta2-secondary;
+    }
   }
 
-  .font__comic--bold {
+  .font-color {
     color: $color-paleta2-primary;
   }
 
@@ -81,9 +91,13 @@
 .paleta-gris {
   .contact__link--active {
     color: $color-paleta3-primary;
+
+    &:hover {
+      color: $color-paleta3-terciary;
+    }
   }
 
-  .font__comic--bold {
+  .font-color {
     color: $color-paleta3-primary;
   }
 

@@ -1,16 +1,48 @@
 // Card
 
-.font__comic--bold {
-  font-size: $size-m;
-  font-family: $font-optional-2;
-  font-weight: $weight-bold;
-  text-transform: capitalize;
+.font-card--comicsans {
+  .font-card--bold {
+    font-size: $size-m;
+    font-family: $font-optional-2;
+    font-weight: $weight-bold;
+    text-transform: capitalize;
+  }
+
+  .font-card {
+    font-size: $size-sm;
+    font-family: $font-optional-2;
+    font-weight: $weight-regular;
+  }
 }
 
-.font__comic {
-  font-size: $size-sm;
-  font-family: $font-optional-2;
-  font-weight: $weight-regular;
+.font-card--ubuntu {
+  .font-card--bold {
+    font-size: $size-m;
+    font-family: $font-optional-1;
+    font-weight: $weight-bold;
+    text-transform: capitalize;
+  }
+
+  .font-card {
+    font-size: $size-sm;
+    font-family: $font-optional-1;
+    font-weight: $weight-regular;
+  }
+}
+
+.font-card--montserrat {
+  .font-card--bold {
+    font-size: $size-m;
+    font-family: $font-optional-3;
+    font-weight: $weight-bold;
+    text-transform: capitalize;
+  }
+
+  .font-card {
+    font-size: $size-sm;
+    font-family: $font-optional-3;
+    font-weight: $weight-regular;
+  }
 }
 
 .button-reset__text {
