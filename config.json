@@ -9,7 +9,7 @@
 			"js/colapsables.js",
 			"js/inputs.js",
 			"js/radiobutton.js",
-		
+			"js/select-buttons.js",
 			"js/callapi.js"
 		],
 		"dest": "js/"
