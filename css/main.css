@@ -694,11 +694,11 @@ select {
 }
 
 .paleta-roja .skills__list {
-  border-top: 2px solid rgba(66, 1, 1, 0.2);
+  border-top: 2px solid rgba(189, 16, 16, 0.2);
 }
 
 .paleta-roja .skills__item {
-  background-color: #420101;
+  background-color: #bd1010;
 }
 
 .paleta-gris .contact__link--active {
@@ -722,11 +722,11 @@ select {
 }
 
 .paleta-gris .skills__list {
-  border-top: 2px solid rgba(62, 91, 101, 0.2);
+  border-top: 2px solid rgba(223, 229, 235, 0.2);
 }
 
 .paleta-gris .skills__item {
-  background-color: #3e5b65;
+  background-color: #dfe5eb;
 }
 
 .info-personal__container {
