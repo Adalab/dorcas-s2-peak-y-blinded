@@ -6,10 +6,10 @@ var userSelections = [];
 var arrayOptions = {};
 
 fetch('https://raw.githubusercontent.com/Adalab/dorcas-s2-proyecto-data/master/skills.json')
-  .then(function(response){
+  .then(function (response) {
     return response.json();
   })
-  .then(function(json) {
+  .then(function (json) {
     console.log(json);
     arrayOptions = json.skills;
     //Llamada a la función que crea el contenido la primera vez
@@ -61,7 +61,6 @@ function addContentToHtml() {
     newSelect.appendChild(newOption);
     newOption.classList.add('js__option');
   }
-
   changeButton();
 }
 
@@ -84,15 +83,14 @@ function changeButton() {
       button[i].addEventListener('click', removeSelect);
     }
   }
-  addContentToCard();
+
 }
 
 //Función para añadir el contenido (hasta que las selecciones del usuario sean 3) y cambiar el signo del último botón
 function addSelect(event) {
   console.log('estoy poniendo');
-
   var clickedElement = event.currentTarget;
-  var elementNumber = clickedElement.getAttribute('number');
+  var elementNumber = clickedElement.value;
   userSelections.push('option ' + elementNumber);
   console.log(userSelections);
   if (userSelections.length < 3) {
@@ -100,7 +98,9 @@ function addSelect(event) {
   } else if (userSelections.length === 3) {
     changeButton();
   }
+  addContentToCard();
 }
+
 
 //Función para quitar el contenido (de momento sólo quita el primer campo no el correspondiente al botón que se pincha)
 function removeSelect(event) {
@@ -108,8 +108,9 @@ function removeSelect(event) {
   parentDiv = document.querySelector('.js__select-container');
   parentSelect = document.querySelector('.item__select-container');
   var clickedElement = event.currentTarget;
-  var elementNumber = clickedElement.getAttribute('number');
-  userSelections.splice(elementNumber, 1);
+  var elementNumber = clickedElement.number;
+  var cardSkills = userSelections.indexOf(elementNumber);
+  userSelections.splice(cardSkills, 1);
   console.log(userSelections);
   if (userSelections.length === 2) {
     changeButton();
@@ -120,6 +121,7 @@ function removeSelect(event) {
     parentDiv.removeChild(parentSelect);
     changeButton();
   }
+  addContentToCard();
 }
 
 //VAriables para crear la lista de habilidades en la preview de la tarjeta y darle clases
@@ -135,9 +137,7 @@ function addContentToCard() {
   var newSkillsItem = document.querySelectorAll('.skills__item');
 
   for (var s = 0; s < newSkillsItem.length; s++) {
-    var buttons = document.querySelectorAll('.js__add');
     skillsList.removeChild(newSkillsItem[s]);
-
   }
   console.log('user selections ', userSelections);
 
