@@ -1,4 +1,3 @@
-'use strict';
 //userSelections para recoger en un array las selecciones del usuario
 var userSelections = [];
 
@@ -69,7 +68,7 @@ function addContentToHtml() {
 function changeButton() {
   var button = document.querySelectorAll('.js__add');
   for (var i = 0; i < button.length; i++) {
-    console.log('i = ' + i);
+    // console.log('i = ' + i);
 
     button[i].setAttribute('number', i);
 
