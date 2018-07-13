@@ -10,7 +10,7 @@ function sendData () {
   var inputs = Array.from(form.elements);
   console.log(form.elements);
   var json = getJSONFromInputs(inputs);
-  json.typography = parseInt(json.typography);
+  // json.typography = parseInt(json.typography);
   json.palette = parseInt(json.palette);
   json.skills = ['JavaScript', 'React'];
   json.photo = fr.result;
@@ -32,7 +32,7 @@ function getJSONFromInputs(inputs){
 
   }, {});
 }
-console.log(getJSONFromInputs);
+
 function sendRequest(json){
   fetch('https://us-central1-awesome-cards-cf6f0.cloudfunctions.net/card/', {
     method: 'POST',

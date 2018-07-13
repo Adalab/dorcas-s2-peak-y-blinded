@@ -57,7 +57,7 @@ function addContentToHtml() {
 function changeButton() {
   var button = document.querySelectorAll('.js__add');
   for (var i = 0; i < button.length; i++) {
-    console.log('i = ' + i);
+    // console.log('i = ' + i);
 
     button[i].setAttribute('number', i);
 
