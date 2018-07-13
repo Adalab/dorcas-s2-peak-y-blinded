@@ -1,4 +1,3 @@
-'use strict';
 //userSelections para recoger en un array las selecciones del usuario
 var userSelections = [];
 
@@ -45,6 +44,7 @@ function addContentToHtml() {
     newParentSelect.classList.add('item__select-container');
     newSelect.classList.add('item__select');
     newSelect.setAttribute('name', 'skills');
+    newSelect.setAttribute('value', '');
 
     //Insercion clase font-awesome en <i>, insercion <i> en <div>
     newSelectButtonContent.classList.add('fas', 'fa-plus', 'js__add');
@@ -69,7 +69,7 @@ function addContentToHtml() {
 function changeButton() {
   var button = document.querySelectorAll('.js__add');
   for (var i = 0; i < button.length; i++) {
-    console.log('i = ' + i);
+    // console.log('i = ' + i);
 
     button[i].setAttribute('number', i);
 
