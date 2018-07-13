@@ -20,30 +20,24 @@
   <section class="section-card">
   <div class="section-card__container">
 
-
     <button class="button-reset">
       <i class="far fa-trash-alt button-reset__icon"></i>
       <span class="button-reset__text">reset</span>
     </button>
-    <div class="card__container paleta-azul">
+    <div id="card" class="card__container paleta-azul">
       <div class="info-personal">
-        <div class="info-personal__container">
-          <p id="element-name" class="font__comic--bold">nombre apellido</p>
-          <p id="element-role" class="font__comic">Front-end developer</p>
+        <div id="card__info" class="info-personal__container font-card--comicsans">
+          <p id="element-name" class="font-card--bold font-color">nombre apellido</p>
+          <p id="element-role" class="font-card">Front-end developer</p>
         </div>
         <img class="personal-image" src="./images/card-image.png" alt="foto personal">
         <div class="contact">
-          <a class="contact__link contact__mobile" href="#"><i class="fas fa-mobile-alt icon-mobile icon__contact"></i></a>
-          <a class="contact__link contact__envelope" href="#"><i class="far fa-envelope icon-mail icon__contact"></i></a>
-          <a class="contact__link contact__linkedin" href="#"><i class="fab fa-linkedin-in icon-linkedin icon__contact"></i></a>
-          <a class="contact__link contact__github" href="#"><i class="fab fa-github-alt icon-github icon__contact"></i></a>
+          <a id="element-tel" class="contact-link contact__link--inactive contact__mobile" href="" target="_blank"><i class="fas fa-mobile-alt icon-mobile icon__contact"></i></a>
+          <a id="element-mail" class="contact-link contact__link--inactive contact__envelope" href="" target="_blank"><i class="far fa-envelope icon-mail icon__contact"></i></a>
+          <a id="element-lin" class="contact-link contact__link--inactive contact__linkedin" href="" target="_blank"><i class="fab fa-linkedin-in icon-linkedin icon__contact"></i></a>
+          <a id="element-gh" class="contact-link contact__link--inactive contact__github" href="" target="_blank"><i class="fab fa-github-alt icon-github icon__contact"></i></a>
         </div>
         <div class="skills">
-          <ul class="skills__list text__skills">
-            <li class="skills__item hidden__item">HTML</li>
-            <li class="skills__item hidden__item">CSS</li>
-            <li class="skills__item hidden__item">GULP</li>
-          </ul>
         </div>
       </div>
     </div>
@@ -54,7 +48,7 @@
 <!-- FORMULARIO DISEÑA -->
 
 <div class="wrapper">
-  <form class="form" action="index.html" method="post">
+  <form id="form" class="form" action="index.html" method="post" name="form">
     <section class="form__fieldset-design js__dropdown visible">
       <div class="legend__container js__dropdown-title">
         <legend class="fieldset__legend"><i class="far fa-object-ungroup icon__primary--medium"></i><span class="text__dark--title">diseña</span></legend>
@@ -65,7 +59,7 @@
           <div class="text__dark--small">colores</div>
           <div class="radio-container">
             <div class="palette palette--margin">
-              <input id="color1" type="radio" name="colorpalette" checked>
+              <input id="color1" class="input__storage" type="radio" name="palette" radio-cual="1" value="1" checked>
               <label for="color1" class="label-design">
                 <div class="palette-box colorp1"></div>
                 <div class="palette-box colorp2"></div>
@@ -73,7 +67,7 @@
               </label>
             </div>
             <div class="palette palette--margin">
-              <input id="color2" type="radio" name="colorpalette">
+              <input id="color2" class="input__storage" type="radio" name="palette" radio-cual="2" value="2">
               <label for="color2" class="label-design">
                 <div class="palette-box colorp4"></div>
                 <div class="palette-box colorp5"></div>
@@ -81,7 +75,7 @@
               </label>
             </div>
             <div class="palette">
-              <input id="color3" type="radio" name="colorpalette">
+              <input id="color3" class="input__storage" type="radio" name="palette" radio-cual="3" value="3">
               <label for="color3" class="label-design">
                 <div class="palette-box colorp7"></div>
                 <div class="palette-box colorp8"></div>
@@ -94,15 +88,15 @@
           <div class="text__dark--small">fuentes</div>
           <div class="radio-container">
             <div class="font font--margin">
-              <input id="font1" type="radio" name="font">
+              <input id="font1" class="input__storage" type="radio" name="typography" radio-cual="4" value="1">
               <label for="font1" class="text__optional--ubuntu label-design">Ubuntu</label>
             </div>
             <div class="font font--margin">
-              <input id="font2" type="radio" name="font" checked>
+              <input id="font2" class="input__storage" type="radio" name="typography" radio-cual="5" value="2" checked>
               <label for="font2" class="text__optional--comic label-design">Comic Sans</label>
             </div>
             <div class="font">
-              <input id="font3" type="radio" name="font">
+              <input id="font3" class="input__storage" type="radio" name="typography" radio-cual="6" value="3">
               <label for="font3" class="text__optional--mont label-design">Montserrat</label>
             </div>
           </div>
@@ -121,55 +115,39 @@
           <div class="js__dropdown-content">
             <div class="item">
               <label class="item__label" for="name">Nombre completo</label>
-              <input class="input item__input form-field--name" id="name" type="text" name="name" placeholder="Ej: Sally Jill" data-donde="element-name" required>
+              <input class="input item__input form-field--name input__storage " id="name" type="text" name="name" placeholder="Ej: Sally Jill" data-donde="element-name" required>
             </div>
             <div class="item">
               <label class="item__label" for="job">Puesto</label>
-              <input class="input item__input form-field--role" id="job" type="text" name="job" placeholder="Ej: Front-end unicorn" data-donde="element-role" required>
+              <input class="input item__input form-field--role input__storage" id="job" type="text" name="job" placeholder="Ej: Front-end unicorn" data-donde="element-role" required>
             </div>
             <div class="item">
               <label class="item__label" for="image">Imagen de perfil</label>
               <div class="item__addfile">
                 <button class="item__button-file item__button-label" type="button">Añadir imagen</button>
-                <input class= "input input__file--hidden" id="image" type="file" name="image" required>
-                <input class="input item__button-checkbox" type="checkbox">
+                <input class="input input__file--hidden input__storage" id="image" type="file" name="photo" required>
+                <div class="item-preview"><img class="item-preview__img" src="http://placehold.it/29x29/ffffff/ffffff"></img></div>
             </div>
             </div>
             <div class="item">
-              <label class="item__label" for="mail">Email</label>
-              <input class="input item__input"
-              id="mail" type="email" name="mail" placeholder="Ej: sally-hill@gmail.com" required>
+              <label class="item__label" for="email">Email</label>
+              <input class="input item__input form-field--mail input__storage"
+              id="email" type="email" name="email" placeholder="Ej: sally-hill@gmail.com" data-donde="element-mail" required>
             </div>
             <div class="item">
-              <label class="item__label" for="telephone">Teléfono</label>
-              <input class="input item__input" id="telephone" type="tel" name="telephone" placeholder="Ej: 555-55-55-55" required>
+              <label class="item__label" for="phone">Teléfono</label>
+              <input class="input item__input form-field--tel input__storage" id="phone" type="tel" name="phone" placeholder="Ej: 555 55 55 55" data-donde="element-tel" required>
             </div>
             <div class="item">
               <label class="item__label" for="linkedin">Linkedin</label>
-              <input class="input item__input" id="linkedin" type="text" name="linkedin" placeholder="Ej: linkedin.com/in/sally.hill" required>
+              <input class="input item__input form-field--lin input__storage" id="linkedin" type="url" name="linkedin" placeholder="Ej: sally.hill" data-donde="element-lin" required>
             </div>
             <div class="item">
               <label class="item__label" for="github">Github</label>
-              <input class="input item__input" id="github" type="text" name="github" placeholder="Ej: @sally-hill" required>
+              <input class="input item__input form-field--gh input__storage" id="github" type="text" name="github" placeholder="Ej: sally-hill" data-donde="element-gh" required>
             </div>
-            <div class="item">
+            <div class="item js__select-container">
               <label class="item__label" for="abilities">Habilidades (máximo 3)</label>
-              <div class="item__select-container">
-                <select class="item__select" id="abilities" name="abilities" required>
-                  <option value="HTML">HTML</option>
-                  <option value="HTML">CSS</option>
-                  <option value="HTML">JavaScript</option>
-                </select>
-                <div class="item__select-button"><i class="fas fa-minus"></i></div>
-              </div>
-              <div class="item__select-container">
-                <select class="item__select" id="abilities" name="abilities" required>
-                  <option value="CSS">HTML</option>
-                  <option value="CSS">CSS</option>
-                  <option value="CSS">JavaScript</option>
-                </select>
-                <div class="item__select-button"><i class="fas fa-plus"></i></div>
-              </div>
             </div>
           </div>
         </section>
@@ -187,11 +165,11 @@
         </div>
         <div class="js__dropdown-content share__content-parent">
           <div class="share__content">
-            <button class="btn-card btn-card--position btn-card--text boton-card--active" type="submit" name="button"><i class="far fa-address-card icon-card"></i>Crear tarjeta</button>
+            <button id="submit" class="btn-card btn-card--position btn-card--text boton-card--active" type="button" name="button"><i class="far fa-address-card icon-card"></i>Crear tarjeta</button>
           </div>
           <div class="card-created">
             <h3 class="text__dark--title card-created__title">La tarjeta ha sido creada:</h3>
-            <a class="card-link text__card-link"  href="#">https://awesome-profile-card.com?id=A456DF0001</a>
+            <p class="card-link text__card-link response"></p>
             <button class="btn-twitter btn-twitter--position btn-twitter--text" type="button" name="button"><i class="fab fa-twitter icon-twitter"></i>Compartir en twitter</button>
           </div>
         </div>

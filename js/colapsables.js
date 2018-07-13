@@ -1,5 +1,3 @@
-'use strict';
-
 var dropDown = document.querySelectorAll('.js__dropdown');
 
 var dropDownTitle = document.querySelectorAll('.js__dropdown-title');

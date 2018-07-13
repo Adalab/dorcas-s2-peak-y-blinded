@@ -1,7 +1,9 @@
 .section-card {
   display: flex;
   flex-direction: column;
-  background: linear-gradient(#fccf31, #f55555);
+  background-image:  url('../../images/pattern-glasses.svg'), linear-gradient(#fccf31, #f55555);;
+  background-repeat: repeat;
+  background-position: center;
   align-items: center;
   padding-bottom: 30px;
 
@@ -22,8 +24,20 @@
   background-color: $color-light;
 }
 
+.contact__link--inactive {
+  color: $color-medium;
+}
+
 .paleta-azul {
-  .font__comic--bold {
+  .contact__link--active {
+    color: $color-paleta1-primary;
+
+    &:hover {
+      color: $color-paleta1-secondary;
+    }
+  }
+
+  .font-color {
     color: $color-paleta1-primary;
   }
 
@@ -38,13 +52,22 @@
   .skills__list {
     border-top: 2px solid rgba($color-paleta1-primary, 0.2);
   }
+
   .skills__item {
     background-color: $color-paleta1-primary;
   }
 }
 
 .paleta-roja {
-  .font__comic--bold {
+  .contact__link--active {
+    color: $color-paleta2-primary;
+
+    &:hover {
+      color: $color-paleta2-secondary;
+    }
+  }
+
+  .font-color {
     color: $color-paleta2-primary;
   }
 
@@ -59,13 +82,22 @@
   .skills__list {
     border-top: 2px solid rgba($color-paleta2-primary, 0.2);
   }
+
   .skills__item {
     background-color: $color-paleta2-primary;
   }
 }
 
 .paleta-gris {
-  .font__comic--bold {
+  .contact__link--active {
+    color: $color-paleta3-primary;
+
+    &:hover {
+      color: $color-paleta3-terciary;
+    }
+  }
+
+  .font-color {
     color: $color-paleta3-primary;
   }
 
@@ -80,6 +112,7 @@
   .skills__list {
     border-top: 2px solid rgba($color-paleta3-primary, 0.2);
   }
+
   .skills__item {
     background-color: $color-paleta3-primary;
   }
@@ -97,7 +130,6 @@
 
 .personal-image__container {
   width: 240px;
-
 }
 
 .personal-image {
