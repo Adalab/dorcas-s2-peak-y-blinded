@@ -3,6 +3,7 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  overflow-x: hidden;
 }
 
 body {
@@ -618,8 +619,8 @@ select {
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
-  background-image: url("../../images/pattern-glasses.svg"), -webkit-gradient(linear, left top, left bottom, from(#fccf31), to(#f55555));
-  background-image: url("../../images/pattern-glasses.svg"), linear-gradient(#fccf31, #f55555);
+  background-image: url("./../images/pattern-glasses.svg"), -webkit-gradient(linear, left top, left bottom, from(#fccf31), to(#f55555));
+  background-image: url("./../images/pattern-glasses.svg"), linear-gradient(#fccf31, #f55555);
   background-repeat: repeat;
   background-position: center;
   -webkit-box-align: center;
