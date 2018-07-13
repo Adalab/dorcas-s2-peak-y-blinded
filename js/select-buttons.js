@@ -44,6 +44,7 @@ function addContentToHtml() {
     newParentSelect.classList.add('item__select-container');
     newSelect.classList.add('item__select');
     newSelect.setAttribute('name', 'skills');
+    newSelect.setAttribute('value', '');
 
     //Insercion clase font-awesome en <i>, insercion <i> en <div>
     newSelectButtonContent.classList.add('fas', 'fa-plus', 'js__add');
