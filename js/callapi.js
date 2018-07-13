@@ -11,8 +11,8 @@ function sendData () {
   console.log(form.elements);
   var json = getJSONFromInputs(inputs);
   // json.typography = parseInt(json.typography);
-  json.palette = parseInt(json.palette);
-  json.skills = ['JavaScript', 'React'];
+  // json.palette = parseInt(json.palette);
+  // json.skills = ['JavaScript', 'React'];
   json.photo = fr.result;
   console.log(json);
   sendRequest(json);
