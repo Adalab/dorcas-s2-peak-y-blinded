@@ -1,3 +1,5 @@
+'use strict';
+var listOfChosenSelects = document.getElementsByTagName('select');
 var submitButton = document.querySelector('#submit');
 var responseURL = document.querySelector('.response');
 var form = document.querySelector('#form');
@@ -10,9 +12,12 @@ function sendData () {
   var inputs = Array.from(form.elements);
   console.log(form.elements);
   var json = getJSONFromInputs(inputs);
-  // json.typography = parseInt(json.typography);
-  // json.palette = parseInt(json.palette);
-  // json.skills = ['JavaScript', 'React'];
+  json.skills = [];
+  console.log('json', json);
+  for(var i = 0; i < listOfChosenSelects.length; i++) {
+    json.skills.push(listOfChosenSelects[i].value);
+    console.log('lista de selects elegidos', listOfChosenSelects);
+  }
   json.photo = fr.result;
   console.log(json);
   sendRequest(json);
@@ -25,11 +30,24 @@ function loadPhoto(){
 }
 
 function getJSONFromInputs(inputs){
-  return inputs.reduce(function (acc, val) {
-    if(val.nodeName !== 'BUTTON')
-      acc[val.name] = val.value;
-    return acc;
+  console.log('inputs', inputs);
+  // return inputs.reduce(function (acc, val) {
+  //   if(val.nodeName !== 'BUTTON')
+  //     acc[val.name] = val.value;
+  //   return acc;
 
+  return inputs.reduce(function (acc, val) {
+   console.log(val.nodeName);
+
+
+   if (val.type==='radio' && val.checked===true) {
+     acc[val.name] = val.value;
+   }
+   if ((val.nodeName !== 'BUTTON') && (val.nodeName !== 'FIELDSET') && (val.type!=='radio') ){
+     acc[val.name] = val.value;
+   }
+
+   return acc;
   }, {});
 }
 

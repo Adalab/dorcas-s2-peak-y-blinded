@@ -2,7 +2,7 @@
 console.log('hola');
 //
 // var data = [];
-// 
+//
 // console.log(data);
 //
 // var inputStorage = document.querySelectorAll('.input__storage');
