@@ -2,7 +2,6 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  overflow-x: hidden;
 }
 
 body {
@@ -10,7 +9,7 @@ body {
   height: 100vh;
   font-family: $font-primary;
   color: $color-medium-dark-dark;
-  overflow-x: hidden;
+ overflow-x: hidden;
 }
 
 .input {
