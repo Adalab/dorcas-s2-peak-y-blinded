@@ -1,4 +1,3 @@
-'use strict';
 //userSelections para recoger en un array las selecciones del usuario
 var userSelections = [];
 
