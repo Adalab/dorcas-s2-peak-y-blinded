@@ -83,6 +83,7 @@ function showURL(result){
   }
 
   twitterURL = result.cardURL;
+  cardCreated.classList.remove('hidden__item');
 }
 
 function shareOnTwitter() {
