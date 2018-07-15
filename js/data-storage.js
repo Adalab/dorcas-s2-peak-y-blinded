@@ -28,11 +28,20 @@ function useDataStorage(inputStorageName, inputStorageValue, inputStoragePositio
     console.log('inputStoragePosition.value', inputStoragePosition.value);
     console.log('data[inputStorageName]', data[inputStorageName]);
     inputStoragePosition.checked = true;
+  } else if(inputStoragePosition.type === 'file'){
+
+    // inputStoragePosition.value = data[inputStorageName];
+    // console.log('inputStoragePosition.value', inputStoragePosition.value);
+    // console.log('data[inputStorageName]', data[inputStorageName]);
+    //
+  } else{
+    inputStoragePosition.value = data[inputStorageName];
+    console.log('inputStoragePosition.value', inputStoragePosition.value);
+    console.log('data[inputStorageName]', data[inputStorageName]);
+
   }
 
-  // inputStoragePosition.appendChild(data[inputStorageName]);
-  console.log ('inner input',inputStoragePosition);
-  console.log ('inner datat',data[inputStorageName]);
+
 }
 
 function saveDataStorage(event) {
