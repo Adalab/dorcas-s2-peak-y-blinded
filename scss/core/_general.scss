@@ -9,6 +9,7 @@ body {
   height: 100vh;
   font-family: $font-primary;
   color: $color-medium-dark-dark;
+ overflow-x: hidden;
 }
 
 .input {

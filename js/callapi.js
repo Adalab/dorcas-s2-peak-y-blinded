@@ -2,8 +2,12 @@
 var listOfChosenSelects = document.getElementsByTagName('select');
 var submitButton = document.querySelector('#submit');
 var responseURL = document.querySelector('.response');
+var buttonTwitter = document.querySelector('.btn-twitter');
+var linkTwitter = document.querySelector('.link-twitter');
 var form = document.querySelector('#form');
+var cardCreated = document.querySelector('.card-created');
 var fr = new FileReader();
+var twitterURL;
 
 submitButton.addEventListener('click', loadPhoto);
 
@@ -77,4 +81,12 @@ function showURL(result){
   }else{
     responseURL.innerHTML = 'ERROR:' + result.error;
   }
+
+  twitterURL = result.cardURL;
 }
+
+function shareOnTwitter() {
+  linkTwitter.href = 'https://twitter.com/intent/tweet?url=' + twitterURL + '&text=Acabo%20de%20crear%20mi%20tarjeta%20con%20Font%20Awesome%20de%20Peak-y-blinded&hashtags=WomenInTech';
+}
+
+buttonTwitter.addEventListener('click', shareOnTwitter);
