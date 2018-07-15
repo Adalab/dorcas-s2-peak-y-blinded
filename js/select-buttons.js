@@ -42,12 +42,15 @@ function addContentToHtml() {
     newParentSelect.appendChild(newSelect);
     parentDivSelect.appendChild(newParentSelect);
 
-    newParentSelect.classList.add('item__select-container');
+    newParentSelect.className = 'item__select-container position-' + i;
+    // newParentSelect.classList.add('item__select-container');
+    // newParentSelect.classList.add('position-' + i);
     newSelect.classList.add('item__select');
     newSelect.setAttribute('name', 'skills');
 
     //Insercion clase font-awesome en <i>, insercion <i> en <div>
     newSelectButtonContent.classList.add('fas', 'fa-plus', 'js__add');
+    newSelectButtonContent.setAttribute('data-value', i);
     newSelectButton.appendChild(newSelectButtonContent);
     newSelectButton.classList.add('item__select-button');
     newParentSelect.appendChild(newSelectButton);
@@ -56,6 +59,7 @@ function addContentToHtml() {
   for (var j = 0; j < arrayOptions.length; j++) {
     var newOption = document.createElement('option');
     newOption.setAttribute('number', j);
+    newOption.setAttribute('value', arrayOptions[j]);
     var optionContent = document.createTextNode(arrayOptions[j]);
     newOption.appendChild(optionContent);
     newSelect.appendChild(newOption);
@@ -87,11 +91,13 @@ function changeButton() {
 }
 
 //Función para añadir el contenido (hasta que las selecciones del usuario sean 3) y cambiar el signo del último botón
-function addSelect(event) {
+function addSelect() {
   console.log('estoy poniendo');
-  var clickedElement = event.currentTarget;
-  var elementNumber = clickedElement.value;
-  userSelections.push('option ' + elementNumber);
+  var clickedElement = document.getElementsByTagName('select');
+  userSelections = [];
+  for (var i = 0; i < clickedElement.length; i++) {
+    userSelections.push(i);
+  }
   console.log(userSelections);
   if (userSelections.length < 3) {
     addContentToHtml();
@@ -107,21 +113,19 @@ function removeSelect(event) {
   console.log('estoy quitando');
   parentDiv = document.querySelector('.js__select-container');
   parentSelect = document.querySelector('.item__select-container');
+
   var clickedElement = event.currentTarget;
-  var elementNumber = clickedElement.number;
-  var cardSkills = userSelections.indexOf(elementNumber);
-  userSelections.splice(cardSkills, 1);
-  console.log(userSelections);
-  if (userSelections.length === 2) {
+  var elementNumber = clickedElement.getAttribute('data-value');
+  var createdElements = document.querySelectorAll('.position-' + elementNumber);
+  if (createdElements.length === 1) {
     changeButton();
-  } else if (userSelections.length === 1) {
-    parentDiv.removeChild(parentSelect);
-    changeButton();
-  } else if (userSelections.length === 0) {
-    parentDiv.removeChild(parentSelect);
-    changeButton();
+    addContentToCard();
+  } else {
+    for (var i = 0; i < createdElements.length; i++) {
+      createdElements[i].remove();
+      changeButton();
+    }
   }
-  addContentToCard();
 }
 
 //VAriables para crear la lista de habilidades en la preview de la tarjeta y darle clases
@@ -146,6 +150,7 @@ function addContentToCard() {
     var skillsItem = document.createElement('li');
     var skillsContent = document.createTextNode(optionContent);
     skillsItem.appendChild(skillsContent);
+    skillsItem.classList.add('position-' + i);
     skillsList.appendChild(skillsItem);
     skillsItem.classList.add('skills__item');
   }
