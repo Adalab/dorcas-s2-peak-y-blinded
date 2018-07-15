@@ -10,6 +10,7 @@ body {
   height: 100vh;
   font-family: "Open Sans", sans-serif;
   color: #54585a;
+  overflow-x: hidden;
 }
 
 .input {
