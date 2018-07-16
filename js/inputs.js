@@ -113,6 +113,15 @@ function resetForm() {
   profileImage.src = "./images/card-image.png";
   miniImage.src = "http://placehold.it/29x29/ffffff/ffffff";
 
+  // reset skills
+  var skillBox = document.querySelector('.skills__list');
+  skillBox.innerHTML = '';
+
+  //reset selects
+  var selectContainer = document.querySelector('.js__select-container');
+  selectContainer.innerHTML = '<label class="item__label" for="abilities">Habilidades (máximo 3)</label>';
+  addSelect();
+
   //Reset localStorage
   localStorage.clear();
 }
