@@ -458,14 +458,14 @@ select {
 
 .font-card--montserrat .font-card--bold {
   font-size: 18px;
-  font-family: "Montserrat", serif;
+  font-family: "Merriweather", serif;
   font-weight: 700;
   text-transform: capitalize;
 }
 
 .font-card--montserrat .font-card {
   font-size: 16px;
-  font-family: "Montserrat", serif;
+  font-family: "Merriweather", serif;
   font-weight: 400;
 }
 
@@ -532,7 +532,7 @@ select {
 }
 
 .text__optional--mont {
-  font-family: "Montserrat", serif;
+  font-family: "Merriweather", serif;
   font-size: 16px;
 }
 
