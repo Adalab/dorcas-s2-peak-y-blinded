@@ -41,17 +41,19 @@ function getJSONFromInputs(inputs){
   //   return acc;
 
   return inputs.reduce(function (acc, val) {
-   console.log(val.nodeName);
+    console.log(val.nodeName);
 
 
-   if (val.type==='radio' && val.checked===true) {
-     acc[val.name] = val.value;
-   }
-   if ((val.nodeName !== 'BUTTON') && (val.nodeName !== 'FIELDSET') && (val.type!=='radio') ){
-     acc[val.name] = val.value;
-   }
+    if (val.type==='radio' && val.checked===true) {
+      acc[val.name] = val.value;
+      console.log('Primer if', val.name);
+    }
+    if ((val.nodeName !== 'BUTTON') && (val.nodeName !== 'FIELDSET') && (val.type!=='radio') ){
+      acc[val.name] = val.value;
+      console.log('Segundo if', val.name);
+    }
 
-   return acc;
+    return acc;
   }, {});
 }
 
@@ -85,7 +87,7 @@ function showURL(result){
   if (submitButton.classList.contains('btn-card')) {
     submitButton.classList.remove('btn-card');
     submitButton.classList.add('btn-card--inactive');
-  } 
+  }
 }
 
 function shareOnTwitter() {
