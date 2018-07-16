@@ -1,6 +1,6 @@
 'use strict';
 console.log('hola');
-//
+
 var data = {};
 var dataStorageRetrieved = [];
 
@@ -9,45 +9,53 @@ console.log(data);
 var fr = new FileReader();
 
 var inputStorage = document.querySelectorAll('.input__storage');
+var photoPreviewDiv = document.querySelector('.item-preview__img');
 
+//Función para recuperar datos almacenados en localStorage
 function useDataStorage(inputStorageName, inputStorageValue, inputStoragePosition) {
   console.log('recuperando localStorage');
   console.log('dentrouseData name', inputStorageName);
   console.log('dentrouseData value', inputStorageValue);
 
   //Recupero los datos de localStorage y los guardo en una variable
-  var dataStorageRetrieved = JSON.parse(localStorage.getItem('formData'));
+  dataStorageRetrieved = JSON.parse(localStorage.getItem('formData'));
   console.log('recuperando formData', dataStorageRetrieved);
+  //Miro que el localStorage no esté vacio
+  if(dataStorageRetrieved !== null){
+  //Creo una acción por si hay campos vacios
+    if(dataStorageRetrieved[inputStorageName] === undefined){
+      console.log('dentro if null', dataStorageRetrieved[inputStorageName]);
+      inputStorageName = '';
+    }else {
+      //Introduzco los datos recuperador en el objeto 'data'
+      inputStorageValue = dataStorageRetrieved[inputStorageName];
+      data[inputStorageName] = inputStorageValue;
+      console.log('data', data);
 
-  //Introduzco los datos recuperador en el objeto 'data'
-
-  inputStorageValue = dataStorageRetrieved[inputStorageName];
-  data[inputStorageName] = inputStorageValue;
-  console.log('data', data);
-
-  if(inputStoragePosition.type === 'radio' && inputStoragePosition.value === data[inputStorageName] ){
-    console.log('inputStoragePosition.type', inputStoragePosition.type);
-    console.log('inputStoragePosition.value', inputStoragePosition.value);
-    console.log('data[inputStorageName]', data[inputStorageName]);
-    inputStoragePosition.checked = true;
-  } else if(inputStoragePosition.type === 'file'){
-
-    // inputStoragePosition.value = data[inputStorageName];
-    // console.log('inputStoragePosition.value', inputStoragePosition.value);
-    // console.log('data[inputStorageName]', data[inputStorageName]);
-    //
-  } else{
-    inputStoragePosition.value = data[inputStorageName];
-    console.log('inputStoragePosition.value', inputStoragePosition.value);
-    console.log('data[inputStorageName]', data[inputStorageName]);
-
+      if(inputStoragePosition.type === 'radio' && inputStoragePosition.value === data[inputStorageName] ){
+        //Condicion si los inputs son tipo radio
+        console.log('inputStoragePosition.type', inputStoragePosition.type);
+        console.log('inputStoragePosition.value', inputStoragePosition.value);
+        console.log('data[inputStorageName]', data[inputStorageName]);
+        inputStoragePosition.checked = true;
+      } else if(inputStoragePosition.type === 'file'){
+        //Para la foto
+      } else{
+        inputStoragePosition.value = data[inputStorageName];
+        console.log('inputStoragePosition.value', inputStoragePosition.value);
+        console.log('data[inputStorageName]', data[inputStorageName]);
+      }
+    }
   }
+}
 
-
+function saveImgInLocaStorage (currentInputName){
+  data[currentInputName] = fr.result;
+  console.log('img in array',  data[currentInputName]);
 }
 
 function saveDataStorage(event) {
-  //Variable para actual nombre del imput y valor del input
+  //Variable para actual nombre del input y valor del input
   var currentInput = event.currentTarget;
   console.log('current value', currentInput.value);
   console.log('current name', currentInput.name);
@@ -56,18 +64,11 @@ function saveDataStorage(event) {
   console.log('value y name',currentInputValue,currentInputName);
   if(currentInput.type === 'file'){
     var myFile = document.querySelector('#image').files[0];
-    console.log('fottoooo', myFile);
-    // fr.readAsDataURL(myFile);
-    console.log('fr', fr);
-    var frResult = fr.result;
-    console.log('fr.result',frResult);
-    console.log('foto despues asurl',myFile );
-    data[currentInputName] = fr.result;
-    console.log('result', FileReader.result);
-    localStorage.setItem(currentInputName, fr.result);
-    // console.log('foto despues asurl',fr.readAsDataURL(myFile) );
+    var imgInArray = data[currentInputName];
+    console.log('currentInputName;',currentInputName);
+    console.log('imgInArray',imgInArray);
+    fr.addEventListener('load', saveImgInLocaStorage(currentInputName));
 
-    // data[currentInputName] = currentInputValue;
   } else if (currentInput.type === 'radio'&& currentInput.checked === true){
     console.log('esta checked', currentInput.checked);
     data[currentInputName] = currentInputValue;
@@ -75,9 +76,8 @@ function saveDataStorage(event) {
     console.log( 'data[currentInputName]', data[currentInputName]);
     localStorage.setItem(currentInputName,currentInputValue);
   }else {
-    console.log('esta checked', currentInput.checked);
     console.log( 'currentInputValue', currentInputValue);
-    console.log( 'ddata.currentInputName ', data.currentInputName );
+    console.log( 'ddata.currentInputName ', (data[currentInputName]) );
     //Guardo los datos dentro del objeto 'data'
     data[currentInputName] = currentInputValue;
     localStorage.setItem(currentInputName,currentInputValue);
@@ -88,7 +88,6 @@ function saveDataStorage(event) {
   //Guardo datos individualmente y tambien como objeto 'data' que convierto en cadena
   // localStorage.setItem(currentInputName,currentInputValue);
   localStorage.setItem('formData',JSON.stringify(data));
-
 }
 
 
@@ -99,7 +98,7 @@ for (var i = 0; i < inputStorage.length; i++ ){
   console.log('input position',inputStoragePosition);
   useDataStorage(inputStorageName, inputStorageValue, inputStoragePosition);
 
-
+  //
   // inputStorage[i].addEventListener('change',saveDataStorage);
 }
 for (var j = 0; j < inputStorage.length; j++ ){
