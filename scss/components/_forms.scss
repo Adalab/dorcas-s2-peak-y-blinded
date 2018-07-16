@@ -163,6 +163,7 @@
 
 .share__header {
   margin-top: 10px;
+  margin-bottom: 20px;
   display: flex;
   justify-content: space-between;
 }
@@ -192,7 +193,6 @@
 
 .item-preview__img {
   width: 100%;
-  height: 30px;
   overflow: hidden;
   border: 1px solid $color-paleta1-terciary;
 }
