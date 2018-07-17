@@ -13,20 +13,17 @@ submitButton.addEventListener('click', loadPhoto);
 
 function sendData () {
   var inputs = Array.from(form.elements);
-  console.log(form.elements);
   var json = getJSONFromInputs(inputs);
   json.skills = [];
   console.log('json', json);
   for(var i = 0; i < listOfChosenSelects.length; i++) {
     json.skills.push(listOfChosenSelects[i].value);
-    console.log('lista de selects elegidos', listOfChosenSelects);
   }
   json.photo = fr.result;
   console.log('json justo antes enviar datos', json);
   var jsonFromLocalStorage = JSON.parse(localStorage.getItem('jsonToSend'));
   console.log('jasonFromLocal', jsonFromLocalStorage);
   if(JSON.stringify(json) === JSON.stringify(jsonFromLocalStorage)){
-    console.log('jasonFromLocal', jsonFromLocalStorage);
     var urlFromStorage = JSON.parse(localStorage.getItem('cardURL'));
     responseURL.innerHTML = '<a href=' + urlFromStorage + '>' + urlFromStorage + '</a>';
     twitterURL = urlFromStorage;
@@ -44,14 +41,12 @@ function loadPhoto(){
 
 function getJSONFromInputs(inputs){
   return inputs.reduce(function (acc, val) {
-    console.log(val.nodeName);
+
     if (val.type==='radio' && val.checked===true) {
       acc[val.name] = val.value;
-      console.log('Primer if', val.name);
     }
     if ((val.nodeName !== 'BUTTON') && (val.nodeName !== 'FIELDSET') && (val.type!=='radio') ){
       acc[val.name] = val.value;
-      console.log('Segundo if', val.name);
     }
     return acc;
   }, {});
@@ -68,7 +63,6 @@ function sendRequest(json){
   })
 
     .then(function(resp) {
-      console.log(resp);
       return resp.json(); })
     .then(function(result) {
       console.log('result',result);
@@ -80,7 +74,6 @@ function sendRequest(json){
 
 function showURL(result){
   if(result.success){
-    console.log(result.cardURL);
     localStorage.setItem('cardURL',JSON.stringify(result.cardURL));
     responseURL.innerHTML = '<a href=' + result.cardURL + '>' + result.cardURL + '</a>';
   }else{
