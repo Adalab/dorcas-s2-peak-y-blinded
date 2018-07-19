@@ -6,12 +6,11 @@ const buttonTwitter = document.querySelector('.btn-twitter');
 const linkTwitter = document.querySelector('.link-twitter');
 const form = document.querySelector('#form');
 const cardCreated = document.querySelector('.card-created');
-//let fr = new FileReader();
 let twitterURL;
 
 submitButton.addEventListener('click', loadPhoto);
 
-function sendData () {
+const sendData = () => {
   const inputs = Array.from(form.elements);
   const json = getJSONFromInputs(inputs);
   json.skills = [];
@@ -31,15 +30,15 @@ function sendData () {
   } else {
     sendRequest(json);
   }
-}
+};
 
-function loadPhoto(){
+const loadPhoto = () => {
   const myFile = document.querySelector('#image').files[0];
   fr.addEventListener('load', sendData);
   fr.readAsDataURL(myFile);
-}
+};
 
-function getJSONFromInputs(inputs){
+const getJSONFromInputs = inputs =>{
   return inputs.reduce(function (acc, val) {
 
     if (val.type==='radio' && val.checked===true) {
@@ -50,7 +49,7 @@ function getJSONFromInputs(inputs){
     }
     return acc;
   }, {});
-}
+};
 
 function sendRequest(json){
   localStorage.setItem('jsonToSend',JSON.stringify(json));
@@ -88,6 +87,9 @@ function showURL(result){
   }
 }
 
+
+
+////Boton twitter
 function shareOnTwitter() {
   linkTwitter.href = 'https://twitter.com/intent/tweet?url=' + twitterURL + '&text=Acabo%20de%20crear%20mi%20tarjeta%20con%20Font%20Awesome%20de%20Peak-y-blinded&hashtags=WomenInTech';
 }
