@@ -1,3 +1,4 @@
+'use strict';
 //get image
 
 var fr = new FileReader();
