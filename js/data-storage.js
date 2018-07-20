@@ -3,8 +3,6 @@
 var data = {};
 var dataStorageRetrieved = [];
 
-var fr = new FileReader();
-
 var inputStorage = document.querySelectorAll('.input__storage');
 
 //Función para recuperar datos almacenados en localStorage
