@@ -1,14 +1,14 @@
-var dropDown = document.querySelectorAll('.js__dropdown');
+'use strict';
 
-var dropDownTitle = document.querySelectorAll('.js__dropdown-title');
+const dropDown = document.querySelectorAll('.js__dropdown');
 
-var arrow = document.querySelectorAll('.arrow');
+const dropDownTitle = document.querySelectorAll('.js__dropdown-title');
 
-function refreshDropDown(event) {
-  var parent = event.currentTarget.parentElement;
+const refreshDropDown = event => {
+  const parent = event.currentTarget.parentElement;
   // var arrowSpan = event.currentTarget.children[1];
   // var arrowAsChild = arrowSpan.children;
-  var arrowAsChild = event.currentTarget.children[1];
+  const arrowAsChild = event.currentTarget.children[1];
 
   if (parent.classList.contains('visible')) {
     parent.classList.remove('visible');
@@ -26,14 +26,15 @@ function refreshDropDown(event) {
   }
 }
 
-function closeAllDropDown() {
-  for (var i = 0; i < dropDown.length; i++) {
-    dropDown[i].classList.remove('visible');
-    arrow[i].classList.remove('fa-angle-up');
-    arrow[i].classList.add('fa-angle-down');
+const closeAllDropDown = () => {
+  for(const dropD of dropDown){
+    dropD.classList.remove('visible');
+    const dropArrow = document.querySelector('.arrow');
+    dropArrow.classList.remove('fa-angle-up');
+    dropArrow.classList.add('fa-angle-down');
   }
 }
 
-for (var j = 0; j < dropDownTitle.length; j++) {
-  dropDownTitle[j].addEventListener('click', refreshDropDown);
+for(const title of dropDownTitle) {
+  title.addEventListener('click', refreshDropDown);
 }
