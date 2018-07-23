@@ -14,10 +14,10 @@ const restoreDataForPreview = (dataStorageRetrieved) => {
 
   document.querySelector('#element-name').innerText = dataStorageRetrieved.name;
   document.querySelector('#element-role').innerText = dataStorageRetrieved.job;
-  document.querySelector('#element-mail').href = 'mailto:' + dataStorageRetrieved.email;
-  document.querySelector('#element-tel').href = 'tel:' + dataStorageRetrieved.phone;
-  document.querySelector('#element-lin').href = 'https://linkedin.com/in/' + dataStorageRetrieved.linkedin;
-  document.querySelector('#element-gh').href = 'https://github.com/' + dataStorageRetrieved.github;
+  document.querySelector('#element-mail').href = `mailto: ${dataStorageRetrieved.email}`;
+  document.querySelector('#element-tel').href = `tel: ${dataStorageRetrieved.phone}`;
+  document.querySelector('#element-lin').href = `https://linkedin.com/in/ ${dataStorageRetrieved.linkedin}`;
+  document.querySelector('#element-gh').href = `https://github.com/' ${dataStorageRetrieved.github}`;
   document.querySelector('.personal-image').src = dataStorageRetrieved.photo;
 
   const cardPreview = document.querySelector('#card');
@@ -44,7 +44,7 @@ console.log(dataStorageRetrieved.palette);
     cardPreview.classList.remove('font-card--comicsans', 'font-card--ubuntu', 'font-card--montserrat');
     cardPreview.classList.add('font-card--montserrat');
   }
-}
+};
 //Función para recuperar datos almacenados en localStorage
 const useDataStorage = (inputStorageName, inputStorageValue, inputStoragePosition) => {
   console.log('recuperando localStorage');
@@ -74,7 +74,7 @@ const useDataStorage = (inputStorageName, inputStorageValue, inputStoragePositio
       }
     }
   }
-}
+};
 
 const saveDataStorage = (event) => {
   //Variable para actual nombre del input y valor del input
@@ -98,7 +98,7 @@ const saveDataStorage = (event) => {
   //Guardo datos individualmente y tambien como objeto 'data' que convierto en cadena
   // localStorage.setItem(currentInputName,currentInputValue);
   localStorage.setItem('formData',JSON.stringify(data));
-}
+};
 
 //Bucle para recorrer los elementos input del formulario, es decir, los radiobuttons, inputs del formulario y skills. Todos esos elementos tienen la clase .input___storage.
 //De los elementos cojo su índice (dataStorage), su nombre (dataStorage.name) y su valor (dataStorage.value).
