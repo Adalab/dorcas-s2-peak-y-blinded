@@ -36,7 +36,7 @@ const writeData = (event) => {
   const guiltyElement = event.currentTarget;
   const targetID = guiltyElement.getAttribute('data-donde');
 
-  document.querySelector('#' + targetID).innerHTML = guiltyElement.value;
+  document.querySelector(`#${targetID}`).innerHTML = guiltyElement.value;
 };
 
 nameField.addEventListener('keyup', writeData);
@@ -53,10 +53,10 @@ const writeSocialMedia = (event) => {
   const guiltyElement = event.currentTarget;
   const targetID = guiltyElement.getAttribute('data-donde');
   const inputID = guiltyElement.getAttribute('id');
-  const linkID = document.querySelector('#' + targetID);
+  const linkID = document.querySelector(`#${targetID}`);
 
   if (inputID==='email'){
-    linkID.href = 'mailto:' + guiltyElement.value;
+    linkID.href = `mailto: ${guiltyElement.value}`;
     linkID.title = guiltyElement.value;
     linkID.classList.remove('contact__link--inactive');
     linkID.classList.add('contact__link--active');
