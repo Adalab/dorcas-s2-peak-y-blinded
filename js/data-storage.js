@@ -1,14 +1,14 @@
 'use strict';
 
-var data = {};
-var dataStorageRetrieved = [];
+let data = {};
+let dataStorageRetrieved = [];
 
-var fr = new FileReader();
+// var fr = new FileReader();
 
-var inputStorage = document.querySelectorAll('.input__storage');
+const inputStorage = document.querySelectorAll('.input__storage');
 
 //Función para recuperar datos almacenados en localStorage
-function useDataStorage(inputStorageName, inputStorageValue, inputStoragePosition) {
+const useDataStorage = (inputStorageName, inputStorageValue, inputStoragePosition) => {
   console.log('recuperando localStorage');
   dataStorageRetrieved = JSON.parse(localStorage.getItem('jsonToSend'));
   restoreDataForPreview(dataStorageRetrieved);
@@ -28,7 +28,7 @@ function useDataStorage(inputStorageName, inputStorageValue, inputStoragePositio
         inputStoragePosition.checked = true;
       } else if(inputStoragePosition.type === 'file'){
         //Para la foto
-        var miniImage = document.querySelector('.item-preview__img');
+        const miniImage = document.querySelector('.item-preview__img');
         miniImage.src = dataStorageRetrieved.photo;
       } else{
         inputStoragePosition.value = data[inputStorageName];
@@ -37,14 +37,14 @@ function useDataStorage(inputStorageName, inputStorageValue, inputStoragePositio
   }
 }
 
-function saveDataStorage(event) {
+const saveDataStorage = (event) => {
   //Variable para actual nombre del input y valor del input
-  var currentInput = event.currentTarget;
-  var currentInputName = currentInput.name;
-  var currentInputValue = currentInput.value;
+  const currentInput = event.currentTarget;
+  const currentInputName = currentInput.name;
+  const currentInputValue = currentInput.value;
 
   if(currentInput.type === 'file'){
-    var miniImage = document.querySelector('.item-preview__img');
+    const miniImage = document.querySelector('.item-preview__img');
     data[currentInputName] = miniImage.src;
 
   } else if (currentInput.type === 'radio' && currentInput.checked === true){
@@ -61,23 +61,21 @@ function saveDataStorage(event) {
   localStorage.setItem('formData',JSON.stringify(data));
 }
 
-
-for (var i = 0; i < inputStorage.length; i++ ){
-  var inputStoragePosition = inputStorage[i];
-  var inputStorageName = inputStorage[i].name;
-  var inputStorageValue = inputStorage[i].value;
+for (const dataStorage of inputStorage){
+  const inputStoragePosition = dataStorage;
+  const inputStorageName = dataStorage.name;
+  const inputStorageValue = dataStorage.value;
   useDataStorage(inputStorageName, inputStorageValue, inputStoragePosition);
-
-  //
-  // inputStorage[i].addEventListener('change',saveDataStorage);
+  dataStorage.addEventListener('change',saveDataStorage);
 }
-for (var j = 0; j < inputStorage.length; j++ ){
-  inputStorage[j].addEventListener('change',saveDataStorage);
+
+for (const dataStorage of inputStorage){
+  dataStorage.addEventListener('change',saveDataStorage);
 }
 
 //Recupero los datos de localStorage y los guardo en una variable
 
-function restoreDataForPreview(dataStorageRetrieved) {
+const restoreDataForPreview = (dataStorageRetrieved) => {
 
   document.querySelector('#element-name').innerText = dataStorageRetrieved.name;
   document.querySelector('#element-role').innerText = dataStorageRetrieved.job;
@@ -87,7 +85,7 @@ function restoreDataForPreview(dataStorageRetrieved) {
   document.querySelector('#element-gh').href = 'https://github.com/' + dataStorageRetrieved.github;
   document.querySelector('.personal-image').src = dataStorageRetrieved.photo;
 
-  var cardPreview = document.querySelector('#card');
+  const cardPreview = document.querySelector('#card');
 console.log(dataStorageRetrieved.palette);
   if (dataStorageRetrieved.palette === '1') {
     cardPreview.classList.remove('paleta-azul', 'paleta-roja', 'paleta-gris');
