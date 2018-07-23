@@ -8,14 +8,14 @@ const form = document.querySelector('#form');
 const cardCreated = document.querySelector('.card-created');
 let twitterURL;
 
-submitButton.addEventListener('click', loadPhoto);
+
 
 const sendData = () => {
   const inputs = Array.from(form.elements);
   const json = getJSONFromInputs(inputs);
   json.skills = [];
   console.log('json', json);
-  for(let i = 0; i < listOfChosenSelects.length; i++) {
+  for (const oneSelect of listOfChosenSelects.length){
     json.skills.push(listOfChosenSelects[i].value);
   }
   json.photo = fr.result;
@@ -51,7 +51,7 @@ const getJSONFromInputs = inputs =>{
   }, {});
 };
 
-function sendRequest(json){
+const sendRequest = json => {
   localStorage.setItem('jsonToSend',JSON.stringify(json));
   fetch('https://us-central1-awesome-cards-cf6f0.cloudfunctions.net/card/', {
     method: 'POST',
@@ -69,9 +69,9 @@ function sendRequest(json){
     .catch(function(error) {
       console.log(error);
     });
-}
+};
 
-function showURL(result){
+const  showURL = result => {
   if(result.success){
     localStorage.setItem('cardURL',JSON.stringify(result.cardURL));
     responseURL.innerHTML = '<a href=' + result.cardURL + '>' + result.cardURL + '</a>';
@@ -85,13 +85,13 @@ function showURL(result){
     submitButton.classList.remove('btn-card');
     submitButton.classList.add('btn-card--inactive');
   }
-}
+};
 
-
+submitButton.addEventListener('click', loadPhoto);
 
 ////Boton twitter
-function shareOnTwitter() {
+const shareOnTwitter = () => {
   linkTwitter.href = 'https://twitter.com/intent/tweet?url=' + twitterURL + '&text=Acabo%20de%20crear%20mi%20tarjeta%20con%20Font%20Awesome%20de%20Peak-y-blinded&hashtags=WomenInTech';
-}
+};
 
 buttonTwitter.addEventListener('click', shareOnTwitter);
