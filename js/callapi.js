@@ -1,44 +1,43 @@
 'use strict';
-var listOfChosenSelects = document.getElementsByTagName('select');
-var submitButton = document.querySelector('#submit');
-var responseURL = document.querySelector('.response');
-var buttonTwitter = document.querySelector('.btn-twitter');
-var linkTwitter = document.querySelector('.link-twitter');
-var form = document.querySelector('#form');
-var cardCreated = document.querySelector('.card-created');
-var twitterURL;
 
-submitButton.addEventListener('click', loadPhoto);
+const listOfChosenSelects = document.getElementsByTagName('select');
+const submitButton = document.querySelector('#submit');
+const responseURL = document.querySelector('.response');
+const buttonTwitter = document.querySelector('.btn-twitter');
+const linkTwitter = document.querySelector('.link-twitter');
+const form = document.querySelector('#form');
+const cardCreated = document.querySelector('.card-created');
+let twitterURL;
 
-function sendData () {
-  var inputs = Array.from(form.elements);
-  var json = getJSONFromInputs(inputs);
+const sendData = () => {
+  const inputs = Array.from(form.elements);
+  const json = getJSONFromInputs(inputs);
   json.skills = [];
-  console.log('json', json);
-  for(var i = 0; i < listOfChosenSelects.length; i++) {
+  console.log(`json ${json}`);
+  for (const oneSelect of listOfChosenSelects){
     json.skills.push(listOfChosenSelects[i].value);
   }
   json.photo = fr.result;
-  console.log('json justo antes enviar datos', json);
-  var jsonFromLocalStorage = JSON.parse(localStorage.getItem('jsonToSend'));
-  console.log('jasonFromLocal', jsonFromLocalStorage);
+  console.log(`json justo antes enviar datos ${json}`);
+  const jsonFromLocalStorage = JSON.parse(localStorage.getItem('jsonToSend'));
+  console.log(`jasonFromLocal ${jsonFromLocalStorage}`);
   if(JSON.stringify(json) === JSON.stringify(jsonFromLocalStorage)){
-    var urlFromStorage = JSON.parse(localStorage.getItem('cardURL'));
-    responseURL.innerHTML = '<a href=' + urlFromStorage + '>' + urlFromStorage + '</a>';
+    const urlFromStorage = JSON.parse(localStorage.getItem('cardURL'));
+    responseURL.innerHTML = `<a href=${urlFromStorage}>${urlFromStorage}</a>`;
     twitterURL = urlFromStorage;
     cardCreated.classList.remove('hidden__item');
   } else {
     sendRequest(json);
   }
-}
+};
 
-function loadPhoto(){
-  var myFile = document.querySelector('#image').files[0];
+const loadPhoto = () => {
+  const myFile = document.querySelector('#image').files[0];
   fr.addEventListener('load', sendData);
   fr.readAsDataURL(myFile);
-}
+};
 
-function getJSONFromInputs(inputs){
+const getJSONFromInputs = inputs =>{
   return inputs.reduce(function (acc, val) {
 
     if (val.type==='radio' && val.checked===true) {
@@ -49,9 +48,9 @@ function getJSONFromInputs(inputs){
     }
     return acc;
   }, {});
-}
+};
 
-function sendRequest(json){
+const sendRequest = json => {
   localStorage.setItem('jsonToSend',JSON.stringify(json));
   fetch('https://us-central1-awesome-cards-cf6f0.cloudfunctions.net/card/', {
     method: 'POST',
@@ -61,20 +60,20 @@ function sendRequest(json){
     },
   })
 
-    .then(function(resp) {
+    .then(resp=> {
       return resp.json(); })
-    .then(function(result) {
-      console.log('result',result);
+    .then(result=> {
+      console.log(`result ${result}`);
       showURL(result); })
-    .catch(function(error) {
+    .catch(error=>{
       console.log(error);
     });
-}
+};
 
-function showURL(result){
+const  showURL = result => {
   if(result.success){
     localStorage.setItem('cardURL',JSON.stringify(result.cardURL));
-    responseURL.innerHTML = '<a href=' + result.cardURL + '>' + result.cardURL + '</a>';
+    responseURL.innerHTML = `<a href=${result.cardURL}>${result.cardURL}</a>`;
   }else{
     responseURL.innerHTML = 'ERROR:' + result.error;
   }
@@ -85,10 +84,14 @@ function showURL(result){
     submitButton.classList.remove('btn-card');
     submitButton.classList.add('btn-card--inactive');
   }
-}
+};
 
-function shareOnTwitter() {
-  linkTwitter.href = 'https://twitter.com/intent/tweet?url=' + twitterURL + '&text=Acabo%20de%20crear%20mi%20tarjeta%20con%20Font%20Awesome%20de%20Peak-y-blinded&hashtags=WomenInTech';
-}
+submitButton.addEventListener('click', loadPhoto);
+
+////Boton twitter
+const shareOnTwitter = () => {
+  linkTwitter.href =`https://twitter.com/intent/tweet?url=${twitterURL}&text=Acabo%20de%20crear%20mi%20tarjeta%20con%20Font%20Awesome%20de%20Peak-y-blinded&hashtags=WomenInTech`;
+};
+
 
 buttonTwitter.addEventListener('click', shareOnTwitter);
