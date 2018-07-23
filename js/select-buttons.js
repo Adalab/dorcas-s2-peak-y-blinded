@@ -6,10 +6,8 @@ let userSelections = [];
 let arrayOptions = {};
 
 fetch('https://raw.githubusercontent.com/Adalab/dorcas-s2-proyecto-data/master/skills.json')
-  .then(function (response) {
-    return response.json();
-  })
-  .then(function (json) {
+  .then((response) => response.json())
+  .then((json) => {
     arrayOptions = json.skills;
     //Llamada a la función que crea el contenido la primera vez
     addContentToHtml(0);
