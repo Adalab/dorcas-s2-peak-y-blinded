@@ -3,9 +3,6 @@
 let data = {};
 let dataStorageRetrieved = [];
 
-
-// var fr = new FileReader();
-
 const inputStorage = document.querySelectorAll('.input__storage');
 
 //Recupero los datos de localStorage y los guardo en una variable
@@ -14,10 +11,10 @@ const restoreDataForPreview = (dataStorageRetrieved) => {
 
   document.querySelector('#element-name').innerText = dataStorageRetrieved.name;
   document.querySelector('#element-role').innerText = dataStorageRetrieved.job;
-  document.querySelector('#element-mail').href = `mailto: ${dataStorageRetrieved.email}`;
-  document.querySelector('#element-tel').href = `tel: ${dataStorageRetrieved.phone}`;
-  document.querySelector('#element-lin').href = `https://linkedin.com/in/ ${dataStorageRetrieved.linkedin}`;
-  document.querySelector('#element-gh').href = `https://github.com/' ${dataStorageRetrieved.github}`;
+  document.querySelector('#element-mail').href = `mailto:${dataStorageRetrieved.email}`;
+  document.querySelector('#element-tel').href = `tel:${dataStorageRetrieved.phone}`;
+  document.querySelector('#element-lin').href = `https://linkedin.com/in/${dataStorageRetrieved.linkedin}`;
+  document.querySelector('#element-gh').href = `https://github.com/${dataStorageRetrieved.github}`;
   document.querySelector('.personal-image').src = dataStorageRetrieved.photo;
 
   const cardPreview = document.querySelector('#card');
