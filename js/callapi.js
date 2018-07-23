@@ -1,4 +1,5 @@
 'use strict';
+
 const listOfChosenSelects = document.getElementsByTagName('select');
 const submitButton = document.querySelector('#submit');
 const responseURL = document.querySelector('.response');
@@ -7,8 +8,6 @@ const linkTwitter = document.querySelector('.link-twitter');
 const form = document.querySelector('#form');
 const cardCreated = document.querySelector('.card-created');
 let twitterURL;
-
-
 
 const sendData = () => {
   const inputs = Array.from(form.elements);
