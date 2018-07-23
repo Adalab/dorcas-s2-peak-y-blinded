@@ -24,7 +24,7 @@ const sendData = () => {
   console.log(`jasonFromLocal ${jsonFromLocalStorage}`);
   if(JSON.stringify(json) === JSON.stringify(jsonFromLocalStorage)){
     const urlFromStorage = JSON.parse(localStorage.getItem('cardURL'));
-    responseURL.innerHTML = '<a href=' + urlFromStorage + '>' + urlFromStorage + '</a>';
+    responseURL.innerHTML = `<a href=${urlFromStorage}>${urlFromStorage}</a>`;
     twitterURL = urlFromStorage;
     cardCreated.classList.remove('hidden__item');
   } else {
@@ -61,12 +61,12 @@ const sendRequest = json => {
     },
   })
 
-    .then(function(resp) {
+    .then(resp=> {
       return resp.json(); })
-    .then(function(result) {
+    .then(result=> {
       console.log(`result ${result}`);
       showURL(result); })
-    .catch(function(error) {
+    .catch(error=>{
       console.log(error);
     });
 };
@@ -74,7 +74,7 @@ const sendRequest = json => {
 const  showURL = result => {
   if(result.success){
     localStorage.setItem('cardURL',JSON.stringify(result.cardURL));
-    responseURL.innerHTML = '<a href=' + result.cardURL + '>' + result.cardURL + '</a>';
+    responseURL.innerHTML = `<a href=${result.cardURL}>${result.cardURL}</a>`;
   }else{
     responseURL.innerHTML = 'ERROR:' + result.error;
   }
@@ -91,7 +91,8 @@ submitButton.addEventListener('click', loadPhoto);
 
 ////Boton twitter
 const shareOnTwitter = () => {
-  linkTwitter.href = 'https://twitter.com/intent/tweet?url=' + twitterURL + '&text=Acabo%20de%20crear%20mi%20tarjeta%20con%20Font%20Awesome%20de%20Peak-y-blinded&hashtags=WomenInTech';
+  linkTwitter.href =`https://twitter.com/intent/tweet?url=${twitterURL}&text=Acabo%20de%20crear%20mi%20tarjeta%20con%20Font%20Awesome%20de%20Peak-y-blinded&hashtags=WomenInTech`;
 };
+
 
 buttonTwitter.addEventListener('click', shareOnTwitter);
