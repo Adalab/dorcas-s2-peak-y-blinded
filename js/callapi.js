@@ -51,6 +51,7 @@ const getJSONFromInputs = inputs =>{
   }, {});
 };
 
+
 const sendRequest = json => {
   localStorage.setItem('jsonToSend',JSON.stringify(json));
   fetch('https://us-central1-awesome-cards-cf6f0.cloudfunctions.net/card/', {
