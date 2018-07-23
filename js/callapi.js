@@ -14,14 +14,14 @@ const sendData = () => {
   const inputs = Array.from(form.elements);
   const json = getJSONFromInputs(inputs);
   json.skills = [];
-  console.log('json', json);
-  for (const oneSelect of listOfChosenSelects.length){
+  console.log(`json ${json}`);
+  for (const oneSelect of listOfChosenSelects){
     json.skills.push(listOfChosenSelects[i].value);
   }
   json.photo = fr.result;
-  console.log('json justo antes enviar datos', json);
+  console.log(`json justo antes enviar datos ${json}`);
   const jsonFromLocalStorage = JSON.parse(localStorage.getItem('jsonToSend'));
-  console.log('jasonFromLocal', jsonFromLocalStorage);
+  console.log(`jasonFromLocal ${jsonFromLocalStorage}`);
   if(JSON.stringify(json) === JSON.stringify(jsonFromLocalStorage)){
     const urlFromStorage = JSON.parse(localStorage.getItem('cardURL'));
     responseURL.innerHTML = '<a href=' + urlFromStorage + '>' + urlFromStorage + '</a>';
@@ -64,7 +64,7 @@ const sendRequest = json => {
     .then(function(resp) {
       return resp.json(); })
     .then(function(result) {
-      console.log('result',result);
+      console.log(`result ${result}`);
       showURL(result); })
     .catch(function(error) {
       console.log(error);
