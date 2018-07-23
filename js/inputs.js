@@ -1,16 +1,18 @@
+'use strict';
 //get image
-
+//FileReader es un constructor, como un lector de archivos
 var fr = new FileReader();
 
-var uploadBtn = document.querySelector('.item__button-file');
-var fileField = document.querySelector('#image');
-var profileImage = document.querySelector('.personal-image');
-var miniImage = document.querySelector('.item-preview__img');
+const uploadBtn = document.querySelector('.item__button-file');
+const fileField = document.querySelector('#image');
+const profileImage = document.querySelector('.personal-image');
+const miniImage = document.querySelector('.item-preview__img');
 
 function getImage(e){
-  var myFile = e.currentTarget.files[0];
+  const myFile = e.currentTarget.files[0];
   fr.addEventListener('load', writeImage);
   fr.readAsDataURL(myFile);
+  console.log ('fr', fr);
 }
 
 function writeImage() {
@@ -27,12 +29,12 @@ uploadBtn.addEventListener('click', fakeFileClick);
 
 //input name y role
 
-var nameField = document.querySelector('.form-field--name');
-var roleField = document.querySelector('.form-field--role');
+const nameField = document.querySelector('.form-field--name');
+const roleField = document.querySelector('.form-field--role');
 
 function writeData(event) {
-  var guiltyElement = event.currentTarget;
-  var targetID = guiltyElement.getAttribute('data-donde');
+  const guiltyElement = event.currentTarget;
+  const targetID = guiltyElement.getAttribute('data-donde');
 
   document.querySelector('#' + targetID).innerHTML = guiltyElement.value;
 }
@@ -42,10 +44,10 @@ roleField.addEventListener('keyup', writeData);
 
 //redes sociales
 
-var mailField = document.querySelector('.form-field--mail');
-var telField = document.querySelector('.form-field--tel');
-var linField = document.querySelector('.form-field--lin');
-var ghField = document.querySelector('.form-field--gh');
+const mailField = document.querySelector('.form-field--mail');
+const telField = document.querySelector('.form-field--tel');
+const linField = document.querySelector('.form-field--lin');
+const ghField = document.querySelector('.form-field--gh');
 
 function writeSocialMedia(event) {
   var guiltyElement = event.currentTarget;
@@ -83,7 +85,7 @@ ghField.addEventListener('change', writeSocialMedia);
 
 // reset
 
-var resetButton = document.querySelector('.button-reset');
+const resetButton = document.querySelector('.button-reset');
 
 function resetForm() {
   document.getElementById('form').reset();
@@ -94,8 +96,8 @@ function resetForm() {
   cardInfo.classList.remove('font-card--comicsans', 'font-card--ubuntu', 'font-card--montserrat');
   cardInfo.classList.add('font-card--comicsans');
   // reset links
-  var linkID = document.querySelectorAll('.contact-link');
-  for (var i = 0; i < linkID.length; i++) {
+  const linkID = document.querySelectorAll('.contact-link');
+  for (let i = 0; i < linkID.length; i++) {
     if (linkID[i].classList.contains('contact__link--active') === true) {
       linkID[i].classList.remove('contact__link--active');
       linkID[i].classList.add('contact__link--inactive');
@@ -104,9 +106,9 @@ function resetForm() {
     }
   }
   // reset nombre y role
-  var nameFieldFilled = document.querySelector('#element-name');
+  const nameFieldFilled = document.querySelector('#element-name');
   nameFieldFilled.innerHTML = 'nombre apellidos';
-  var roleFieldFilled = document.querySelector('#element-role');
+  const roleFieldFilled = document.querySelector('#element-role');
   roleFieldFilled.innerHTML = 'Front-end developer';
 
   //reset pic
@@ -114,11 +116,11 @@ function resetForm() {
   miniImage.src = "http://placehold.it/29x29/ffffff/ffffff";
 
   // reset skills
-  var skillBox = document.querySelector('.skills__list');
+  const skillBox = document.querySelector('.skills__list');
   skillBox.innerHTML = '';
 
   //reset selects
-  var selectContainer = document.querySelector('.js__select-container');
+  const selectContainer = document.querySelector('.js__select-container');
   selectContainer.innerHTML = '<label class="item__label" for="abilities">Habilidades (máximo 3)</label>';
   addSelect();
 
