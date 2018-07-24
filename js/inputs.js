@@ -8,11 +8,11 @@ const fileField = document.querySelector('#image');
 const profileImage = document.querySelector('.personal-image');
 const miniImage = document.querySelector('.item-preview__img');
 
-const getImage = (e) => {
+const getImage = e => {
   const myFile = e.currentTarget.files[0];
   fr.addEventListener('load', writeImage);
   fr.readAsDataURL(myFile);
-  console.log ('fr', fr);
+  console.log(`fr ${fr}`);
 };
 
 const writeImage = () => {
@@ -32,7 +32,7 @@ uploadBtn.addEventListener('click', fakeFileClick);
 const nameField = document.querySelector('.form-field--name');
 const roleField = document.querySelector('.form-field--role');
 
-const writeData = (event) => {
+const writeData = event => {
   const guiltyElement = event.currentTarget;
   const targetID = guiltyElement.getAttribute('data-donde');
 
@@ -49,30 +49,30 @@ const telField = document.querySelector('.form-field--tel');
 const linField = document.querySelector('.form-field--lin');
 const ghField = document.querySelector('.form-field--gh');
 
-const writeSocialMedia = (event) => {
+const writeSocialMedia = event => {
   const guiltyElement = event.currentTarget;
   const targetID = guiltyElement.getAttribute('data-donde');
   const inputID = guiltyElement.getAttribute('id');
   const linkID = document.querySelector(`#${targetID}`);
 
   if (inputID==='email'){
-    linkID.href = `mailto: ${guiltyElement.value}`;
+    linkID.href = `mailto:${guiltyElement.value}`;
     linkID.title = guiltyElement.value;
     linkID.classList.remove('contact__link--inactive');
     linkID.classList.add('contact__link--active');
   } else if (inputID === 'phone'){
-    linkID.href = 'tel:' + guiltyElement.value;
+    linkID.href = `tel:${guiltyElement.value}`;
     linkID.title = guiltyElement.value;
     linkID.classList.remove('contact__link--inactive');
     linkID.classList.add('contact__link--active');
   } else if  (inputID === 'linkedin'){
-    linkID.href = 'https://linkedin.com/in/' + guiltyElement.value;
-    linkID.title = 'https://linkedin.com/in/' + guiltyElement.value;
+    linkID.href = `https://linkedin.com/in/${guiltyElement.value}`;
+    linkID.title = `https://linkedin.com/in/${guiltyElement.value}`;
     linkID.classList.remove('contact__link--inactive');
     linkID.classList.add('contact__link--active');
   } else if (inputID === 'github') {
-    linkID.href = 'https://github.com/' + guiltyElement.value;
-    linkID.title = 'https://github.com/' + guiltyElement.value;
+    linkID.href = `https://github.com/${guiltyElement.value}`;
+    linkID.title = `https://github.com/${guiltyElement.value}`;
     linkID.classList.remove('contact__link--inactive');
     linkID.classList.add('contact__link--active');
   }
@@ -97,12 +97,12 @@ const resetForm = () => {
   cardInfo.classList.add('font-card--comicsans');
   // reset links
   const linkID = document.querySelectorAll('.contact-link');
-  for (let i = 0; i < linkID.length; i++) {
-    if (linkID[i].classList.contains('contact__link--active') === true) {
-      linkID[i].classList.remove('contact__link--active');
-      linkID[i].classList.add('contact__link--inactive');
-      linkID[i].href = '';
-      linkID[i].title = '';
+  for (const link of linkID) {
+    if (link.classList.contains('contact__link--active') === true) {
+      link.classList.remove('contact__link--active');
+      link.classList.add('contact__link--inactive');
+      link.href = '';
+      link.title = '';
     }
   }
   // reset nombre y role

@@ -33,8 +33,8 @@ const closeAllDropDown = () => {
     dropArrow.classList.remove('fa-angle-up');
     dropArrow.classList.add('fa-angle-down');
   }
-}
+};
 
 for(const title of dropDownTitle) {
   title.addEventListener('click', refreshDropDown);
-}
+};

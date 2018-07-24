@@ -1,4 +1,3 @@
-'use strict';
 //userSelections para recoger en un array las selecciones del usuario
 let userSelections = [];
 
@@ -6,33 +5,35 @@ let userSelections = [];
 let arrayOptions = {};
 
 fetch('https://raw.githubusercontent.com/Adalab/dorcas-s2-proyecto-data/master/skills.json')
-  .then((response) => response.json())
-  .then((json) => {
+  .then(response =>{
+    return response.json();
+  })
+  .then(json=> {
     arrayOptions = json.skills;
     //Llamada a la función que crea el contenido la primera vez
     addContentToHtml(0);
   });
 
 //función para crear y añadir contenido al html
-const addContentToHtml = (index) => {
-  console.log('newIndex = ', index);
+const addContentToHtml = index => {
+  console.log(`newIndex${index}`);
 
   //Apuntar al padre de Select, el div
   const parentDivSelect = document.querySelector('.js__select-container');
 
-  //Declaraciones de variables de select y su contenido
+  //Declaraciones de constiables de select y su contenido
   const newParentSelect = document.createElement('div');
   const newSelect = document.createElement('select');
 
-  //Declaraciones variables boton más div que lo contiene
+  //Declaraciones constiables boton más div que lo contiene
   const newSelectButton = document.createElement('div');
   const newSelectButtonContent = document.createElement('i');
 
   //Insercion contenido en option, e insercion de option como contenido de select. Insercion de select dentro del div que es su padre
   newParentSelect.appendChild(newSelect);
   parentDivSelect.appendChild(newParentSelect);
-  newParentSelect.className = 'item__select-container position-' + index;
-  newSelect.className = 'item__select position-' + index;
+  newParentSelect.className = `item__select-container position-${index}`;
+  newSelect.className = `item__select position-${index}`;
   // newSelect.classList.add('item__select');
   newSelect.setAttribute('name', 'skills');
 
@@ -44,11 +45,11 @@ const addContentToHtml = (index) => {
   newParentSelect.appendChild(newSelectButton);
 
   //Añadir options
-  for (let j = 0; j < arrayOptions.length; j++) {
+  for (const arrayOption of arrayOptions) {
     const newOption = document.createElement('option');
-    newOption.setAttribute('number', j);
-    newOption.setAttribute('value', arrayOptions[j]);
-    const optionContent = document.createTextNode(arrayOptions[j]);
+    newOption.setAttribute('number', arrayOption);
+    newOption.setAttribute('value', arrayOption);
+    const optionContent = document.createTextNode(arrayOption);
     newOption.appendChild(optionContent);
     newSelect.appendChild(newOption);
     newOption.classList.add('js__option');
@@ -73,6 +74,7 @@ const changeButton = () => {
       button[i].addEventListener('click', removeSelect);
     }
   }
+
 };
 
 //Función para añadir el contenido (hasta que las selecciones del usuario sean 3) y cambiar el signo del último botón
@@ -82,7 +84,7 @@ const addSelect = () => {
 
   let newIndex = 0;
   for (let i = 0; i < 3; i++) {
-    const createdElements = document.querySelectorAll('.position-' + i);
+    let createdElements = document.querySelectorAll(`.position-${i}`);
     //console.log('createdElements.position' + i + "=" + createdElements.length);
     if (createdElements.length === 0) {
       newIndex = i;
@@ -99,16 +101,16 @@ const addSelect = () => {
 
 
 //Función para quitar el contenido (de momento sólo quita el primer campo no el correspondiente al botón que se pincha)
-const removeSelect = (event) => {
+const removeSelect = event => {
   console.log('estoy quitando');
 
   const clickedElement = event.currentTarget;
   const elementNumber = clickedElement.getAttribute('data-value');
   const plusButton = document.querySelectorAll('.fa-plus');
-  const createdElements = document.querySelectorAll('.position-' + elementNumber);
+  const createdElements = document.querySelectorAll(`.position-${elementNumber}`);
 
-  for (let i = 0; i < createdElements.length; i++) {
-    createdElements[i].remove();
+  for (const createdElement of createdElements) {
+    createdElement.remove();
   }
 
   userSelections = document.querySelectorAll('.item__select-container');
@@ -119,7 +121,7 @@ const removeSelect = (event) => {
   //addContentToCard();
 };
 
-//Variables para crear la lista de habilidades en la preview de la tarjeta y darle clases
+//constiables para crear la lista de habilidades en la preview de la tarjeta y darle clases
 const skills = document.querySelector('.skills');
 const skillsList = document.createElement('ul');
 
@@ -131,9 +133,10 @@ const addContentToCard = () => {
   const selects = document.getElementsByTagName('select');
   const newSkillsItem = document.querySelectorAll('.skills__item');
 
-  for (let s = 0; s < newSkillsItem.length; s++) {
-    skillsList.removeChild(newSkillsItem[s]);
+  for (const newSkillItem of newSkillsItem) {
+    skillsList.removeChild(newSkillItem);
   }
+
 
   for (let i = 0; i < userSelections.length; i++) {
     const userSelectionPosition = userSelections[i].classList[1];

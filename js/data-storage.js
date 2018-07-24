@@ -7,7 +7,7 @@ const inputStorage = document.querySelectorAll('.input__storage');
 
 //Recupero los datos de localStorage y los guardo en una variable
 
-const restoreDataForPreview = (dataStorageRetrieved) => {
+const restoreDataForPreview = dataStorageRetrieved => {
 
   document.querySelector('#element-name').innerText = dataStorageRetrieved.name;
   document.querySelector('#element-role').innerText = dataStorageRetrieved.job;
@@ -73,7 +73,7 @@ const useDataStorage = (inputStorageName, inputStorageValue, inputStoragePositio
   }
 };
 
-const saveDataStorage = (event) => {
+const saveDataStorage = event => {
   //Variable para actual nombre del input y valor del input
   const currentInput = event.currentTarget;
   const currentInputName = currentInput.name;
@@ -112,7 +112,3 @@ for (const data of inputStorage){
 // for (const dataStorage of inputStorage){
 //   dataStorage.addEventListener('change',saveDataStorage);
 // }
-
-
-
-

@@ -15,7 +15,7 @@ const sendData = () => {
   json.skills = [];
   console.log(`json ${json}`);
   for (const oneSelect of listOfChosenSelects){
-    json.skills.push(listOfChosenSelects[i].value);
+    json.skills.push(oneSelect.value);
   }
   json.photo = fr.result;
   console.log(`json justo antes enviar datos ${json}`);

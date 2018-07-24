@@ -7,7 +7,7 @@ const paleta3 = document.querySelector('#color3');
 const card = document.querySelector('#card');
 const cardInfo = document.querySelector('#card__info');
 
-const changeColor = (event) => {
+const changeColor = event => {
   const clickedPalette = event.currentTarget;
   const selectedPalette = clickedPalette.getAttribute('radio-cual');
   card.classList.remove('paleta-azul', 'paleta-roja', 'paleta-gris');
@@ -30,7 +30,7 @@ const font1 = document.querySelector('#font1');
 const font2 = document.querySelector('#font2');
 const font3 = document.querySelector('#font3');
 
-const changeFont = (event) => {
+const changeFont = event => {
   const clickedFont = event.currentTarget;
   const selectedFont = clickedFont.getAttribute('radio-cual');
   cardInfo.classList.remove('font-card--comicsans', 'font-card--ubuntu', 'font-card--montserrat');
